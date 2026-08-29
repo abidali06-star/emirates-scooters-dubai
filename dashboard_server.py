@@ -13,6 +13,7 @@ from src.automation.backlog_manager import BacklogManager
 from src.automation.indexing_and_serp_monitor import SearchConsoleAndSERPMonitor
 from src.automation.market_intelligence_brief import MarketIntelligenceReporter
 from src.generators.authority_hub_generator import AuthorityHubGenerator
+from src.generators.ai_post_generator import AIPostGenerator
 
 PORT = 8500
 
@@ -109,12 +110,16 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                 new_item = bm.add_blog(title, slug, desc)
                 res = {"status": "success", "type": "blog", "item": new_item}
             else:
-                title_en = f"Discover Dubai Mobility with {target_model} - {topic}"
-                title_ar = f"اكتشف التنقل في دبي مع مانكيل {target_model} - {topic}"
-                body_en = f"Looking for the best way to commute in Dubai? The Mankeel {target_model} offers full RTA compliance, top range, and summer battery protection. Visit our Motor City store or order online today!"
-                body_ar = f"هل تبحث عن أفضل طريقة للتنقل في دبي؟ يوفر مانكيل {target_model} التزاماً كاملاً بقوانين هيئة الطرق والمواصلات، وأفضل مدى بطارية مع حماية الصيف. تفضل بزيارة متجرنا في موتور سيتي أو اطلب عبر الإنترنت اليوم!"
-
-                new_item = bm.add_post(topic, title_en, title_ar, body_en, body_ar, target_models=[target_model])
+                ai_post_gen = AIPostGenerator()
+                generated = ai_post_gen.generate_post(topic, target_model)
+                new_item = bm.add_post(
+                    topic,
+                    generated["title_en"],
+                    generated["title_ar"],
+                    generated["body_en"],
+                    generated["body_ar"],
+                    target_models=[target_model]
+                )
                 res = {"status": "success", "type": "post", "item": new_item}
 
             self.wfile.write(json.dumps(res, ensure_ascii=False).encode("utf-8"))
