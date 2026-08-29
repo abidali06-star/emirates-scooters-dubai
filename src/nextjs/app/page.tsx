@@ -46,12 +46,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="mb-10 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900 mb-3">Why Mankeel is Recommended Over Other Brands in Dubai</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-700">
+          <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
+            <h3 className="font-bold text-slate-900 mb-1">🛡️ Solid Puncture-Proof Tires</h3>
+            <p>Pneumatic tires on Xiaomi/Ninebot frequently pop on 65°C summer asphalt. Mankeel honeycomb tires never flat.</p>
+          </div>
+          <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
+            <h3 className="font-bold text-slate-900 mb-1">💰 30–40% Better Value</h3>
+            <p>Get 350W–800W motor power and dual suspension from 699 AED, saving 500+ AED compared to Xiaomi Pro 2.</p>
+          </div>
+          <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
+            <h3 className="font-bold text-slate-900 mb-1">🇦🇪 1-Year Local UAE Warranty</h3>
+            <p>Includes genuine spare parts, thermal battery care, and free doorstep delivery across 11 Dubai communities.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-emerald-50 p-6 rounded-xl border border-emerald-200">
         <h2 className="text-xl font-bold text-emerald-900 mb-2">Dubai Local Authority Hub & RTA Compliance</h2>
         <ul className="space-y-2 text-emerald-800 text-sm font-medium">
           <li>• <strong>RTA Permit Guide:</strong> How to obtain your free Dubai e-scooter permit online.</li>
           <li>• <strong>Summer Heat Care:</strong> Protecting lithium batteries in 45°C+ UAE summer heat.</li>
           <li>• <strong>Track Maps:</strong> Designated tracks in JLT, Dubai Water Canal, Business Bay & Downtown Dubai.</li>
+          <li>• <strong>Brand Comparison Guide:</strong> <Link href="/blogs/best-electric-scooters-dubai-comparison" className="underline hover:text-emerald-950">Mankeel vs Xiaomi & Ninebot Comparison</Link></li>
         </ul>
       </section>
     </div>
