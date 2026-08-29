@@ -60,7 +60,10 @@ class TestGEOSEOPipeline(unittest.TestCase):
             "output/blogs/rta-e-scooter-permit-dubai.html",
             "output/blogs/battery-maintenance-uae-summer.html",
             "output/blogs/best-e-scooter-tracks-dubai.html",
-            "output/blogs/best-electric-scooters-dubai-comparison.html"
+            "output/blogs/best-electric-scooters-dubai-comparison.html",
+            "output/blogs/best-electric-scooter-dubai-metro-commute.html",
+            "output/blogs/puncture-proof-vs-pneumatic-tires-dubai.html",
+            "output/blogs/best-off-road-scooters-dubai-under-1500-aed.html"
         ]
         for bf in blog_files:
             self.assertTrue(os.path.exists(bf), f"Generated blog file missing: {bf}")

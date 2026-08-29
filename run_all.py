@@ -192,7 +192,10 @@ def run_pipeline():
         auth_gen.generate_rta_permit_guide(),
         auth_gen.generate_battery_maintenance_guide(),
         auth_gen.generate_tracks_guide(),
-        auth_gen.generate_competitor_comparison_guide()
+        auth_gen.generate_competitor_comparison_guide(),
+        auth_gen.generate_metro_commute_guide(),
+        auth_gen.generate_tire_comparison_guide(),
+        auth_gen.generate_offroad_guide()
     ]
 
     for g in guides:

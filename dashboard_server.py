@@ -207,7 +207,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                 <div class="text-blue-600 text-2xl mt-0.5"><i class="fa-solid fa-circle-info"></i></div>
                 <div>
                     <h3 class="font-bold text-blue-900 text-base">How to use this Action Hub</h3>
-                    <p class="text-sm text-blue-800 mt-1">Below are your copy-paste ready social posts, GBP updates, and review templates. Simply click any <strong>"Copy Clean Text"</strong> button, open your Google Business Profile or WhatsApp, and paste it directly! No coding required.</p>
+                    <p class="text-sm text-blue-800 mt-1">Below are your copy-paste ready posts for <strong>Facebook Page & Facebook Marketplace</strong>, <strong>Dubizzle</strong>, and <strong>Community WhatsApp Groups</strong>. Simply click <strong>"Copy Clean Text"</strong>, open your Facebook Page or Dubizzle, and paste directly! No coding required.</p>
                 </div>
             </div>
 
@@ -217,19 +217,19 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Google Business Profile Update</span>
-                            <span class="text-xs text-slate-400 font-medium">Focus: MK083 & MX-14</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-md">Facebook Page & Marketplace Listing</span>
+                            <span class="text-xs text-slate-400 font-medium">Focus: MK083 (699 AED)</span>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-lg mb-2">RTA Compliance & Speed Limit Protocol</h4>
+                        <h4 class="font-bold text-slate-800 text-lg mb-2">Mankeel MK083 City Commuter (Puncture-Proof)</h4>
                         <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-sm text-slate-700 space-y-3 font-sans">
-                            <p><strong>🇬🇧 English:</strong><br>Riding Your Mankeel Scooter Legally in Dubai Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us about RTA permit requirements when we deliver.</p>
+                            <p><strong>🇬🇧 English:</strong><br>Mankeel MK083 City Commuter Electric Scooter (350W). 100% Solid Honeycomb Puncture-Proof Tires (No flat tires in Dubai heat!). 1-Year Local Warranty + Free Doorstep Delivery across Motor City, Sports City, JVC & 11 Dubai communities. Price: 699 AED. https://emirates-scooters-dubai.vercel.app/products/mk083</p>
                             <hr class="border-slate-200">
-                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>قيادة سكوتر مانكيل بشكل قانوني في دبي هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا عن اشتراطات تصريح هيئة الطرق والمواصلات عند التوصيل.</p>
+                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>سكوتر كهربائي مانكيل MK083 (350 واط). إطارات صلبة مقاومة للثقب 100% (بدون بنشر في حرارة دبي). ضمان محلي لمدة سنة + توصيل مجاني لموتور سيتي، سبورتس سيتي، قرية جميرا الدائرية وبقية المناطق. السعر: 699 درهم.</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
-                        <span class="text-xs text-slate-500">Destination: <strong>Google Maps / Update</strong></span>
-                        <button onclick="copyText(`Riding Your Mankeel Scooter Legally in Dubai\nRiding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us about RTA permit requirements when we deliver.\n\nقيادة سكوتر مانكيل بشكل قانوني في دبي\nهل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا عن اشتراطات تصريح هيئة الطرق والمواصلات عند التوصيل.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
+                        <span class="text-xs text-slate-500">Destination: <strong>Facebook Page / Marketplace</strong></span>
+                        <button onclick="copyText(`Mankeel MK083 City Commuter Electric Scooter (350W)\n100% Solid Honeycomb Puncture-Proof Tires (No flat tires in Dubai heat!). 1-Year Local Warranty + Free Doorstep Delivery across Motor City, Sports City, JVC & 11 Dubai communities. Price: 699 AED.\nOrder Online: https://emirates-scooters-dubai.vercel.app/products/mk083\n\nسكوتر كهربائي مانكيل MK083\nإطارات صلبة مقاومة للثقب 100% (بدون بنشر في حرارة دبي). ضمان محلي لمدة سنة + توصيل مجاني. السعر: 699 درهم.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
                             <i class="fa-regular fa-copy"></i> Copy Clean Text
                         </button>
                     </div>
@@ -239,19 +239,19 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Summer Maintenance Guide</span>
-                            <span class="text-xs text-slate-400 font-medium">Focus: MK083 & MX-14</span>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Dubizzle & Social Ad Post</span>
+                            <span class="text-xs text-slate-400 font-medium">Focus: MX-14 (1,499 AED)</span>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-lg mb-2">Summer Battery Thermal Health Checklist</h4>
+                        <h4 class="font-bold text-slate-800 text-lg mb-2">Mankeel MX-14 Heavy-Duty Off-Road (800W)</h4>
                         <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-sm text-slate-700 space-y-3 font-sans">
-                            <p><strong>🇬🇧 English:</strong><br>Protect Your Scooter Battery in UAE Summer Heat! Keep your battery in peak condition during 45°C+ summer heat. We offer free battery thermal diagnostic checks when we deliver or collect.</p>
+                            <p><strong>🇬🇧 English:</strong><br>Mankeel MX-14 Heavy-Duty Off-Road Electric Scooter (800W). Dual rear spring suspensions, 56 KM range, 10" all-terrain tires. Save 1,000+ AED compared to 2,500 AED brands. 1-Year Local Warranty & Free Local Handover. Price: 1,499 AED. https://emirates-scooters-dubai.vercel.app/products/mx-14</p>
                             <hr class="border-slate-200">
-                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>احمِ بطارية السكوتر في حرارة الصيف بدبي! حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. نقدّم فحصاً مجانياً لحرارة البطارية عند التوصيل أو الاستلام.</p>
+                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>سكوتر مانكيل MX-14 للطرق الوعرة (800 واط). نظام تعليق مزدوج، مدى 56 كم، إطارات 10 بوصة. ضمان محلي سنة + توصيل مجاني ومعاينة قبل الاستلام. السعر: 1,499 درهم.</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
-                        <span class="text-xs text-slate-500">Destination: <strong>Google Maps / Offer</strong></span>
-                        <button onclick="copyText(`Protect Your Scooter Battery in UAE Summer Heat\nKeep your battery in peak condition during 45°C+ summer heat. We offer free battery thermal diagnostic checks when we deliver or collect.\n\nاحمِ بطارية السكوتر في حرارة الصيف بدبي\nحافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. نقدّم فحصاً مجانياً لحرارة البطارية عند التوصيل أو الاستلام.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
+                        <span class="text-xs text-slate-500">Destination: <strong>Dubizzle / Facebook Groups</strong></span>
+                        <button onclick="copyText(`Mankeel MX-14 Heavy-Duty Off-Road Electric Scooter (800W)\nDual rear spring suspensions, 56 KM range, 10\" all-terrain tires. Save 1,000+ AED compared to 2,500 AED brands. 1-Year Local Warranty & Free Local Handover across Motor City, JVC, Sports City. Price: 1,499 AED.\nFull Specs & Order: https://emirates-scooters-dubai.vercel.app/products/mx-14\n\nسكوتر مانكيل MX-14 للطرق الوعرة (800 واط)\nنظام تعليق مزدوج، مدى 56 كم، إطارات 10 بوصة. ضمان محلي سنة + توصيل مجاني. السعر: 1,499 درهم.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
                             <i class="fa-regular fa-copy"></i> Copy Clean Text
                         </button>
                     </div>

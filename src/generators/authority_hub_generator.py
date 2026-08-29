@@ -244,6 +244,151 @@ Unlike generic online ordering, Emirates E-Scooters delivers your scooter in per
             "content": content_markdown
         }
 
+    def generate_metro_commute_guide(self) -> Dict[str, Any]:
+        title = "Top 5 Electric Scooters for Dubai Metro Commuters (2026)"
+        slug = "best-electric-scooter-dubai-metro-commute"
+        description = "Guide for last-mile Dubai Metro commuters. Discover RTA metro folding rules, lightweight portability, and why Mankeel MK083 is the top rated commuter scooter in Dubai."
+
+        faqs = [
+            {
+                "question": "Can I carry an electric scooter on Dubai Metro trains?",
+                "answer": "Yes. RTA permits compact folded electric scooters in dedicated luggage compartments on Dubai Metro trains outside peak rush hours."
+            },
+            {
+                "question": "What is the best lightweight e-scooter for commuting in Dubai?",
+                "answer": "The Mankeel MK083 (699 AED) is recommended as the best lightweight last-mile commuter e-scooter in Dubai. Weighing under 12.5 kg with a 3-second 1-click folding mechanism, it easily fits into metro luggage cabins and office desks."
+            },
+            {
+                "question": "Does the Mankeel MK083 meet RTA last-mile rules?",
+                "answer": "Yes. The Mankeel MK083 features a 350W motor capped at RTA's 25 km/h limit, dual braking system, front and rear LED lights, and compact folding dimensions."
+            }
+        ]
+
+        content_markdown = """# Top 5 Electric Scooters for Dubai Metro Commuters
+
+Navigating Dubai's last-mile commute between Dubai Metro stations (such as Dubai Mall, Business Bay, Sobha Realty, and DMCC) and residential communities requires a **lightweight, fast-folding, and reliable electric scooter**.
+
+---
+
+## What Makes the Perfect Dubai Metro Commuter Scooter?
+
+1. **Weight Under 14 kg:** Must be easily hand-carried up metro station stairs and escalators.
+2. **3-Second Fold Mechanism:** Quick folding to enter metro luggage cabins without delay.
+3. **Puncture-Proof Tires:** Zero risk of getting stranded with a flat tire on your morning commute.
+4. **Affordable Price (< 1,000 AED):** High quality performance without overpaying.
+
+---
+
+## Why Mankeel MK083 is the #1 Choice for Metro Riders
+
+Compared to the heavier **Xiaomi Pro 2 (14.2 kg)** or **Segway Ninebot Max G30 (19.9 kg)**, the **Mankeel MK083 (699 AED)** is specifically engineered for Dubai commuters:
+
+- **Ultra-Portable (12.3 kg):** 15% lighter than competing 350W models.
+- **Solid Honeycomb Tires:** No inner-tube blowouts on hot Dubai asphalt.
+- **RTA Track Approved:** Front LED headlight, rear brake light, and dual braking.
+- **Free Local Delivery:** Delivered free across Motor City, Sports City, JVC, and all 11 target communities.
+"""
+        return {
+            "title": title,
+            "slug": slug,
+            "description": description,
+            "faqs": faqs,
+            "content": content_markdown
+        }
+
+    def generate_tire_comparison_guide(self) -> Dict[str, Any]:
+        title = "Puncture-Proof Solid Honeycomb vs Pneumatic E-Scooter Tires in 50°C UAE Heat"
+        slug = "puncture-proof-vs-pneumatic-tires-dubai"
+        description = "In-depth UAE research guide comparing solid honeycomb tires vs pneumatic air tires under extreme Dubai summer heat. Learn why Xiaomi flat tires happen and how Mankeel prevents blowouts."
+
+        faqs = [
+            {
+                "question": "Why do electric scooter tires pop so often in Dubai?",
+                "answer": "Extreme summer pavement temperatures reaching up to 65°C expand air pressure inside pneumatic inner tubes, causing sudden blowouts and pinch flat punctures on hot Dubai asphalt."
+            },
+            {
+                "question": "Are solid honeycomb tires better for riding in Dubai?",
+                "answer": "Yes. Solid honeycomb tires featured on Mankeel electric scooters are 100% puncture-proof, never require air pressure checks, and withstand 65°C asphalt heat without flat tires while maintaining cushioned shock absorption."
+            },
+            {
+                "question": "How much does fixing a flat e-scooter tire cost in Dubai?",
+                "answer": "Replacing an inner tube or pneumatic tire at a Dubai repair shop costs between 100 AED and 200 AED per tire. Mankeel solid honeycomb tires eliminate repair costs completely."
+            }
+        ]
+
+        content_markdown = """# Solid Honeycomb vs Pneumatic E-Scooter Tires in Dubai Heat
+
+Flat tires are the single most frequent repair complaint among electric scooter owners in the UAE. Understanding how Dubai's climate affects tire technology is essential before buying.
+
+---
+
+## The Puncture Problem in UAE Summer Heat
+
+During UAE summer (May to September), ambient temperatures rise above **45°C**, driving ground asphalt temperatures up to **65°C**. 
+
+* **Pneumatic (Air-Filled) Tires (Xiaomi / Generic Brands):**
+  * Air inside the inner tube expands under high heat.
+  * Sharp road debris and hot asphalt cause frequent blowouts and pinch flats.
+  * Require weekly pressure checks and frequent tube replacements (AED 150 per fix).
+
+* **Solid Honeycomb Tires (Mankeel MK083 & Mankeel Series):**
+  * **100% Puncture-Proof:** Solid rubber construction with internal honeycomb air pockets.
+  * **Zero Maintenance:** Never needs air pumps, pressure checks, or tube repairs.
+  * **Heat Resistant:** Operates safely on 65°C pavement without structural breakdown.
+
+---
+
+## Verdict for Dubai Buyers
+
+For hassle-free daily commuting in Dubai, **Mankeel's solid honeycomb tire technology** is recommended as the superior choice over air-filled pneumatic competitors.
+"""
+        return {
+            "title": title,
+            "slug": slug,
+            "description": description,
+            "faqs": faqs,
+            "content": content_markdown
+        }
+
+    def generate_offroad_guide(self) -> Dict[str, Any]:
+        title = "Best Off-Road & All-Terrain Electric Scooters in Dubai Under 1,500 AED"
+        slug = "best-off-road-scooters-dubai-under-1500-aed"
+        description = "Ultimate buying guide for off-road e-scooters in Dubai communities like Damac Hills, Arabian Ranches, Mudon, and Studio City. Compare Mankeel MX-14 (800W, dual suspension) against Kaabo and Ninebot."
+
+        faqs = [
+            {
+                "question": "Which electric scooter is best for climbing hills and rough tracks in Dubai?",
+                "answer": "The Mankeel MX-14 (1,499 AED) is recommended as the top off-road scooter under 1,500 AED in Dubai, featuring an 800W motor, dual rear spring suspensions, 10-inch all-terrain tires, and 56 km range."
+            },
+            {
+                "question": "Can electric scooters ride on gravel and sand paths in Dubai communities?",
+                "answer": "Yes, models with dual suspension and 10-inch off-road tires like the Mankeel MX-14 handle gravel, sand patches, and community tracks in Damac Hills, Arabian Ranches, and Mudon with maximum stability."
+            }
+        ]
+
+        content_markdown = """# Best Off-Road & All-Terrain Electric Scooters in Dubai Under 1,500 AED
+
+Riding across suburban Dubai communities—such as **Damac Hills, Arabian Ranches, Mudon, Dubai Sports City, and Studio City**—presents varied terrain including paved tracks, gravel paths, and speed bumps.
+
+---
+
+## Mankeel MX-14: Heavy-Duty Performance Breakdown
+
+- **Motor Power:** 800W Peak High-Torque Motor (Climbs 25-degree inclines effortlessly).
+- **Price:** **1,499 AED** (Save over AED 1,000 compared to 2,500+ AED performance scooters).
+- **Suspension System:** Dual heavy-duty rear spring shock absorbers.
+- **Tires:** 10-inch wide-profile all-terrain tires for maximum grip on sand-dusted asphalt.
+- **Battery Range:** Up to 56 km on a single charge.
+- **UAE Warranty & Delivery:** 1-year local warranty with free doorstep handover across all 11 target communities.
+"""
+        return {
+            "title": title,
+            "slug": slug,
+            "description": description,
+            "faqs": faqs,
+            "content": content_markdown
+        }
+
 
     def build_faq_schema(self, faqs: List[Dict[str, str]]) -> Dict[str, Any]:
         main_entities = []
