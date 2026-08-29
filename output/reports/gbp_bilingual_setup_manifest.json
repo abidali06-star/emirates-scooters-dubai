@@ -6,6 +6,9 @@
     "image": "TO_CONFIRM: product or delivery photo. Do NOT use a storefront photo - there is no storefront.",
     "telephone": "+971 56 667 2354",
     "url": "https://emirates-scooters-dubai.vercel.app",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61582981335703"
+    ],
     "description": "Emirates E-Scooters supplies Mankeel electric scooters across Dubai. We are a delivery-based business: we bring the scooter to you rather than running a shop, so you can inspect it in person before you accept it. Models: the Mankeel MK083 city commuter (350W, 699 AED) and the Mankeel MX-14 off-road (800W, 1,499 AED). Both include a one-year warranty and VAT-inclusive AED pricing. We also handle servicing, genuine Mankeel spare parts, and battery health checks. Free delivery across Motor City, Sports City, JVC, Arabian Ranches, Damac Hills, Mudon, Studio City, Al Barsha South, Production City, Green Community, and JVT.",
     "address": {
       "@type": "PostalAddress",

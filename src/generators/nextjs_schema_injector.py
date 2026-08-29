@@ -104,6 +104,9 @@ export default function RootLayout({{ children }}: {{ children: React.ReactNode 
     image: 'https://emirates-scooters-dubai.vercel.app/images/mankeel-mk083-product.jpg',
     telephone: '{nap["phone"]}',
     url: 'https://emirates-scooters-dubai.vercel.app',
+    sameAs: [
+      'https://www.facebook.com/profile.php?id=61582981335703',
+    ],
     address: {{
       '@type': 'PostalAddress',
       addressLocality: '{nap["city"]}',

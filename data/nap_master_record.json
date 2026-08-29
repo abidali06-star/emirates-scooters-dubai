@@ -70,6 +70,9 @@
   ],
   "_service_area_note": "Matches the 11 revised free delivery areas.",
   "website_url": "https://emirates-scooters-dubai.vercel.app",
+  "social_profiles": {
+    "facebook": "https://www.facebook.com/profile.php?id=61582981335703"
+  },
   "superseded_values": {
     "_note": "Historic incorrect values. Kept only so future audits can detect stragglers.",
     "business_name": "Mankeel E-Scooters Dubai",

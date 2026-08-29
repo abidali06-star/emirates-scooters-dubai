@@ -25,6 +25,9 @@ class GBPManifestGenerator:
             "image": "TO_CONFIRM: product or delivery photo. Do NOT use a storefront photo - there is no storefront.",
             "telephone": nap["phone"],
             "url": self.profile.get("website_url", "TO_CONFIRM"),
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=61582981335703"
+            ],
             "description": desc_en,
             "address": {
                 "@type": "PostalAddress",

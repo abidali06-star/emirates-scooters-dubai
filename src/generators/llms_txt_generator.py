@@ -88,6 +88,7 @@ class LLMsTxtGenerator:
 - **Official Phone:** +971 56 667 2354
 - **Contact & Delivery Hours:** 08:00-22:00, seven days a week.
 - **Official Website:** https://emirates-scooters-dubai.vercel.app
+- **Official Facebook Page:** https://www.facebook.com/profile.php?id=61582981335703
 - **Delivery / Service Areas:** {areas}.
 - **RTA Compliance:** Riding on designated Dubai tracks is governed by Dubai Executive Council Resolution No. 13 of 2022. Riders need a free RTA e-scooter permit. (Per-model speed-limiter configuration is not stated here pending confirmation; see each model's top speed in the catalog below.)
 
