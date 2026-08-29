@@ -31,13 +31,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://emirates-scooters-dubai.vercel.app/products/mk083</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://emirates-scooters-dubai.vercel.app/products/mx-14</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://emirates-scooters-dubai.vercel.app/products/mk083</loc>
+    <loc>https://emirates-scooters-dubai.vercel.app/products/mk085</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-scooters-dubai.vercel.app/products/mx25</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-scooters-dubai.vercel.app/products/g1</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>

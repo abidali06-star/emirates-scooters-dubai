@@ -25,13 +25,19 @@ class TestGEOSEOPipeline(unittest.TestCase):
                 self.assertIn("system_prompt", data)
 
     def test_02_product_data_valid(self):
+        """Catalogue comes from the owner's spec sheet: MK083, MX-14, MK085, MX25, G1."""
         data_path = "data/mankeel_products.json"
         self.assertTrue(os.path.exists(data_path))
         with open(data_path, "r", encoding="utf-8") as f:
             products = json.load(f)
-            self.assertEqual(len(products), 2, "Dataset must strictly contain the 2 active Mankeel models.")
-            models = [p["model"] for p in products]
-            self.assertCountEqual(models, ["MX-14", "MK083"])
+        self.assertCountEqual(
+            [p["model"] for p in products],
+            ["MK083", "MX-14", "MK085", "MX25", "G1"],
+        )
+        for p in products:
+            self.assertIn("price_aed", p)
+            self.assertIn("max_speed_kmh", p["specs"])
+            self.assertIsInstance(p["inStock"], bool)
 
     def test_03_pipeline_execution(self):
         result = subprocess.run([sys.executable, "run_all.py"], capture_output=True, text=True)
@@ -120,7 +126,10 @@ class TestGEOSEOPipeline(unittest.TestCase):
         
         with open(data_json_path, "r", encoding="utf-8") as f:
             products = json.load(f)
-            self.assertEqual(len(products), 2)
+        with open("data/mankeel_products.json", "r", encoding="utf-8") as f:
+            source = json.load(f)
+        self.assertEqual(len(products), len(source),
+                         "Next.js product data must match the source catalogue")
             
         with open(layout_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -147,7 +156,10 @@ class TestGEOSEOPipeline(unittest.TestCase):
         tree = ET.parse(feed_path)
         root = tree.getroot()
         items = root.findall(".//item")
-        self.assertEqual(len(items), 2)
+        with open("data/mankeel_products.json", "r", encoding="utf-8") as f:
+            source = json.load(f)
+        self.assertEqual(len(items), len(source),
+                         "Merchant feed must list every model in the catalogue")
 
     def test_10_sitemap_and_robots_valid(self):
         robots_path = "src/nextjs/public/robots.txt"

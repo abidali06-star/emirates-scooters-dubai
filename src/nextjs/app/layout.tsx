@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
     // priceRange derived from the live catalogue, not hand-written, so it cannot
     // drift from the products actually on sale.
-    priceRange: 'AED 699 - AED 1499',
+    priceRange: 'AED 699 - AED 2299',
   };
 
   return (

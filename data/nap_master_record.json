@@ -93,5 +93,21 @@
     "days": "Monday-Sunday (all seven days)",
     "meaning": "Hours the business is contactable and delivering. NOT shop opening hours - there is no shop.",
     "status": "CONFIRMED by owner 2026-08-29"
+  },
+  "blocking_issues": {
+    "_status": "Recorded 2026-08-29 after the owner confirmed no trade licence and no premises.",
+    "no_trade_licence": {
+      "owner_statement": "No UAE trade licence. Described as a side hustle.",
+      "impact": "Blocks Google Business Profile verification (Google asks for business documentation), Google Merchant Center, Bing Places, Apple Business Connect, and business profiles on Trustpilot/Dubizzle. Separately, trading commercially in the UAE without a licence is not permitted regardless of what Google requires.",
+      "action": "Owner to obtain an appropriate UAE e-commerce/trader licence, or accept that local-listing channels stay closed."
+    },
+    "no_verification_address": {
+      "owner_statement": "Prefers not to use a real address for verification.",
+      "impact": "Google requires a real address for verification even when it is hidden from the public listing. PO boxes and virtual offices are explicitly disallowed and cause suspension. There is no compliant workaround. Without an address, GBP verification cannot complete.",
+      "mitigation": "For a service-area business the address is NEVER displayed publicly - only used to verify. That already addresses the privacy concern."
+    },
+    "speed_governor_unresolved": {
+      "note": "The owner's spec sheet gives hardware top speeds (30-65 km/h) but says nothing about whether units are limited to RTA's 20 km/h. No compliance claim may be published until that is confirmed with Mankeel."
+    }
   }
 }

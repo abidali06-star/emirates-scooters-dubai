@@ -5,6 +5,7 @@ Executes Part 1, Part 2, Next.js Server Components, llms.txt AI crawler feeds, G
 
 import os
 import json
+import re
 from src.generators.specs_processor import SpecsProcessor
 from src.generators.geo_rewriter import GEORewriter
 from src.generators.authority_hub_generator import AuthorityHubGenerator
@@ -78,6 +79,38 @@ def generate_product_html(product, html_table, geo_markdown, jsonld_schema):
 </html>
 """
     return full_html
+
+def markdown_to_body_html(md: str) -> str:
+    """Minimal markdown -> HTML for the guide bodies rendered by the Next.js blog route."""
+    html, in_list = [], False
+    for line in md.split("\n"):
+        t = line.rstrip()
+        if t.startswith("### "):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f"<h3>{t[4:]}</h3>")
+        elif t.startswith("## "):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f"<h2>{t[3:]}</h2>")
+        elif t.startswith("# "):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f"<h1>{t[2:]}</h1>")
+        elif t.startswith("---"):
+            if in_list: html.append("</ul>"); in_list = False
+            html.append("<hr>")
+        elif t.startswith("- ") or t.startswith("* "):
+            if not in_list: html.append("<ul>"); in_list = True
+            html.append(f"<li>{t[2:]}</li>")
+        elif t.strip() == "":
+            if in_list: html.append("</ul>"); in_list = False
+        else:
+            if in_list: html.append("</ul>"); in_list = False
+            html.append(f"<p>{t}</p>")
+    if in_list: html.append("</ul>")
+    out = "\n".join(html)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", out)
+    out = re.sub(r"`(.+?)`", r"<code>\1</code>", out)
+    return out
+
 
 def generate_blog_html(guide, faq_schema):
     schema_str = json.dumps(faq_schema, indent=2)
@@ -154,6 +187,7 @@ def run_pipeline():
     # 3. Phase 2: Topical Authority Hub
     print("\n--- Phase 2: Generating Local Authority Hubs ---")
     auth_gen = AuthorityHubGenerator()
+    blog_records = []
     guides = [
         auth_gen.generate_rta_permit_guide(),
         auth_gen.generate_battery_maintenance_guide(),
@@ -168,6 +202,13 @@ def run_pipeline():
             f.write(blog_html)
         print(f"[OK] Generated Blog/Guide Page: {out_path}")
         generated_urls.append(f"https://emirates-scooters-dubai.vercel.app/blogs/{g['slug']}")
+        blog_records.append({
+            "slug": g["slug"],
+            "title": g["title"],
+            "description": g["description"],
+            "bodyHtml": markdown_to_body_html(g["content"]),
+            "faqs": g["faqs"],
+        })
 
     # 4. Part 2 - Section 1: Fast-Mode Website n8n Webhook Test Trigger
     print("\n--- Part 2 Section 1: Testing Fast-Mode n8n Webhook Automation ---")
@@ -177,6 +218,41 @@ def run_pipeline():
         "name": "Mankeel MX-14 Off-Road Electric Scooter"
     })
     print(f"[OK] n8n Webhook Trigger Result: Status {n8n_res['status']} ({len(n8n_res['actions_triggered'])} actions automated)")
+
+    # Next.js product database, generated from the source catalogue so the site
+    # can never serve a different set of models than data/mankeel_products.json.
+    # (This file used to be hand-maintained and had drifted to 2 of 5 models.)
+    nextjs_products = [{
+        "Model": p["model"],
+        "slug": p["id"],
+        "name": p["name"],
+        "Price AED": p["price_aed"],
+        "Stock": p["stock_status"],
+        "inStock": p["inStock"],
+        "Product Link": p["product_link"],
+        "specifications": {
+            "Top Speed": p["specs"]["max_speed"],
+            "Range": p["specs"]["max_range"],
+            "Motor": p["specs"]["motor_power"],
+            "Battery": p["specs"]["battery"],
+            "Tire": p["specs"]["tire"],
+            "Charge time": p["specs"]["charge_time"],
+            "Weight": p["specs"]["weight"],
+            "Max Load": p["specs"]["max_load"],
+        },
+        "key_features": p["key_features"],
+    } for p in products]
+    nextjs_products_path = "src/nextjs/lib/data/products.json"
+    os.makedirs(os.path.dirname(nextjs_products_path), exist_ok=True)
+    with open(nextjs_products_path, "w", encoding="utf-8") as f:
+        json.dump(nextjs_products, f, indent=2, ensure_ascii=False)
+    print(f"[OK] Next.js product database saved: {nextjs_products_path} ({len(nextjs_products)} models)")
+
+    blogs_json_path = "src/nextjs/lib/data/blogs.json"
+    os.makedirs(os.path.dirname(blogs_json_path), exist_ok=True)
+    with open(blogs_json_path, "w", encoding="utf-8") as f:
+        json.dump(blog_records, f, indent=2, ensure_ascii=False)
+    print(f"[OK] Blog data for Next.js routes saved to: {blogs_json_path} ({len(blog_records)} guides)")
 
     # 5. Part 2 - Section 2: Google Business Profile (GBP Maps Engine)
     print("\n--- Part 2 Section 2: Generating Google Business Profile (GBP) Local Maps Manifest ---")
