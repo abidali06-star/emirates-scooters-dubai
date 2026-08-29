@@ -53,7 +53,7 @@ class SpecsProcessor:
             "@context": "https://schema.org/",
             "@type": "Product",
             "name": f"Mankeel {product.get('model', product.get('name'))}",
-            "image": f"https://emirates-scooters.ae/images/products/{product.get('id')}.jpg",
+            "image": f"https://emirates-scooters-dubai.vercel.app/images/products/{product.get('id')}.jpg",
             "description": f"Official Mankeel {product.get('model')} electric scooter in Dubai featuring a {specs.get('motor_power')} motor and top speed of {specs.get('max_speed')}. Range: {specs.get('max_range')}.",
             "sku": product.get("sku"),
             "mpn": product.get("sku"),
@@ -63,7 +63,7 @@ class SpecsProcessor:
             },
             "offers": {
                 "@type": "Offer",
-                "url": f"https://emirates-scooters.ae/products/{product.get('id')}",
+                "url": f"https://emirates-scooters-dubai.vercel.app/products/{product.get('id')}",
                 "priceCurrency": product.get("currency", "AED"),
                 "price": product.get("price_aed"),
                 "priceValidUntil": "2027-12-31",
@@ -71,7 +71,7 @@ class SpecsProcessor:
                 "availability": availability,
                 "seller": {
                     "@type": "Organization",
-                    "name": "Mankeel E-Scooters Dubai"
+                    "name": "Emirates E-Scooters"
                 }
             },
             "additionalProperty": [

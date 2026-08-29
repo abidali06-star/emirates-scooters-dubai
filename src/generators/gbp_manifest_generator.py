@@ -21,32 +21,25 @@ class GBPManifestGenerator:
             "@context": "https://schema.org",
             "@type": "Store",
             "name": b_name,
-            "image": "https://emirates-scooters.ae/images/storefront-jlt.jpg",
+            "image": "TO_CONFIRM: real photo of the Motor City storefront, hosted on the production domain",
             "telephone": nap["phone"],
-            "url": "https://emirates-scooters.ae",
+            "url": self.profile.get("website_url", "TO_CONFIRM"),
             "description": desc_en,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": f"{nap['unit']}, {nap['building_name']}, {nap['cluster_area']}",
+                "streetAddress": f"{nap['store_number']}, {nap['building_name']}, {nap['area']}",
                 "addressLocality": nap["city"],
                 "addressRegion": nap["emirate"],
-                "postalCode": nap["postal_code"],
-                "addressCountry": "AE"
+                "addressCountry": nap.get("country_code", "AE")
             },
             "geo": {
                 "@type": "GeoCoordinates",
                 "latitude": nap["geo_coordinates"]["latitude"],
                 "longitude": nap["geo_coordinates"]["longitude"]
             },
-            "openingHoursSpecification": [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                    "opens": "09:00",
-                    "closes": "21:00"
-                }
-            ],
-            "priceRange": "AED 1399 - AED 2299",
+            # openingHoursSpecification and priceRange omitted: never confirmed by
+            # the owner. Do not reinstate with guessed values.
+            "_omitted_pending_owner_confirmation": ["openingHoursSpecification", "priceRange"],
             "areaServed": self.profile["neighborhood_coverage"]
         }
         return schema
@@ -55,17 +48,17 @@ class GBPManifestGenerator:
         posts = [
             {
                 "topic": "RTA Compliance",
-                "title_en": "Mankeel Scooters are 100% RTA Dubai Compliant!",
-                "title_ar": "سكوترات مانكيل معتمدة 100% من هيئة الطرق والمواصلات بدبي!",
-                "body_en": "Cruising in JLT, Marina, or Business Bay? All Mankeel scooters come pre-configured with 25 km/h speed governors and dual braking systems required by Dubai RTA.",
-                "body_ar": "هل تتنقل في أبراج بحيرات جميرا، دبي مارينا، أو الخليج التجاري؟ جميع سكوترات مانكيل تأتي مجهزة بمحدد سرعة 25 كم/س ونظام فرامل مزدوج معتمد من هيئة الطرق والمواصلات."
+                "title_en": "Riding Your Mankeel Scooter Legally in Dubai",
+                "title_ar": "قيادة سكوتر مانكيل بشكل قانوني في دبي",
+                "body_en": "Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.",
+                "body_ar": "هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات."
             },
             {
                 "topic": "Summer Maintenance Protocol",
                 "title_en": "Protect Your Scooter Battery in UAE Summer Heat",
                 "title_ar": "احمِ بطارية السكوتر في حرارة الصيف بدبي",
-                "body_en": "Keep your battery in peak condition during 45°C+ summer heat. Visit our JLT store for free battery thermal diagnostic checks.",
-                "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في أبراج بحيرات جميرا لفحص بطاريتك مجاناً."
+                "body_en": "Keep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.",
+                "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً."
             }
         ]
         return {"gbp_posts": posts}

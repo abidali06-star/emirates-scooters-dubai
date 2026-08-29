@@ -2,65 +2,53 @@
   "local_business_schema": {
     "@context": "https://schema.org",
     "@type": "Store",
-    "name": "Mankeel E-Scooters Dubai",
-    "image": "https://emirates-scooters.ae/images/storefront-jlt.jpg",
-    "telephone": "+971 4 456 7890",
-    "url": "https://emirates-scooters.ae",
-    "description": "Official Mankeel Electric Scooter store in Dubai. We offer RTA-compliant 350W-600W electric scooters including the Mankeel MK083 P1, MX-14, and MX-14. Full 1-year warranty, summer battery maintenance, and fast local Dubai delivery to JLT, Marina, and Business Bay.",
+    "name": "Emirates E-Scooters",
+    "image": "TO_CONFIRM: real photo of the Motor City storefront, hosted on the production domain",
+    "telephone": "+971 56 667 2354",
+    "url": "https://emirates-scooters-dubai.vercel.app",
+    "description": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock RTA-compliant 350W-600W electric scooters including the Mankeel MK083 and MX-14. One-year warranty, summer battery maintenance, and local delivery across Motor City, Sports City, and JVC.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Store 14, Ground Floor, Silver Tower, Cluster I, Jumeirah Lakes Towers (JLT)",
+      "streetAddress": "Store 001, Waitrose, Motor City",
       "addressLocality": "Dubai",
       "addressRegion": "Dubai",
-      "postalCode": "00000",
       "addressCountry": "AE"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 25.07725,
-      "longitude": 55.15012
+      "latitude": 25.041390226596707,
+      "longitude": 55.22914791534377
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "09:00",
-        "closes": "21:00"
-      }
+    "_omitted_pending_owner_confirmation": [
+      "openingHoursSpecification",
+      "priceRange"
     ],
-    "priceRange": "AED 1399 - AED 2299",
     "areaServed": [
-      "Jumeirah Lakes Towers (JLT)",
-      "Dubai Marina",
-      "Business Bay",
-      "Downtown Dubai",
-      "City Walk",
-      "Dubai Water Canal Promenade",
-      "Al Rigga & Deira Mobility Hubs"
+      "Motor City",
+      "Dubai Sports City",
+      "Dubai Studio City",
+      "Jumeirah Village Circle (JVC)",
+      "Arabian Ranches",
+      "Damac Hills",
+      "Mudon",
+      "Al Barsha South"
     ]
   },
   "bilingual_posts": {
     "gbp_posts": [
       {
         "topic": "RTA Compliance",
-        "title_en": "Mankeel Scooters are 100% RTA Dubai Compliant!",
-        "title_ar": "سكوترات مانكيل معتمدة 100% من هيئة الطرق والمواصلات بدبي!",
-        "body_en": "Cruising in JLT, Marina, or Business Bay? All Mankeel scooters come pre-configured with 25 km/h speed governors and dual braking systems required by Dubai RTA.",
-        "body_ar": "هل تتنقل في أبراج بحيرات جميرا، دبي مارينا، أو الخليج التجاري؟ جميع سكوترات مانكيل تأتي مجهزة بمحدد سرعة 25 كم/س ونظام فرامل مزدوج معتمد من هيئة الطرق والمواصلات."
+        "title_en": "Riding Your Mankeel Scooter Legally in Dubai",
+        "title_ar": "قيادة سكوتر مانكيل بشكل قانوني في دبي",
+        "body_en": "Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.",
+        "body_ar": "هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات."
       },
       {
         "topic": "Summer Maintenance Protocol",
         "title_en": "Protect Your Scooter Battery in UAE Summer Heat",
         "title_ar": "احمِ بطارية السكوتر في حرارة الصيف بدبي",
-        "body_en": "Keep your battery in peak condition during 45°C+ summer heat. Visit our JLT store for free battery thermal diagnostic checks.",
-        "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في أبراج بحيرات جميرا لفحص بطاريتك مجاناً."
+        "body_en": "Keep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.",
+        "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً."
       }
     ]
   }

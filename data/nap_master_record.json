@@ -1,0 +1,58 @@
+{
+  "_note": "SOURCE OF TRUTH for Name, Address, Phone (NAP). Confirmed by owner Saam Khan on 2026-08-29. Every citation, schema block, GBP field and directory listing must match this record character-for-character.",
+  "business_name": {
+    "en": "Emirates E-Scooters",
+    "ar": "TO_CONFIRM - owner to approve Arabic trading name before use"
+  },
+  "brand_sold": "Mankeel (product brand; the retailer name is Emirates E-Scooters)",
+  "owner_contact": {
+    "name": "Saam Khan",
+    "role": "Owner / primary contact"
+  },
+  "address": {
+    "formatted_single_line": "Store 001, Waitrose, Motor City, Dubai, United Arab Emirates",
+    "store_number": "Store 001",
+    "building_or_landmark": "Waitrose, Motor City",
+    "area": "Motor City",
+    "city": "Dubai",
+    "emirate": "Dubai",
+    "country": "United Arab Emirates",
+    "country_code": "AE",
+    "geo_coordinates": {
+      "latitude": 25.041390226596707,
+      "longitude": 55.22914791534377
+    },
+    "open_questions": [
+      "Verify the pin lands on the shop entrance in Google Maps satellite view before submitting GBP."
+    ],
+    "premises_type": "standalone_unit",
+    "premises_note": "Store 001 is a STANDALONE unit, not a concession inside Waitrose. Waitrose is used as the locating landmark only. GBP is therefore eligible as a normal storefront listing with its own door and signage; it must NOT be filed as a department/'store within a store'."
+  },
+  "phone": {
+    "primary_e164": "+971566672354",
+    "primary_display": "+971 56 667 2354"
+  },
+  "service_areas": [
+    "Motor City",
+    "Dubai Sports City",
+    "Dubai Studio City",
+    "Jumeirah Village Circle (JVC)",
+    "Arabian Ranches",
+    "Damac Hills",
+    "Mudon",
+    "Al Barsha South"
+  ],
+  "_service_area_note": "Rewritten from the previous JLT/Marina/Business Bay set, which reflected the old incorrect JLT address. These are the districts adjacent to Motor City. Confirm they match actual delivery coverage.",
+  "website_url": "https://emirates-scooters-dubai.vercel.app",
+  "superseded_values": {
+    "_note": "Historic incorrect values. Kept only so future audits can detect stragglers.",
+    "business_name": "Mankeel E-Scooters Dubai",
+    "address": "Store 14, Ground Floor, Silver Tower, Cluster I, Jumeirah Lakes Towers (JLT), Dubai",
+    "phone": "+971 4 456 7890",
+    "coordinates": {
+      "latitude": 25.07725,
+      "longitude": 55.15012
+    }
+  },
+  "website_url_status": "CONFIRMED as the currently deployed Vercel URL (found in Antigravity session log 4ee5d596 and git commit b084d75; verified live 2026-08-29). This is a vercel.app subdomain, not a custom domain — decide before citations are submitted whether to buy emirates-scooters-dubai.vercel.app, because changing it later breaks every citation."
+}

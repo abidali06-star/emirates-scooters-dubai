@@ -1,4 +1,4 @@
-# Robots.txt for Mankeel E-Scooters Dubai (https://emirates-scooters.ae)
+# Robots.txt for Emirates E-Scooters (https://emirates-scooters-dubai.vercel.app)
 
 User-agent: *
 Allow: /
@@ -31,4 +31,4 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 # Sitemaps & LLM Direct Feeds
-Sitemap: https://emirates-scooters.ae/sitemap.xml
+Sitemap: https://emirates-scooters-dubai.vercel.app/sitemap.xml

@@ -72,9 +72,9 @@ class SearchConsoleAndSERPMonitor:
 if __name__ == "__main__":
     monitor = SearchConsoleAndSERPMonitor()
     urls = [
-        "https://emirates-scooters.ae/products/mankeel-mk083-p1",
-        "https://emirates-scooters.ae/products/mankeel-mx-14",
-        "https://emirates-scooters.ae/blogs/rta-e-scooter-permit-dubai"
+        "https://emirates-scooters-dubai.vercel.app/products/mankeel-mk083-p1",
+        "https://emirates-scooters-dubai.vercel.app/products/mankeel-mx-14",
+        "https://emirates-scooters-dubai.vercel.app/blogs/rta-e-scooter-permit-dubai"
     ]
     sub = monitor.submit_urls_for_indexing(urls)
     serp = monitor.monitor_dubai_serp()

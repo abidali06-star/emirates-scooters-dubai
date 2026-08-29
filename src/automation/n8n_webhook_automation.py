@@ -9,7 +9,7 @@ from typing import Dict, Any
 
 class N8NWebhookAutomation:
     def __init__(self):
-        self.webhook_url = "https://n8n.emirates-scooters.ae/webhook/mankeel-catalog-update"
+        self.webhook_url = "https://emirates-scooters-dubai.vercel.app/n8n/webhook/mankeel-catalog-update"
 
     def handle_product_update_payload(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         """Processes incoming n8n webhook payload for new/updated scooter models."""

@@ -5,14 +5,14 @@ You are an expert Next.js and SEO developer. Your task is to inject machine-read
 
 **Task 1: Global LocalBusiness Schema (app/layout.tsx)**
 1. Locate `app/layout.tsx`.
-2. Generate a JSON-LD `LocalBusiness` object for "Mankeel E-Scooters Dubai".
+2. Generate a JSON-LD `LocalBusiness` object for "Emirates E-Scooters".
 3. Include the following precise properties:
    - `@context`: "https://schema.org"
    - `@type`: "LocalBusiness"
-   - `name`: "Mankeel E-Scooters Dubai"
-   - `image`: "https://emirates-scooters.ae/images/storefront-jlt.jpg"
+   - `name`: "Emirates E-Scooters"
+   - `image`: "https://emirates-scooters-dubai.vercel.app/images/storefront-jlt.jpg"
    - `telephone`: "+97144567890"
-   - `address`: { "@type": "PostalAddress", "streetAddress": "Store 14, Silver Tower, Cluster I, JLT", "addressLocality": "Dubai", "addressCountry": "AE" }
+   - `address`: { "@type": "PostalAddress", "streetAddress": "Store 001, Waitrose, Motor City", "addressLocality": "Dubai", "addressCountry": "AE" }
    - `priceRange`: "AED 1399 - AED 2299"
 4. Inject this object into the layout wrapper using a standard `<script type="application/ld+json">` tag with `dangerouslySetInnerHTML`. Ensure `JSON.stringify()` is used to parse the object. Do not use the `next/script` component.
 
@@ -32,12 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Mankeel E-Scooters Dubai',
-    image: 'https://emirates-scooters.ae/images/storefront-jlt.jpg',
+    name: 'Emirates E-Scooters',
+    image: 'https://emirates-scooters-dubai.vercel.app/images/storefront-jlt.jpg',
     telephone: '+97144567890',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Store 14, Silver Tower, Cluster I, JLT',
+      streetAddress: 'Store 001, Waitrose, Motor City',
       addressLocality: 'Dubai',
       addressCountry: 'AE',
     },

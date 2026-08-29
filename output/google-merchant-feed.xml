@@ -1,15 +1,15 @@
 <?xml version="1.0" ?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
-    <title>Mankeel E-Scooters Dubai Official Feed</title>
-    <link>https://emirates-scooters.ae</link>
+    <title>Emirates E-Scooters Official Feed</title>
+    <link>https://emirates-scooters-dubai.vercel.app</link>
     <description>Official product feed for Mankeel electric scooters in Dubai, UAE.</description>
     <item>
       <g:id>MNK-MX14-DXB</g:id>
       <g:title>Mankeel MX-14 Electric Scooter (800W, 45 KMH)</g:title>
       <g:description>Buy Mankeel MX-14 in Dubai. Motor: 800W, Speed: 45 KMH, Range: 56 KM, Battery: 48V 13Ah. Free Dubai delivery.</g:description>
-      <g:link>https://emirates-scooters.ae/products/mx-14</g:link>
-      <g:image_link>https://emirates-scooters.ae/images/products/mx-14.jpg</g:image_link>
+      <g:link>https://emirates-scooters-dubai.vercel.app/products/mx-14</g:link>
+      <g:image_link>https://emirates-scooters-dubai.vercel.app/images/products/mx-14.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>1499.00 AED</g:price>
@@ -26,8 +26,8 @@
       <g:id>MNK-MK083-DXB</g:id>
       <g:title>Mankeel MK083 Electric Scooter (350W, 30 KMH)</g:title>
       <g:description>Buy Mankeel MK083 in Dubai. Motor: 350W, Speed: 30 KMH, Range: 35 KM, Battery: 36V 7.8Ah. Free Dubai delivery.</g:description>
-      <g:link>https://emirates-scooters.ae/products/mk083</g:link>
-      <g:image_link>https://emirates-scooters.ae/images/products/mk083.jpg</g:image_link>
+      <g:link>https://emirates-scooters-dubai.vercel.app/products/mk083</g:link>
+      <g:image_link>https://emirates-scooters-dubai.vercel.app/images/products/mk083.jpg</g:image_link>
       <g:condition>new</g:condition>
       <g:availability>in_stock</g:availability>
       <g:price>699.00 AED</g:price>

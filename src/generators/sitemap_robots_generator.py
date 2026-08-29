@@ -14,7 +14,7 @@ class SitemapRobotsGenerator:
             self.products = json.load(f)
 
     def generate_robots_txt(self) -> str:
-        robots = """# Robots.txt for Mankeel E-Scooters Dubai (https://emirates-scooters.ae)
+        robots = """# Robots.txt for Emirates E-Scooters (https://emirates-scooters-dubai.vercel.app)
 
 User-agent: *
 Allow: /
@@ -47,7 +47,7 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 # Sitemaps & LLM Direct Feeds
-Sitemap: https://emirates-scooters.ae/sitemap.xml
+Sitemap: https://emirates-scooters-dubai.vercel.app/sitemap.xml
 """
         return robots
 
@@ -55,16 +55,16 @@ Sitemap: https://emirates-scooters.ae/sitemap.xml
         current_date = time.strftime("%Y-%m-%d")
         
         urls = [
-            {"loc": "https://emirates-scooters.ae", "priority": "1.0", "changefreq": "daily"},
-            {"loc": "https://emirates-scooters.ae/llms.txt", "priority": "0.9", "changefreq": "weekly"},
-            {"loc": "https://emirates-scooters.ae/blogs/rta-e-scooter-permit-dubai", "priority": "0.8", "changefreq": "monthly"},
-            {"loc": "https://emirates-scooters.ae/blogs/battery-maintenance-uae-summer", "priority": "0.8", "changefreq": "monthly"},
-            {"loc": "https://emirates-scooters.ae/blogs/best-e-scooter-tracks-dubai", "priority": "0.8", "changefreq": "monthly"},
+            {"loc": "https://emirates-scooters-dubai.vercel.app", "priority": "1.0", "changefreq": "daily"},
+            {"loc": "https://emirates-scooters-dubai.vercel.app/llms.txt", "priority": "0.9", "changefreq": "weekly"},
+            {"loc": "https://emirates-scooters-dubai.vercel.app/blogs/rta-e-scooter-permit-dubai", "priority": "0.8", "changefreq": "monthly"},
+            {"loc": "https://emirates-scooters-dubai.vercel.app/blogs/battery-maintenance-uae-summer", "priority": "0.8", "changefreq": "monthly"},
+            {"loc": "https://emirates-scooters-dubai.vercel.app/blogs/best-e-scooter-tracks-dubai", "priority": "0.8", "changefreq": "monthly"},
         ]
         
         for p in self.products:
             urls.append({
-                "loc": f"https://emirates-scooters.ae/products/{p['id']}",
+                "loc": f"https://emirates-scooters-dubai.vercel.app/products/{p['id']}",
                 "priority": "0.9",
                 "changefreq": "daily"
             })

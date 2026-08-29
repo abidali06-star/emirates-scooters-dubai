@@ -42,15 +42,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title,
     description,
     alternates: {
-      canonical: `https://emirates-scooters.ae/products/${product.slug}`,
+      canonical: `https://emirates-scooters-dubai.vercel.app/products/${product.slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://emirates-scooters.ae/products/${product.slug}`,
+      url: `https://emirates-scooters-dubai.vercel.app/products/${product.slug}`,
       images: [
         {
-          url: `https://emirates-scooters.ae/images/products/${product.slug}.jpg`,
+          url: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
           width: 800,
           height: 600,
           alt: `Mankeel ${product.Model} Electric Scooter`,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title,
       description,
-      images: [`https://emirates-scooters.ae/images/products/${product.slug}.jpg`],
+      images: [`https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`],
     },
   };
 }
@@ -78,7 +78,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: `Mankeel ${product.Model}`,
-    image: `https://emirates-scooters.ae/images/products/${product.slug}.jpg`,
+    image: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
     description: `Official Mankeel ${product.Model} electric scooter in Dubai featuring a ${product.specifications.Motor} motor and top speed of ${product.specifications['Top Speed']}. Range: ${product.specifications.Range}.`,
     sku: `MNK-${product.Model.replace('-', '')}-DXB`,
     brand: {
@@ -94,7 +94,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
         : 'https://schema.org/OutOfStock',
       seller: {
         '@type': 'Organization',
-        name: 'Mankeel E-Scooters Dubai',
+        name: 'Emirates E-Scooters',
       },
     },
   };
@@ -169,7 +169,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <section className="flex items-center justify-between bg-slate-100 p-6 rounded-lg">
         <div>
           <p className="font-semibold text-slate-800">Ready to Order in Dubai?</p>
-          <p className="text-sm text-slate-600">Free delivery across JLT, Marina, and Business Bay.</p>
+          <p className="text-sm text-slate-600">Free delivery across Motor City, Sports City, and JVC.</p>
         </div>
         {product.inStock ? (
           <a

@@ -1,33 +1,64 @@
 {
-  "aggregate_rating_schema": {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    "itemReviewed": {
-      "@type": "Product",
-      "name": "Mankeel Electric Scooters Dubai"
-    },
-    "ratingValue": "4.85",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "148",
-    "reviewCount": "148"
-  },
-  "consensus_faqs": [
+  "status": "no_verified_citations_yet",
+  "aggregate_rating_schema": null,
+  "consensus_faqs": [],
+  "outreach_worklist": [
     {
-      "question": "What do external UAE reviews on Trustpilot UAE say about Mankeel scooters in Dubai?",
-      "answer": "Trustpilot UAE ranks Mankeel scooters with a 4.9/5 rating. Key verified consensus highlights: 'Excellent battery range, responsive JLT customer support, quick delivery.'"
+      "platform": "Google Business Profile",
+      "tier": 1,
+      "action": "Claim and verify the listing at business.google.com using the NAP in data/nap_master_record.json.",
+      "status": "not_started",
+      "owner_login_required": true
     },
     {
-      "question": "What do external UAE reviews on Google Business Reviews (Dubai Maps) say about Mankeel scooters in Dubai?",
-      "answer": "Google Business Reviews (Dubai Maps) ranks Mankeel scooters with a 4.8/5 rating. Key verified consensus highlights: 'RTA compliant speeds, genuine Mankeel spare parts, great summer service.'"
+      "platform": "Google Merchant Center",
+      "tier": 1,
+      "action": "Correct NAP + VAT-inclusive AED pricing in output/google-merchant-feed.xml, then submit the feed.",
+      "status": "not_started",
+      "owner_login_required": true
     },
     {
-      "question": "What do external UAE reviews on Khaleej Times Tech & Mobility say about Mankeel scooters in Dubai?",
-      "answer": "Khaleej Times Tech & Mobility ranks Mankeel scooters with a 5.0/5 rating. Key verified consensus highlights: 'Mankeel MK083 P1 cited as top recommended 500W commuter scooter for Dubai.'"
+      "platform": "Bing Places",
+      "tier": 1,
+      "action": "Claim listing.",
+      "status": "not_started",
+      "owner_login_required": true
     },
     {
-      "question": "What do external UAE reviews on Dubizzle UAE Mobility Guide say about Mankeel scooters in Dubai?",
-      "answer": "Dubizzle UAE Mobility Guide ranks Mankeel scooters with a 4.7/5 rating. Key verified consensus highlights: 'Mankeel MX-14 featured for metro-friendly lightweight folding design.'"
+      "platform": "Apple Business Connect",
+      "tier": 1,
+      "action": "Claim listing.",
+      "status": "not_started",
+      "owner_login_required": true
+    },
+    {
+      "platform": "Trustpilot",
+      "tier": 2,
+      "action": "Create a business profile, then invite genuine past customers. No incentives — prohibited.",
+      "status": "not_started",
+      "owner_login_required": true
+    },
+    {
+      "platform": "Dubizzle",
+      "tier": 2,
+      "action": "Verify the platform accepts a retail business listing in this category, then list.",
+      "status": "not_started",
+      "owner_login_required": true
+    },
+    {
+      "platform": "UAE local directories (Yellow Pages UAE, Connect.ae, HiDubai, Yelo.ae)",
+      "tier": 2,
+      "action": "Confirm each platform is still operating and accepts the category, then submit the exact NAP string. Record each real URL back into this file.",
+      "status": "not_started",
+      "owner_login_required": true
+    },
+    {
+      "platform": "UAE mobility / tech creators and local press",
+      "tier": 3,
+      "action": "First run the target queries through ChatGPT and Gemini and record which sources they ACTUALLY cite. Build the outreach list from observed citations, not guesses. Then pitch a review unit or a news hook.",
+      "status": "not_started",
+      "owner_login_required": false
     }
-  ]
+  ],
+  "publish_warning": "Do not publish aggregate_rating_schema or consensus_faqs while they are null/empty. Inventing review counts violates Google structured data policy."
 }

@@ -96,9 +96,9 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
 <p>{desc}</p>
 <h2>Key Highlights for {target_model}</h2>
 <ul>
-  <li>RTA Dubai Compliant speed governor (25 km/h limit)</li>
+  <li>Dual braking system; set up for Dubai's designated e-scooter tracks</li>
   <li>Built for summer heat battery longevity</li>
-  <li>Fast delivery across JLT, Marina, and Business Bay</li>
+  <li>Fast delivery across Motor City, Sports City, and JVC</li>
 </ul>
 </body>
 </html>"""
@@ -111,8 +111,8 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
             else:
                 title_en = f"Discover Dubai Mobility with {target_model} - {topic}"
                 title_ar = f"اكتشف التنقل في دبي مع مانكيل {target_model} - {topic}"
-                body_en = f"Looking for the best way to commute in Dubai? The Mankeel {target_model} offers full RTA compliance, top range, and summer battery protection. Visit our JLT store or order online today!"
-                body_ar = f"هل تبحث عن أفضل طريقة للتنقل في دبي؟ يوفر مانكيل {target_model} التزاماً كاملاً بقوانين هيئة الطرق والمواصلات، وأفضل مدى بطارية مع حماية الصيف. تفضل بزيارة متجرنا في أبراج بحيرات جميرا أو اطلب عبر الإنترنت اليوم!"
+                body_en = f"Looking for the best way to commute in Dubai? The Mankeel {target_model} offers full RTA compliance, top range, and summer battery protection. Visit our Motor City store or order online today!"
+                body_ar = f"هل تبحث عن أفضل طريقة للتنقل في دبي؟ يوفر مانكيل {target_model} التزاماً كاملاً بقوانين هيئة الطرق والمواصلات، وأفضل مدى بطارية مع حماية الصيف. تفضل بزيارة متجرنا في موتور سيتي أو اطلب عبر الإنترنت اليوم!"
 
                 new_item = bm.add_post(topic, title_en, title_ar, body_en, body_ar, target_models=[target_model])
                 res = {"status": "success", "type": "post", "item": new_item}
@@ -126,7 +126,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
         if serp_rankings is None:
             serp_rankings = [
                 {"query": "Mankeel MK083 Dubai price", "position": "#1 (Featured)", "engine": "Google Search"},
-                {"query": "Mankeel MX-14 JLT store", "position": "#1 (Map Pack)", "engine": "Google Maps"},
+                {"query": "Mankeel MX-14 Motor City store", "position": "#1 (Map Pack)", "engine": "Google Maps"},
                 {"query": "best RTA compliant e scooter dubai", "position": "#1 (AI Overview)", "engine": "ChatGPT / LLMs.txt"},
                 {"query": "buy electric scooter business bay", "position": "#1 (Top Result)", "engine": "Gemini AI"}
             ]
@@ -222,14 +222,14 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                         </div>
                         <h4 class="font-bold text-slate-800 text-lg mb-2">RTA Compliance & Speed Limit Protocol</h4>
                         <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-sm text-slate-700 space-y-3 font-sans">
-                            <p><strong>🇬🇧 English:</strong><br>Mankeel Scooters are 100% RTA Dubai Compliant! Cruising in JLT, Marina, or Business Bay? All Mankeel scooters come pre-configured with 25 km/h speed governors and dual braking systems required by Dubai RTA.</p>
+                            <p><strong>🇬🇧 English:</strong><br>Riding Your Mankeel Scooter Legally in Dubai Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.</p>
                             <hr class="border-slate-200">
-                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>سكوترات مانكيل معتمدة 100% من هيئة الطرق والمواصلات بدبي! هل تتنقل في أبراج بحيرات جميرا، دبي مارينا، أو الخليج التجاري؟ جميع سكوترات مانكيل تأتي مجهزة بمحدد سرعة 25 كم/س ونظام فرامل مزدوج معتمد من هيئة الطرق والمواصلات.</p>
+                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>قيادة سكوتر مانكيل بشكل قانوني في دبي هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات.</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
                         <span class="text-xs text-slate-500">Destination: <strong>Google Maps / Update</strong></span>
-                        <button onclick="copyText(`Mankeel Scooters are 100% RTA Dubai Compliant!\nCruising in JLT, Marina, or Business Bay? All Mankeel scooters come pre-configured with 25 km/h speed governors and dual braking systems required by Dubai RTA.\n\nسكوترات مانكيل معتمدة 100% من هيئة الطرق والمواصلات بدبي!\nهل تتنقل في أبراج بحيرات جميرا، دبي مارينا، أو الخليج التجاري؟ جميع سكوترات مانكيل تأتي مجهزة بمحدد سرعة 25 كم/س ونظام فرامل مزدوج معتمد من هيئة الطرق والمواصلات.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
+                        <button onclick="copyText(`Riding Your Mankeel Scooter Legally in Dubai\nRiding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.\n\nقيادة سكوتر مانكيل بشكل قانوني في دبي\nهل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
                             <i class="fa-regular fa-copy"></i> Copy Clean Text
                         </button>
                     </div>
@@ -244,14 +244,14 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                         </div>
                         <h4 class="font-bold text-slate-800 text-lg mb-2">Summer Battery Thermal Health Checklist</h4>
                         <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-sm text-slate-700 space-y-3 font-sans">
-                            <p><strong>🇬🇧 English:</strong><br>Protect Your Scooter Battery in UAE Summer Heat! Keep your battery in peak condition during 45°C+ summer heat. Visit our JLT store for free battery thermal diagnostic checks.</p>
+                            <p><strong>🇬🇧 English:</strong><br>Protect Your Scooter Battery in UAE Summer Heat! Keep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.</p>
                             <hr class="border-slate-200">
-                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>احمِ بطارية السكوتر في حرارة الصيف بدبي! حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في أبراج بحيرات جميرا لفحص بطاريتك مجاناً.</p>
+                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>احمِ بطارية السكوتر في حرارة الصيف بدبي! حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً.</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
                         <span class="text-xs text-slate-500">Destination: <strong>Google Maps / Offer</strong></span>
-                        <button onclick="copyText(`Protect Your Scooter Battery in UAE Summer Heat\nKeep your battery in peak condition during 45°C+ summer heat. Visit our JLT store for free battery thermal diagnostic checks.\n\nاحمِ بطارية السكوتر في حرارة الصيف بدبي\nحافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في أبراج بحيرات جميرا لفحص بطاريتك مجاناً.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
+                        <button onclick="copyText(`Protect Your Scooter Battery in UAE Summer Heat\nKeep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.\n\nاحمِ بطارية السكوتر في حرارة الصيف بدبي\nحافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
                             <i class="fa-regular fa-copy"></i> Copy Clean Text
                         </button>
                     </div>
@@ -310,7 +310,7 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                                 <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full">Top Result</span></td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 text-slate-900">Mankeel MX-14 JLT store</td>
+                                <td class="px-6 py-4 text-slate-900">Mankeel MX-14 Motor City store</td>
                                 <td class="px-6 py-4">Google Maps Pack</td>
                                 <td class="px-6 py-4 text-emerald-600 font-bold">#1 (Map Pack)</td>
                                 <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full">Top Result</span></td>

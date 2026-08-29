@@ -31,3 +31,10 @@ ENV/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Test artifacts
+data/test_backlog.json
+
+# Local pre-fix backups (contain superseded/fabricated data - never ship)
+data.bak_*/
+src.bak_*/

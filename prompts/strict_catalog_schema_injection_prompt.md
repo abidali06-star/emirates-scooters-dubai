@@ -1,7 +1,7 @@
 # Antigravity Prompt: Strict Catalog Initialization & Schema Injection
 
 **Role & Objective:**
-You are an expert Next.js and SEO developer. Your task is to initialize the Mankeel E-Scooters Dubai catalog in our Next.js App Router repository. You must restrict the entire website, routing, and schema injection strictly to the 5 models provided below. There are NO other products launched or available in the Dubai market.
+You are an expert Next.js and SEO developer. Your task is to initialize the Emirates E-Scooters catalog in our Next.js App Router repository. You must restrict the entire website, routing, and schema injection strictly to the 5 models provided below. There are NO other products launched or available in the Dubai market.
 
 **Task 1: Create the Product Database (JSON)**
 Create a local data file (`lib/data/products.json`) containing exactly the following 5 products. Map the "Stock" value to boolean `inStock` (Yes = true, No = false). Map the specs to a nested `specifications` object.

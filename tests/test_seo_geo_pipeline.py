@@ -78,7 +78,23 @@ class TestGEOSEOPipeline(unittest.TestCase):
             data = json.load(f)
             self.assertIn("aggregate_rating_schema", data)
             self.assertIn("consensus_faqs", data)
-            self.assertEqual(data["aggregate_rating_schema"]["@type"], "AggregateRating")
+
+            # The manifest must NEVER carry rating schema that isn't backed by
+            # verified, observed review data. When no citations are verified yet,
+            # aggregate_rating_schema is null and consensus_faqs is empty --
+            # that is the correct, policy-compliant state, not a failure.
+            rating = data["aggregate_rating_schema"]
+            if rating is None:
+                self.assertEqual(data["status"], "no_verified_citations_yet")
+                self.assertEqual(data["consensus_faqs"], [])
+            else:
+                self.assertEqual(rating["@type"], "AggregateRating")
+                # Any published rating must cite where each number came from.
+                self.assertIn("_provenance", rating)
+                self.assertTrue(rating["_provenance"], "Rating published with no provenance")
+                counted = sum(int(p["observed_review_count"]) for p in rating["_provenance"])
+                self.assertEqual(int(rating["ratingCount"]), counted,
+                                 "ratingCount must equal the sum of observed review counts")
 
     def test_07_nextjs_server_components_valid(self):
         layout_path = "src/nextjs/app/layout.tsx"

@@ -1,41 +1,109 @@
 {
-  "trusted_citation_platforms": [
+  "_note": "Citation PROSPECTS. Nothing here is an existing endorsement. An entry may only move to status 'verified_live' after a human opens the URL, confirms the listing/mention exists, and records the actually observed rating and review count. Never hand-write observed_rating or observed_review_count.",
+  "_replaced": "The previous version of this file asserted live profiles on Trustpilot, Google Maps, Khaleej Times and Dubizzle with invented ratings and sentiment quotes. None were verified to exist. Removed 2026-08-29.",
+  "business": "Emirates E-Scooters",
+  "citation_prospects": [
     {
-      "platform": "Trustpilot UAE",
-      "category": "Customer Review Sentiment",
-      "target_url": "https://www.trustpilot.com/review/emirates-scooters.ae",
-      "trust_score": 4.9,
-      "ai_engine_citation_weight": "High",
-      "key_sentiment": "Excellent battery range, responsive JLT customer support, quick delivery."
+      "platform": "Google Business Profile",
+      "tier": 1,
+      "category": "Local Maps consensus — highest weight for both Maps ranking and AI recommendation",
+      "status": "not_started",
+      "next_action": "Claim and verify the listing at business.google.com using the NAP in data/nap_master_record.json.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
     },
     {
-      "platform": "Google Business Reviews (Dubai Maps)",
-      "category": "Local Maps Consensus",
-      "target_url": "https://maps.google.com/?cid=mankeel-dubai",
-      "trust_score": 4.8,
-      "ai_engine_citation_weight": "Critical",
-      "key_sentiment": "RTA compliant speeds, genuine Mankeel spare parts, great summer service."
+      "platform": "Google Merchant Center",
+      "tier": 1,
+      "category": "Product-level shopping surface",
+      "status": "not_started",
+      "next_action": "Correct NAP + VAT-inclusive AED pricing in output/google-merchant-feed.xml, then submit the feed.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
     },
     {
-      "platform": "Khaleej Times Tech & Mobility",
-      "category": "Mainstream UAE News Citation",
-      "target_url": "https://www.khaleejtimes.com/tech/dubai-e-scooter-guide-2026",
-      "trust_score": 5.0,
-      "ai_engine_citation_weight": "High",
-      "key_sentiment": "Mankeel MK083 P1 cited as top recommended 500W commuter scooter for Dubai."
+      "platform": "Bing Places",
+      "tier": 1,
+      "category": "Feeds Copilot and Bing local results",
+      "status": "not_started",
+      "next_action": "Claim listing.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
     },
     {
-      "platform": "Dubizzle UAE Mobility Guide",
-      "category": "Local Classifieds & Buying Guide",
-      "target_url": "https://www.dubizzle.com/guides/e-scooter-dubai-rules",
-      "trust_score": 4.7,
-      "ai_engine_citation_weight": "Medium-High",
-      "key_sentiment": "Mankeel MX-14 featured for metro-friendly lightweight folding design."
+      "platform": "Apple Business Connect",
+      "tier": 1,
+      "category": "Apple Maps / Siri",
+      "status": "not_started",
+      "next_action": "Claim listing.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
+    },
+    {
+      "platform": "Trustpilot",
+      "tier": 2,
+      "category": "Customer review sentiment",
+      "status": "not_started",
+      "next_action": "Create a business profile, then invite genuine past customers. No incentives — prohibited.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
+    },
+    {
+      "platform": "Dubizzle",
+      "tier": 2,
+      "category": "UAE classifieds and buying guides",
+      "status": "not_started",
+      "next_action": "Verify the platform accepts a retail business listing in this category, then list.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
+    },
+    {
+      "platform": "UAE local directories (Yellow Pages UAE, Connect.ae, HiDubai, Yelo.ae)",
+      "tier": 2,
+      "category": "NAP consistency citations",
+      "status": "not_started",
+      "next_action": "Confirm each platform is still operating and accepts the category, then submit the exact NAP string. Record each real URL back into this file.",
+      "owner_login_required": true,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
+    },
+    {
+      "platform": "UAE mobility / tech creators and local press",
+      "tier": 3,
+      "category": "Editorial mentions — the actual AI citation fuel",
+      "status": "not_started",
+      "next_action": "First run the target queries through ChatGPT and Gemini and record which sources they ACTUALLY cite. Build the outreach list from observed citations, not guesses. Then pitch a review unit or a news hook.",
+      "owner_login_required": false,
+      "profile_url": null,
+      "observed_rating": null,
+      "observed_review_count": null,
+      "last_verified_date": null
     }
   ],
   "review_syndication_webhook": {
+    "status": "disabled_until_real_reviews_exist",
     "frequency": "Daily",
     "target_schema": "FAQPage & AggregateRating",
-    "endpoint": "https://api.emirates-scooters.ae/webhooks/n8n/review-sync"
+    "endpoint": "TO_CONFIRM — https://emirates-scooters-dubai.vercel.app/api/webhooks/n8n/review-sync was assumed, not built"
   }
 }

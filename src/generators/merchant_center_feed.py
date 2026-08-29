@@ -23,10 +23,10 @@ class MerchantCenterFeedGenerator:
         channel = ET.SubElement(rss, "channel")
         
         title = ET.SubElement(channel, "title")
-        title.text = "Mankeel E-Scooters Dubai Official Feed"
+        title.text = "Emirates E-Scooters Official Feed"
         
         link = ET.SubElement(channel, "link")
-        link.text = "https://emirates-scooters.ae"
+        link.text = "https://emirates-scooters-dubai.vercel.app"
         
         description = ET.SubElement(channel, "description")
         description.text = "Official product feed for Mankeel electric scooters in Dubai, UAE."
@@ -44,10 +44,10 @@ class MerchantCenterFeedGenerator:
             g_desc.text = f"Buy Mankeel {p['model']} in Dubai. Motor: {p['specs']['motor_power']}, Speed: {p['specs']['max_speed']}, Range: {p['specs']['max_range']}, Battery: {p['specs']['battery']}. Free Dubai delivery."
             
             g_link = ET.SubElement(item, "g:link")
-            g_link.text = f"https://emirates-scooters.ae/products/{p['id']}"
+            g_link.text = f"https://emirates-scooters-dubai.vercel.app/products/{p['id']}"
             
             g_image = ET.SubElement(item, "g:image_link")
-            g_image.text = f"https://emirates-scooters.ae/images/products/{p['id']}.jpg"
+            g_image.text = f"https://emirates-scooters-dubai.vercel.app/images/products/{p['id']}.jpg"
             
             g_condition = ET.SubElement(item, "g:condition")
             g_condition.text = "new"

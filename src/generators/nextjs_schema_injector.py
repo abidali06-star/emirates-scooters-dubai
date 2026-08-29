@@ -2,7 +2,7 @@
 Module: nextjs_schema_injector.py
 Implements Next.js App Router Server Component JSON-LD Schema Generator & Template Output.
 Includes dynamic generateMetadata for OpenGraph, Twitter Cards, and SEO/GEO indexing.
-Strictly restricted to the 5 official Mankeel models: MX-14, MX-14, MX25, MK083, MK085.
+Covers the Mankeel models present in data/mankeel_products.json (currently MK083, MX-14).
 """
 
 import os
@@ -23,47 +23,44 @@ import React from 'react';
 import type {{ Metadata }} from 'next';
 
 export const metadata: Metadata = {{
-  metadataBase: new URL('https://emirates-scooters.ae'),
+  metadataBase: new URL('https://emirates-scooters-dubai.vercel.app'),
   title: {{
-    default: 'Mankeel E-Scooters Dubai | Official Store & RTA Authorized Dealer',
-    template: '%s | Mankeel E-Scooters Dubai',
+    default: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
+    template: '%s | Emirates E-Scooters',
   }},
-  description: 'Official Dubai store for Mankeel MX-14, MX-14, MX25, MK083, and MK085 electric scooters. RTA compliant, summer battery warranty, local delivery in JLT, Marina, Business Bay.',
+  description: 'Official Dubai store for Mankeel MK083 and MX-14 electric scooters. RTA compliant, summer battery warranty, local delivery in Motor City, Sports City, and JVC.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
     'RTA compliant e-scooter',
-    'Mankeel MX-14',
-    'Mankeel MX-14',
-    'Mankeel MX25',
     'Mankeel MK083',
-    'Mankeel MK085',
+    'Mankeel MX-14',
     'e-scooter Dubai price',
-    'electric scooter JLT Marina',
+    'electric scooter Motor City Dubai',
   ],
-  authors: [{{ name: 'Emirates Scooters Dubai' }}],
-  creator: 'Mankeel E-Scooters Dubai',
+  authors: [{{ name: 'Emirates E-Scooters' }}],
+  creator: 'Emirates E-Scooters',
   openGraph: {{
     type: 'website',
     locale: 'en_AE',
-    url: 'https://emirates-scooters.ae',
-    siteName: 'Mankeel E-Scooters Dubai',
-    title: 'Mankeel E-Scooters Dubai | Official Store & RTA Authorized Dealer',
+    url: 'https://emirates-scooters-dubai.vercel.app',
+    siteName: 'Emirates E-Scooters',
+    title: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
     description: 'Buy official RTA-compliant Mankeel electric scooters in Dubai. In-stock models starting from 699 AED with free Dubai delivery.',
     images: [
       {{
-        url: 'https://emirates-scooters.ae/images/og-mankeel-dubai.jpg',
+        url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mankeel Electric Scooters Dubai Showroom',
+        alt: 'Emirates E-Scooters showroom, Motor City Dubai',
       }},
     ],
   }},
   twitter: {{
     card: 'summary_large_image',
-    title: 'Mankeel E-Scooters Dubai | Official Store',
-    description: 'Official Mankeel electric scooters in Dubai. RTA-compliant 25 km/h models.',
-    images: ['https://emirates-scooters.ae/images/og-mankeel-dubai.jpg'],
+    title: 'Emirates E-Scooters | Official Store',
+    description: 'Official Mankeel electric scooters in Dubai. RTA-compliant models.',
+    images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
   }},
   robots: {{
     index: true,
@@ -83,15 +80,14 @@ export default function RootLayout({{ children }}: {{ children: React.ReactNode 
     '@context': 'https://schema.org',
     '@type': 'Store',
     name: '{b_name}',
-    image: 'https://emirates-scooters.ae/images/storefront-jlt.jpg',
+    image: 'https://emirates-scooters-dubai.vercel.app/images/storefront-motor-city.jpg',
     telephone: '{nap["phone"]}',
-    url: 'https://emirates-scooters.ae',
+    url: 'https://emirates-scooters-dubai.vercel.app',
     address: {{
       '@type': 'PostalAddress',
-      streetAddress: '{nap["unit"]}, {nap["building_name"]}, {nap["cluster_area"]}',
+      streetAddress: '{nap["store_number"]}, {nap["building_name"]}, {nap["area"]}',
       addressLocality: '{nap["city"]}',
       addressRegion: '{nap["emirate"]}',
-      postalCode: '{nap["postal_code"]}',
       addressCountry: 'AE',
     }},
     geo: {{
@@ -99,15 +95,11 @@ export default function RootLayout({{ children }}: {{ children: React.ReactNode 
       latitude: {nap["geo_coordinates"]["latitude"]},
       longitude: {nap["geo_coordinates"]["longitude"]},
     }},
-    priceRange: 'AED 699 - AED 2299',
-    openingHoursSpecification: [
-      {{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '09:00',
-        closes: '21:00',
-      }},
-    ],
+    // NOTE: priceRange and openingHoursSpecification are deliberately omitted.
+    // The previous values (AED 699-2299, 09:00-21:00) were placeholders that had
+    // never been confirmed by the owner. An absent field is harmless; a wrong one
+    // becomes a permanent citation that Google and AI engines will repeat.
+    // Add them back only once the real trading hours and price range are known.
   }};
 
   return (
@@ -172,15 +164,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title,
     description,
     alternates: {
-      canonical: `https://emirates-scooters.ae/products/${product.slug}`,
+      canonical: `https://emirates-scooters-dubai.vercel.app/products/${product.slug}`,
     },
     openGraph: {
       title,
       description,
-      url: `https://emirates-scooters.ae/products/${product.slug}`,
+      url: `https://emirates-scooters-dubai.vercel.app/products/${product.slug}`,
       images: [
         {
-          url: `https://emirates-scooters.ae/images/products/${product.slug}.jpg`,
+          url: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
           width: 800,
           height: 600,
           alt: `Mankeel ${product.Model} Electric Scooter`,
@@ -191,7 +183,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title,
       description,
-      images: [`https://emirates-scooters.ae/images/products/${product.slug}.jpg`],
+      images: [`https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`],
     },
   };
 }
@@ -208,7 +200,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: `Mankeel ${product.Model}`,
-    image: `https://emirates-scooters.ae/images/products/${product.slug}.jpg`,
+    image: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
     description: `Official Mankeel ${product.Model} electric scooter in Dubai featuring a ${product.specifications.Motor} motor and top speed of ${product.specifications['Top Speed']}. Range: ${product.specifications.Range}.`,
     sku: `MNK-${product.Model.replace('-', '')}-DXB`,
     brand: {
@@ -224,7 +216,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
         : 'https://schema.org/OutOfStock',
       seller: {
         '@type': 'Organization',
-        name: 'Mankeel E-Scooters Dubai',
+        name: 'Emirates E-Scooters',
       },
     },
   };
@@ -299,7 +291,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <section className="flex items-center justify-between bg-slate-100 p-6 rounded-lg">
         <div>
           <p className="font-semibold text-slate-800">Ready to Order in Dubai?</p>
-          <p className="text-sm text-slate-600">Free delivery across JLT, Marina, and Business Bay.</p>
+          <p className="text-sm text-slate-600">Free delivery across Motor City, Sports City, and JVC.</p>
         </div>
         {product.inStock ? (
           <a

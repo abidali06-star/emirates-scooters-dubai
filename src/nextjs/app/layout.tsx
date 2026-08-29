@@ -3,47 +3,44 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emirates-scooters.ae'),
+  metadataBase: new URL('https://emirates-scooters-dubai.vercel.app'),
   title: {
-    default: 'Mankeel E-Scooters Dubai | Official Store & RTA Authorized Dealer',
-    template: '%s | Mankeel E-Scooters Dubai',
+    default: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
+    template: '%s | Emirates E-Scooters',
   },
-  description: 'Official Dubai store for Mankeel MX-14, MX-14, MX25, MK083, and MK085 electric scooters. RTA compliant, summer battery warranty, local delivery in JLT, Marina, Business Bay.',
+  description: 'Official Dubai store for Mankeel MK083 and MX-14 electric scooters. RTA compliant, summer battery warranty, local delivery in Motor City, Sports City, and JVC.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
     'RTA compliant e-scooter',
-    'Mankeel MX-14',
-    'Mankeel MX-14',
-    'Mankeel MX25',
     'Mankeel MK083',
-    'Mankeel MK085',
+    'Mankeel MX-14',
     'e-scooter Dubai price',
-    'electric scooter JLT Marina',
+    'electric scooter Motor City Dubai',
   ],
-  authors: [{ name: 'Emirates Scooters Dubai' }],
-  creator: 'Mankeel E-Scooters Dubai',
+  authors: [{ name: 'Emirates E-Scooters' }],
+  creator: 'Emirates E-Scooters',
   openGraph: {
     type: 'website',
     locale: 'en_AE',
-    url: 'https://emirates-scooters.ae',
-    siteName: 'Mankeel E-Scooters Dubai',
-    title: 'Mankeel E-Scooters Dubai | Official Store & RTA Authorized Dealer',
+    url: 'https://emirates-scooters-dubai.vercel.app',
+    siteName: 'Emirates E-Scooters',
+    title: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
     description: 'Buy official RTA-compliant Mankeel electric scooters in Dubai. In-stock models starting from 699 AED with free Dubai delivery.',
     images: [
       {
-        url: 'https://emirates-scooters.ae/images/og-mankeel-dubai.jpg',
+        url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mankeel Electric Scooters Dubai Showroom',
+        alt: 'Emirates E-Scooters showroom, Motor City Dubai',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mankeel E-Scooters Dubai | Official Store',
-    description: 'Official Mankeel electric scooters in Dubai. RTA-compliant 25 km/h models.',
-    images: ['https://emirates-scooters.ae/images/og-mankeel-dubai.jpg'],
+    title: 'Emirates E-Scooters | Official Store',
+    description: 'Official Mankeel electric scooters in Dubai. RTA-compliant models.',
+    images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
   },
   robots: {
     index: true,
@@ -62,32 +59,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'Store',
-    name: 'Mankeel E-Scooters Dubai',
-    image: 'https://emirates-scooters.ae/images/storefront-jlt.jpg',
-    telephone: '+971 4 456 7890',
-    url: 'https://emirates-scooters.ae',
+    name: 'Emirates E-Scooters',
+    image: 'https://emirates-scooters-dubai.vercel.app/images/storefront-motor-city.jpg',
+    telephone: '+971 56 667 2354',
+    url: 'https://emirates-scooters-dubai.vercel.app',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Store 14, Ground Floor, Silver Tower, Cluster I, Jumeirah Lakes Towers (JLT)',
+      streetAddress: 'Store 001, Waitrose, Motor City',
       addressLocality: 'Dubai',
       addressRegion: 'Dubai',
-      postalCode: '00000',
       addressCountry: 'AE',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 25.07725,
-      longitude: 55.15012,
+      latitude: 25.041390226596707,
+      longitude: 55.22914791534377,
     },
-    priceRange: 'AED 699 - AED 2299',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '09:00',
-        closes: '21:00',
-      },
-    ],
+    // NOTE: priceRange and openingHoursSpecification are deliberately omitted.
+    // The previous values (AED 699-2299, 09:00-21:00) were placeholders that had
+    // never been confirmed by the owner. An absent field is harmless; a wrong one
+    // becomes a permanent citation that Google and AI engines will repeat.
+    // Add them back only once the real trading hours and price range are known.
   };
 
   return (

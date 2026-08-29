@@ -1,40 +1,52 @@
 {
+  "_source_of_truth": "data/nap_master_record.json — do not edit NAP fields here independently.",
   "business_name": {
-    "en": "Mankeel E-Scooters Dubai",
-    "ar": "مانكيل للسكوترات الكهربائية دبي"
+    "en": "Emirates E-Scooters",
+    "ar": "TO_CONFIRM — owner to approve the Arabic trading name. Do not submit to GBP until confirmed; the previous value was the wrong business's name."
   },
   "nap_data": {
-    "building_name": "Silver Tower",
-    "unit": "Store 14, Ground Floor",
-    "cluster_area": "Cluster I, Jumeirah Lakes Towers (JLT)",
+    "store_number": "Store 001",
+    "building_name": "Waitrose",
+    "area": "Motor City",
     "city": "Dubai",
     "emirate": "Dubai",
     "country": "United Arab Emirates",
-    "postal_code": "00000",
-    "phone": "+971 4 456 7890",
+    "formatted_single_line": "Store 001, Waitrose, Motor City, Dubai, United Arab Emirates",
+    "phone": "+971 56 667 2354",
+    "phone_e164": "+971566672354",
     "geo_coordinates": {
-      "latitude": 25.07725,
-      "longitude": 55.15012
-    }
+      "latitude": 25.041390226596707,
+      "longitude": 55.22914791534377
+    },
+    "premises_type": "standalone_unit"
   },
   "neighborhood_coverage": [
-    "Jumeirah Lakes Towers (JLT)",
-    "Dubai Marina",
-    "Business Bay",
-    "Downtown Dubai",
-    "City Walk",
-    "Dubai Water Canal Promenade",
-    "Al Rigga & Deira Mobility Hubs"
+    "Motor City",
+    "Dubai Sports City",
+    "Dubai Studio City",
+    "Jumeirah Village Circle (JVC)",
+    "Arabian Ranches",
+    "Damac Hills",
+    "Mudon",
+    "Al Barsha South"
   ],
+  "_coverage_note": "Rewritten from the previous JLT/Marina/Business Bay list, which belonged to the incorrect JLT address. Confirm these match actual delivery coverage before publishing.",
   "bilingual_descriptions": {
-    "en": "Official Mankeel Electric Scooter store in Dubai. We offer RTA-compliant 350W-600W electric scooters including the Mankeel MK083 P1, MX-14, and MX-14. Full 1-year warranty, summer battery maintenance, and fast local Dubai delivery to JLT, Marina, and Business Bay.",
-    "ar": "المتجر الرسمي لسكوترات مانكيل الكهربائية في دبي. نوفر سكوترات كهربائية معتمدة من هيئة الطرق والمواصلات (RTA) بقدرات من 350 واط إلى 600 واط، تشمل موديلات مانكيل بايونير P1 وسيلفروينج وستيدز. ضمان لمدة سنة كاملة، صيانة بطاريات في الصيف، وتوصيل سريع في جميع مناطق دبي."
+    "en": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock RTA-compliant 350W-600W electric scooters including the Mankeel MK083 and MX-14. One-year warranty, summer battery maintenance, and local delivery across Motor City, Sports City, and JVC.",
+    "ar": "إميرتس إي سكوترز هو المتجر الرسمي لسكوترات مانكيل الكهربائية في دبي، ويقع في وايتروز، موتور سيتي. نوفر سكوترات كهربائية متوافقة مع اشتراطات هيئة الطرق والمواصلات (RTA) بقدرات من 350 إلى 600 واط، وتشمل موديلات مانكيل MK083 وMX-14. ضمان لمدة سنة، وصيانة البطاريات في الصيف، وتوصيل محلي يغطي موتور سيتي وسبورتس سيتي وقرية جميرا الدائرية.",
+    "_ar_note": "Arabic rewritten to match the English. The previous Arabic text referenced models (Pioneer P1, Silverwing, Steeds) that do not exist in the catalog. Have a native speaker review before publishing."
   },
   "photo_upload_manifest": [
-    "storefront_exterior_jlt_silver_tower.jpg",
-    "mankeel_mk083_p1_display_showroom.jpg",
+    "storefront_exterior_waitrose_motor_city.jpg",
+    "mankeel_mk083_display_showroom.jpg",
     "rta_permit_safety_helmet_gear.jpg",
     "summer_battery_service_workshop.jpg"
   ],
-  "website_url": "https://emirates-scooters-dubai.vercel.app"
+  "_photo_note": "Filenames are targets, not existing assets. Real photos of the actual Motor City storefront must be taken before GBP upload.",
+  "website_url": "https://emirates-scooters-dubai.vercel.app",
+  "gbp_listing_type": {
+    "type": "storefront",
+    "note": "Standalone unit with its own entrance. File as a normal storefront listing. Do NOT use the 'located within' / department relationship, and do not select a service-area-only business type.",
+    "hide_address": false
+  }
 }

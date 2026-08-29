@@ -1,5 +1,5 @@
 """
-Master Pipeline Orchestrator for Mankeel E-Scooters Dubai GEO & SEO Automation.
+Master Pipeline Orchestrator for Emirates E-Scooters GEO & SEO Automation.
 Executes Part 1, Part 2, Next.js Server Components, llms.txt AI crawler feeds, Google Merchant XML feeds, and Sitemap/Robots pipelines.
 """
 
@@ -149,7 +149,7 @@ def run_pipeline():
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(page_html)
         print(f"[OK] Generated Product Page: {out_path}")
-        generated_urls.append(f"https://emirates-scooters.ae/products/{prod['id']}")
+        generated_urls.append(f"https://emirates-scooters-dubai.vercel.app/products/{prod['id']}")
 
     # 3. Phase 2: Topical Authority Hub
     print("\n--- Phase 2: Generating Local Authority Hubs ---")
@@ -167,7 +167,7 @@ def run_pipeline():
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(blog_html)
         print(f"[OK] Generated Blog/Guide Page: {out_path}")
-        generated_urls.append(f"https://emirates-scooters.ae/blogs/{g['slug']}")
+        generated_urls.append(f"https://emirates-scooters-dubai.vercel.app/blogs/{g['slug']}")
 
     # 4. Part 2 - Section 1: Fast-Mode Website n8n Webhook Test Trigger
     print("\n--- Part 2 Section 1: Testing Fast-Mode n8n Webhook Automation ---")
@@ -192,13 +192,31 @@ def run_pipeline():
     # 6. Part 2 - Section 3: Off-Site Citations & AI Sentiment Engine
     print("\n--- Part 2 Section 3: Processing Off-Site Citations & AI Sentiment Consensus ---")
     sentiment_engine = AICitationSentimentEngine()
-    agg_rating = sentiment_engine.generate_aggregate_rating_schema()
-    citation_faqs = sentiment_engine.generate_consensus_faqs()
-    
+
+    # strict=False: emit nothing rather than fabricate. AggregateRating and
+    # consensus FAQs are only produced once genuine, verified review data exists
+    # in data/offsite_citations_registry.json. See Step3_OffSite_Citations_Playbook.md.
+    agg_rating = sentiment_engine.generate_aggregate_rating_schema(strict=False)
+    citation_faqs = sentiment_engine.generate_consensus_faqs(strict=False)
+    outreach_worklist = sentiment_engine.generate_outreach_worklist()
+
+    citation_manifest = {
+        "status": "no_verified_citations_yet" if not agg_rating else "verified",
+        "aggregate_rating_schema": agg_rating,
+        "consensus_faqs": citation_faqs,
+        "outreach_worklist": outreach_worklist,
+        "publish_warning": (
+            "Do not publish aggregate_rating_schema or consensus_faqs while they are "
+            "null/empty. Inventing review counts violates Google structured data policy."
+        ),
+    }
+
     citation_manifest_path = "output/reports/offsite_citations_sentiment_manifest.json"
     with open(citation_manifest_path, "w", encoding="utf-8") as f:
-        json.dump({"aggregate_rating_schema": agg_rating, "consensus_faqs": citation_faqs}, f, indent=2)
+        json.dump(citation_manifest, f, indent=2, ensure_ascii=False)
     print(f"[OK] Off-Site Citations Manifest Saved to: {citation_manifest_path}")
+    if not agg_rating:
+        print(f"[INFO] No rating schema emitted. {len(outreach_worklist)} citation prospects pending.")
 
     # 7. Next.js App Router Server Component Schema Injection Templates
     print("\n--- Generating Next.js App Router Server Component Templates (Server-Side Injection) ---")
