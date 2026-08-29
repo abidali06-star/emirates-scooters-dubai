@@ -8,13 +8,16 @@ export const metadata: Metadata = {
     default: 'Mankeel E-Scooters Dubai | Official Store & RTA Authorized Dealer',
     template: '%s | Mankeel E-Scooters Dubai',
   },
-  description: 'Official Dubai store for Mankeel MK083 and MX-14 electric scooters. RTA compliant, summer battery warranty, local delivery in JLT, Marina, Business Bay.',
+  description: 'Official Dubai store for Mankeel MX-14, MX-14, MX25, MK083, and MK085 electric scooters. RTA compliant, summer battery warranty, local delivery in JLT, Marina, Business Bay.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
     'RTA compliant e-scooter',
     'Mankeel MX-14',
+    'Mankeel MX-14',
+    'Mankeel MX25',
     'Mankeel MK083',
+    'Mankeel MK085',
     'e-scooter Dubai price',
     'electric scooter JLT Marina',
   ],
@@ -76,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       latitude: 25.07725,
       longitude: 55.15012,
     },
-    priceRange: 'AED 699 - AED 1499',
+    priceRange: 'AED 699 - AED 2299',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

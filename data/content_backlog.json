@@ -52,5 +52,6 @@
       "description": "Discover Dubai's top rated e-scooter tracks: JLT, Dubai Water Canal, Downtown, City Walk, Nad Al Sheba, and Business Bay."
     }
   ],
-  "reports": []
+  "reports": [],
+  "live_website_url": "https://emirates-scooters-dubai.vercel.app"
 }
