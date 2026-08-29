@@ -169,7 +169,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <section className="flex items-center justify-between bg-slate-100 p-6 rounded-lg">
         <div>
           <p className="font-semibold text-slate-800">Ready to Order in Dubai?</p>
-          <p className="text-sm text-slate-600">Free delivery across Motor City, Sports City, and JVC.</p>
+          <p className="text-sm text-slate-600">Free delivery across Motor City, Sports City, JVC, Arabian Ranches, Damac Hills, Mudon, Studio City, Al Barsha South, Production City, Green Community, and JVT.</p>
         </div>
         {product.inStock ? (
           <a

@@ -18,21 +18,21 @@
   },
   "neighborhood_coverage": [
     "Motor City",
-    "Dubai Sports City",
-    "Dubai Studio City",
-    "Jumeirah Village Circle (JVC)",
-    "Jumeirah Village Triangle (JVT)",
+    "Sports City",
+    "JVC",
     "Arabian Ranches",
     "Damac Hills",
     "Mudon",
+    "Studio City",
     "Al Barsha South",
-    "Dubai Production City",
-    "Green Community Motor City"
+    "Production City",
+    "Green Community",
+    "JVT"
   ],
-  "_coverage_note": "Rewritten from the previous JLT/Marina/Business Bay list, which belonged to the incorrect JLT address. Confirm these match actual delivery coverage before publishing.",
+  "_coverage_note": "Revised free delivery areas.",
   "bilingual_descriptions": {
-    "en": "Emirates E-Scooters supplies Mankeel electric scooters across Dubai. We are a delivery-based business: we bring the scooter to you rather than running a shop, so you can inspect it in person before you accept it. Models: the Mankeel MK083 city commuter (350W, 699 AED) and the Mankeel MX-14 off-road (800W, 1,499 AED). Both include a one-year warranty and VAT-inclusive AED pricing. We also handle servicing, genuine Mankeel spare parts, and battery health checks. Delivery across Motor City, Sports City, Studio City, JVC, Arabian Ranches, Damac Hills, Mudon and Al Barsha South.",
-    "ar": "إميرتس إي سكوترز توفّر سكوترات مانكيل الكهربائية في جميع أنحاء دبي. نحن نعمل بنظام التوصيل: نأتي بالسكوتر إليك بدلاً من تشغيل متجر، ويمكنك معاينته بنفسك قبل استلامه. الموديلات: مانكيل MK083 للتنقل داخل المدينة (350 واط، 699 درهماً) ومانكيل MX-14 للطرق الوعرة (800 واط، 1,499 درهماً). كلاهما يشمل ضماناً لمدة سنة وأسعاراً شاملة ضريبة القيمة المضافة. نوفّر أيضاً خدمات الصيانة وقطع الغيار الأصلية وفحص صحة البطارية. التوصيل يغطي موتور سيتي وسبورتس سيتي وستوديو سيتي وقرية جميرا الدائرية ومزارع العرب ودماك هيلز ومدن وبرشاء ساوث.",
+    "en": "Emirates E-Scooters supplies Mankeel electric scooters across Dubai. We are a delivery-based business: we bring the scooter to you rather than running a shop, so you can inspect it in person before you accept it. Models: the Mankeel MK083 city commuter (350W, 699 AED) and the Mankeel MX-14 off-road (800W, 1,499 AED). Both include a one-year warranty and VAT-inclusive AED pricing. We also handle servicing, genuine Mankeel spare parts, and battery health checks. Free delivery across Motor City, Sports City, JVC, Arabian Ranches, Damac Hills, Mudon, Studio City, Al Barsha South, Production City, Green Community, and JVT.",
+    "ar": "إميرتس إي سكوترز توفّر سكوترات مانكيل الكهربائية في جميع أنحاء دبي. نحن نعمل بنظام التوصيل: نأتي بالسكوتر إليك بدلاً من تشغيل متجر، ويمكنك معاينته بنفسك قبل استلامه. الموديلات: مانكيل MK083 للتنقل داخل المدينة (350 واط، 699 درهماً) ومانكيل MX-14 للطرق الوعرة (800 واط، 1,499 درهماً). كلاهما يشمل ضماناً لمدة سنة وأسعاراً شاملة ضريبة القيمة المضافة. نوفّر أيضاً خدمات الصيانة وقطع الغيار الأصلية وفحص صحة البطارية. التوصيل المجاني يغطي موتور سيتي، سبورتس سيتي، قرية جميرا الدائرية، مزارع العرب، دماك هيلز، مدن، ستوديو سيتي، برشاء ساوث، برودكشن سيتي، الجرين كوميونيتي، وقرية جميرا المثلثة.",
     "_ar_note": "Matches the English. Have a native speaker read it once before it goes on a listing."
   },
   "photo_upload_manifest": [

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'Emirates E-Scooters | Mankeel Electric Scooters Delivered Across Dubai',
     template: '%s | Emirates E-Scooters',
   },
-  description: 'Mankeel MK083 and MX-14 electric scooters delivered across Dubai. One-year warranty, battery servicing, and free local delivery to Motor City, Sports City and JVC.',
+  description: 'Mankeel MK083 and MX-14 electric scooters delivered across Dubai. One-year warranty, battery servicing, and free local delivery to Motor City, Sports City, JVC, Arabian Ranches, Damac Hills, Mudon, Studio City, Al Barsha South, Production City, Green Community, and JVT.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
@@ -75,16 +75,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     },
     areaServed: [
       'Motor City',
-      'Dubai Sports City',
-      'Dubai Studio City',
-      'Jumeirah Village Circle (JVC)',
-      'Jumeirah Village Triangle (JVT)',
+      'Sports City',
+      'JVC',
       'Arabian Ranches',
       'Damac Hills',
       'Mudon',
+      'Studio City',
       'Al Barsha South',
-      'Dubai Production City',
-      'Green Community Motor City',
+      'Production City',
+      'Green Community',
+      'JVT',
     ],
     // Contact and delivery hours, confirmed 2026-08-29. Not shop hours - there is no shop.
     openingHoursSpecification: [

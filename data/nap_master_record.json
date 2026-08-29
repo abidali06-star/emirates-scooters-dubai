@@ -57,18 +57,18 @@
   },
   "service_areas": [
     "Motor City",
-    "Dubai Sports City",
-    "Dubai Studio City",
-    "Jumeirah Village Circle (JVC)",
-    "Jumeirah Village Triangle (JVT)",
+    "Sports City",
+    "JVC",
     "Arabian Ranches",
     "Damac Hills",
     "Mudon",
+    "Studio City",
     "Al Barsha South",
-    "Dubai Production City",
-    "Green Community Motor City"
+    "Production City",
+    "Green Community",
+    "JVT"
   ],
-  "_service_area_note": "Matches the 11 areas entered in Google Business Profile on 2026-08-29.",
+  "_service_area_note": "Matches the 11 revised free delivery areas.",
   "website_url": "https://emirates-scooters-dubai.vercel.app",
   "superseded_values": {
     "_note": "Historic incorrect values. Kept only so future audits can detect stragglers.",

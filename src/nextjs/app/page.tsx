@@ -15,7 +15,7 @@ export default function HomePage() {
         </span>
         <h1 className="text-3xl font-bold mt-3">Emirates E-Scooters</h1>
         <p className="text-slate-300 mt-2">
-          Official Dubai catalog of Mankeel electric scooters, with local summer warranty and fast delivery across Motor City, Sports City, and JVC.
+          Official Dubai catalog of Mankeel electric scooters, with local summer warranty and free delivery across Motor City, Sports City, JVC, Arabian Ranches, Damac Hills, Mudon, Studio City, Al Barsha South, Production City, Green Community, and JVT.
         </p>
       </header>
 
