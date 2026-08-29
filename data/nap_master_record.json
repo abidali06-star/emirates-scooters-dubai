@@ -2,7 +2,36 @@
   "_note": "SOURCE OF TRUTH for Name, Address, Phone (NAP). Confirmed by owner Saam Khan on 2026-08-29. Every citation, schema block, GBP field and directory listing must match this record character-for-character.",
   "business_name": {
     "en": "Emirates E-Scooters",
-    "ar": "TO_CONFIRM - owner to approve Arabic trading name before use"
+    "ar": "PROPOSED - NOT CONFIRMED - DO NOT PUBLISH",
+    "ar_proposals": {
+      "_status": "PROPOSED by Claude 2026-08-29. Awaiting Saam's confirmation. Must NOT be published to any listing until confirmed.",
+      "_legal_warning": "On a UAE trade licence the Arabic name is the LEGAL identifier, and DED/GBP listings should match the licence exactly. Whatever is already printed on the trade licence overrides every option below. Check the licence before choosing.",
+      "option_1_translation": {
+        "arabic": "الإمارات للسكوترات الكهربائية",
+        "romanised": "Al-Emarat lil-Scooters al-Kahrabaiyya",
+        "means": "Emirates for Electric Scooters",
+        "note": "Standard UAE trade-name construction (X for Y). Reads naturally to an Arabic speaker and is self-describing, which helps Arabic local search."
+      },
+      "option_2_transliteration": {
+        "arabic": "إميرتس إي سكوترز",
+        "romanised": "Emirates E-Scooters",
+        "means": "phonetic rendering of the English name; carries no meaning in Arabic",
+        "note": "Matches the English brand sound exactly. Preferred if the brand is marketed in English and you want one spoken name."
+      },
+      "option_3_hybrid": {
+        "arabic": "إميرتس للسكوترات الكهربائية",
+        "romanised": "Emirates lil-Scooters al-Kahrabaiyya",
+        "means": "Emirates for Electric Scooters, keeping 'Emirates' transliterated",
+        "note": "Keeps brand recognition while staying descriptive."
+      },
+      "recommendation": "option_1_translation",
+      "recommendation_reasoning": "Google matches Arabic queries semantically, so a descriptive Arabic name ('electric scooters') earns relevance for Arabic searches like 'سكوتر كهربائي دبي' that a pure transliteration cannot. It is also the conventional form for a UAE retail trade name.",
+      "risks_to_check_before_filing": [
+        "UAE trade-name rules restrict names of countries/emirates. 'الإمارات' may require approval or be refused by DED. Verify with the licensing authority.",
+        "'Emirates' is a heavily used mark in the UAE (Emirates airline group). Confirm there is no objection for this activity.",
+        "Confirm the Arabic name on the existing trade licence first - if one exists, use it verbatim and discard these options."
+      ]
+    }
   },
   "brand_sold": "Mankeel (product brand; the retailer name is Emirates E-Scooters)",
   "owner_contact": {
@@ -54,5 +83,12 @@
       "longitude": 55.15012
     }
   },
-  "website_url_status": "CONFIRMED as the currently deployed Vercel URL (found in Antigravity session log 4ee5d596 and git commit b084d75; verified live 2026-08-29). This is a vercel.app subdomain, not a custom domain — decide before citations are submitted whether to buy emirates-scooters-dubai.vercel.app, because changing it later breaks every citation."
+  "website_url_status": "CONFIRMED as the deployed Vercel URL (Antigravity session log 4ee5d596; git commit b084d75; verified live 2026-08-29). Owner has decided against a custom domain, so emirates-scooters-dubai.vercel.app is final and safe to use in citations.",
+  "trading_hours": {
+    "status": "CONFIRMED by owner 2026-08-29",
+    "opens": "08:00",
+    "closes": "22:00",
+    "days": "Monday-Sunday (all seven days)",
+    "note": "Earlier '8:00 - 10:00 all days' was ambiguous; owner clarified as 08:00-22:00."
+  }
 }

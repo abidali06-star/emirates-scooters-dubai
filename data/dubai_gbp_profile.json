@@ -2,7 +2,7 @@
   "_source_of_truth": "data/nap_master_record.json — do not edit NAP fields here independently.",
   "business_name": {
     "en": "Emirates E-Scooters",
-    "ar": "TO_CONFIRM — owner to approve the Arabic trading name. Do not submit to GBP until confirmed; the previous value was the wrong business's name."
+    "ar": "PROPOSED - see data/nap_master_record.json business_name.ar_proposals. DO NOT PUBLISH until Saam confirms."
   },
   "nap_data": {
     "store_number": "Store 001",
@@ -32,9 +32,9 @@
   ],
   "_coverage_note": "Rewritten from the previous JLT/Marina/Business Bay list, which belonged to the incorrect JLT address. Confirm these match actual delivery coverage before publishing.",
   "bilingual_descriptions": {
-    "en": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock RTA-compliant 350W-600W electric scooters including the Mankeel MK083 and MX-14. One-year warranty, summer battery maintenance, and local delivery across Motor City, Sports City, and JVC.",
-    "ar": "إميرتس إي سكوترز هو المتجر الرسمي لسكوترات مانكيل الكهربائية في دبي، ويقع في وايتروز، موتور سيتي. نوفر سكوترات كهربائية متوافقة مع اشتراطات هيئة الطرق والمواصلات (RTA) بقدرات من 350 إلى 600 واط، وتشمل موديلات مانكيل MK083 وMX-14. ضمان لمدة سنة، وصيانة البطاريات في الصيف، وتوصيل محلي يغطي موتور سيتي وسبورتس سيتي وقرية جميرا الدائرية.",
-    "_ar_note": "Arabic rewritten to match the English. The previous Arabic text referenced models (Pioneer P1, Silverwing, Steeds) that do not exist in the catalog. Have a native speaker review before publishing."
+    "en": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock the Mankeel MK083 and MX-14, supplied with a one-year warranty and VAT-inclusive AED pricing. Servicing, genuine spare parts, and summer battery health checks. Local delivery across Motor City, Sports City and JVC.",
+    "_ar_note": "Arabic rewritten to match the English. The previous Arabic text referenced models (Pioneer P1, Silverwing, Steeds) that do not exist in the catalog. Have a native speaker review before publishing.",
+    "ar": "TO_CONFIRM - withheld until the Arabic trading name is confirmed."
   },
   "photo_upload_manifest": [
     "storefront_exterior_waitrose_motor_city.jpg",
@@ -48,5 +48,20 @@
     "type": "storefront",
     "note": "Standalone unit with its own entrance. File as a normal storefront listing. Do NOT use the 'located within' / department relationship, and do not select a service-area-only business type.",
     "hide_address": false
-  }
+  },
+  "trading_hours": {
+    "opens": "08:00",
+    "closes": "22:00",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "status": "CONFIRMED by owner 2026-08-29 (08:00-22:00, all seven days)"
+  },
+  "_rta_claim_policy": "No product-level 'RTA compliant' or 'RTA Authorized Dealer' claim may be published until the Mankeel manufacturer spec sheet confirms whether the imported units are limited to RTA's 20 km/h maximum. State the law; do not assert the products meet it."
 }

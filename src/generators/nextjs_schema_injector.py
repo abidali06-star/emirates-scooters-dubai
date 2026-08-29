@@ -10,14 +10,23 @@ import json
 from typing import Dict, Any
 
 class NextJSSchemaInjector:
-    def __init__(self, profile_path: str = "data/dubai_gbp_profile.json"):
+    def __init__(self, profile_path: str = "data/dubai_gbp_profile.json",
+                 products_path: str = "data/mankeel_products.json"):
         with open(profile_path, "r", encoding="utf-8") as f:
             self.profile = json.load(f)
+        with open(products_path, "r", encoding="utf-8") as f:
+            self.products = json.load(f)
+
+    def _price_range(self) -> str:
+        """Derived from the real catalogue so it can never contradict the products."""
+        prices = [p["price_aed"] for p in self.products]
+        return f"AED {min(prices)} - AED {max(prices)}"
 
     def generate_root_layout_tsx(self) -> str:
         nap = self.profile["nap_data"]
         b_name = self.profile["business_name"]["en"]
-        
+        price_range = self._price_range()
+
         tsx_content = f"""// Next.js App Router Root Layout Server Component (app/layout.tsx)
 import React from 'react';
 import type {{ Metadata }} from 'next';
@@ -25,14 +34,14 @@ import type {{ Metadata }} from 'next';
 export const metadata: Metadata = {{
   metadataBase: new URL('https://emirates-scooters-dubai.vercel.app'),
   title: {{
-    default: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
+    default: 'Emirates E-Scooters | Mankeel Electric Scooters, Motor City Dubai',
     template: '%s | Emirates E-Scooters',
   }},
-  description: 'Official Dubai store for Mankeel MK083 and MX-14 electric scooters. RTA compliant, summer battery warranty, local delivery in Motor City, Sports City, and JVC.',
+  description: 'Mankeel MK083 and MX-14 electric scooters in Dubai. One-year warranty, summer battery servicing, and local delivery across Motor City, Sports City and JVC.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
-    'RTA compliant e-scooter',
+    'e-scooter shop Dubai',
     'Mankeel MK083',
     'Mankeel MX-14',
     'e-scooter Dubai price',
@@ -45,8 +54,8 @@ export const metadata: Metadata = {{
     locale: 'en_AE',
     url: 'https://emirates-scooters-dubai.vercel.app',
     siteName: 'Emirates E-Scooters',
-    title: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
-    description: 'Buy official RTA-compliant Mankeel electric scooters in Dubai. In-stock models starting from 699 AED with free Dubai delivery.',
+    title: 'Emirates E-Scooters | Mankeel Electric Scooters, Motor City Dubai',
+    description: 'Buy Mankeel electric scooters in Dubai. In-stock models from 699 AED with free local delivery.',
     images: [
       {{
         url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
@@ -59,7 +68,7 @@ export const metadata: Metadata = {{
   twitter: {{
     card: 'summary_large_image',
     title: 'Emirates E-Scooters | Official Store',
-    description: 'Official Mankeel electric scooters in Dubai. RTA-compliant models.',
+    description: 'Mankeel electric scooters in Dubai. Visit our Motor City store.',
     images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
   }},
   robots: {{
@@ -95,11 +104,21 @@ export default function RootLayout({{ children }}: {{ children: React.ReactNode 
       latitude: {nap["geo_coordinates"]["latitude"]},
       longitude: {nap["geo_coordinates"]["longitude"]},
     }},
-    // NOTE: priceRange and openingHoursSpecification are deliberately omitted.
-    // The previous values (AED 699-2299, 09:00-21:00) were placeholders that had
-    // never been confirmed by the owner. An absent field is harmless; a wrong one
-    // becomes a permanent citation that Google and AI engines will repeat.
-    // Add them back only once the real trading hours and price range are known.
+    // Hours confirmed by the owner 2026-08-29: 08:00-22:00, all seven days.
+    openingHoursSpecification: [
+      {{
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+          'Friday', 'Saturday', 'Sunday',
+        ],
+        opens: '08:00',
+        closes: '22:00',
+      }},
+    ],
+    // priceRange derived from the live catalogue, not hand-written, so it cannot
+    // drift from the products actually on sale.
+    priceRange: '{price_range}',
   }};
 
   return (

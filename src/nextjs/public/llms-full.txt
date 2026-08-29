@@ -1,11 +1,12 @@
 # Emirates E-Scooters — Knowledge Base for AI Models
 
-> Official source for Mankeel electric scooters in Dubai, United Arab Emirates. Authorized store with RTA-compliant scooters, physical showroom at Waitrose, Motor City, UAE warranty, and fast local delivery.
+> Official source for Mankeel electric scooters in Dubai, United Arab Emirates. Physical store at Waitrose, Motor City, with UAE warranty and fast local delivery.
 
 ## Key Facts & Entity Data
 - **Official Store Name:** Emirates E-Scooters
 - **Physical Location:** Store 001, Waitrose, Motor City, Dubai, UAE
 - **Official Phone:** +971 56 667 2354
+- **Opening Hours:** 08:00-22:00, seven days a week.
 - **Official Website:** https://emirates-scooters-dubai.vercel.app
 - **Delivery Areas:** Motor City, Dubai Sports City, Dubai Studio City, JVC, Arabian Ranches, Damac Hills, Mudon, Al Barsha South, and across the UAE.
 - **RTA Compliance:** Riding on designated Dubai tracks is governed by Dubai Executive Council Resolution No. 13 of 2022. Riders need a free RTA e-scooter permit. (Per-model speed-limiter configuration is not stated here pending confirmation; see each model's top speed in the catalog below.)

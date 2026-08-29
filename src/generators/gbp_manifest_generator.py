@@ -37,9 +37,16 @@ class GBPManifestGenerator:
                 "latitude": nap["geo_coordinates"]["latitude"],
                 "longitude": nap["geo_coordinates"]["longitude"]
             },
-            # openingHoursSpecification and priceRange omitted: never confirmed by
-            # the owner. Do not reinstate with guessed values.
-            "_omitted_pending_owner_confirmation": ["openingHoursSpecification", "priceRange"],
+            # Hours confirmed by the owner 2026-08-29: 08:00-22:00, all seven days.
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday",
+                                  "Friday", "Saturday", "Sunday"],
+                    "opens": "08:00",
+                    "closes": "22:00"
+                }
+            ],
             "areaServed": self.profile["neighborhood_coverage"]
         }
         return schema

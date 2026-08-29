@@ -5,14 +5,14 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://emirates-scooters-dubai.vercel.app'),
   title: {
-    default: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
+    default: 'Emirates E-Scooters | Mankeel Electric Scooters, Motor City Dubai',
     template: '%s | Emirates E-Scooters',
   },
-  description: 'Official Dubai store for Mankeel MK083 and MX-14 electric scooters. RTA compliant, summer battery warranty, local delivery in Motor City, Sports City, and JVC.',
+  description: 'Mankeel MK083 and MX-14 electric scooters in Dubai. One-year warranty, summer battery servicing, and local delivery across Motor City, Sports City and JVC.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
-    'RTA compliant e-scooter',
+    'e-scooter shop Dubai',
     'Mankeel MK083',
     'Mankeel MX-14',
     'e-scooter Dubai price',
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: 'https://emirates-scooters-dubai.vercel.app',
     siteName: 'Emirates E-Scooters',
-    title: 'Emirates E-Scooters | Official Store & RTA Authorized Dealer',
-    description: 'Buy official RTA-compliant Mankeel electric scooters in Dubai. In-stock models starting from 699 AED with free Dubai delivery.',
+    title: 'Emirates E-Scooters | Mankeel Electric Scooters, Motor City Dubai',
+    description: 'Buy Mankeel electric scooters in Dubai. In-stock models from 699 AED with free local delivery.',
     images: [
       {
         url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Emirates E-Scooters | Official Store',
-    description: 'Official Mankeel electric scooters in Dubai. RTA-compliant models.',
+    description: 'Mankeel electric scooters in Dubai. Visit our Motor City store.',
     images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
   },
   robots: {
@@ -75,11 +75,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       latitude: 25.041390226596707,
       longitude: 55.22914791534377,
     },
-    // NOTE: priceRange and openingHoursSpecification are deliberately omitted.
-    // The previous values (AED 699-2299, 09:00-21:00) were placeholders that had
-    // never been confirmed by the owner. An absent field is harmless; a wrong one
-    // becomes a permanent citation that Google and AI engines will repeat.
-    // Add them back only once the real trading hours and price range are known.
+    // Hours confirmed by the owner 2026-08-29: 08:00-22:00, all seven days.
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+          'Friday', 'Saturday', 'Sunday',
+        ],
+        opens: '08:00',
+        closes: '22:00',
+      },
+    ],
+    // priceRange derived from the live catalogue, not hand-written, so it cannot
+    // drift from the products actually on sale.
+    priceRange: 'AED 699 - AED 1499',
   };
 
   return (

@@ -6,7 +6,7 @@
     "image": "TO_CONFIRM: real photo of the Motor City storefront, hosted on the production domain",
     "telephone": "+971 56 667 2354",
     "url": "https://emirates-scooters-dubai.vercel.app",
-    "description": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock RTA-compliant 350W-600W electric scooters including the Mankeel MK083 and MX-14. One-year warranty, summer battery maintenance, and local delivery across Motor City, Sports City, and JVC.",
+    "description": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock the Mankeel MK083 and MX-14, supplied with a one-year warranty and VAT-inclusive AED pricing. Servicing, genuine spare parts, and summer battery health checks. Local delivery across Motor City, Sports City and JVC.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Store 001, Waitrose, Motor City",
@@ -19,9 +19,21 @@
       "latitude": 25.041390226596707,
       "longitude": 55.22914791534377
     },
-    "_omitted_pending_owner_confirmation": [
-      "openingHoursSpecification",
-      "priceRange"
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "22:00"
+      }
     ],
     "areaServed": [
       "Motor City",

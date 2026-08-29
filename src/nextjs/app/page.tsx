@@ -15,7 +15,7 @@ export default function HomePage() {
         </span>
         <h1 className="text-3xl font-bold mt-3">Emirates E-Scooters</h1>
         <p className="text-slate-300 mt-2">
-          Official Dubai catalog featuring RTA-compliant Mankeel electric scooters with local summer warranty and fast Dubai delivery across Motor City, Sports City, and JVC.
+          Official Dubai catalog of Mankeel electric scooters, with local summer warranty and fast delivery across Motor City, Sports City, and JVC.
         </p>
       </header>
 
