@@ -1,0 +1,116 @@
+"""
+Module: sitemap_robots_generator.py
+Generates robots.txt (with explicit AI crawler permissions) and sitemap.xml for Google Search, ChatGPT, Gemini, and Perplexity.
+"""
+
+import os
+import json
+import time
+from typing import Dict, Any
+
+class SitemapRobotsGenerator:
+    def __init__(self, products_path: str = "data/mankeel_products.json"):
+        with open(products_path, "r", encoding="utf-8") as f:
+            self.products = json.load(f)
+
+    def generate_robots_txt(self) -> str:
+        robots = """# Robots.txt for Mankeel E-Scooters Dubai (https://emirates-scooters.ae)
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini / Extended AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Sitemaps & LLM Direct Feeds
+Sitemap: https://emirates-scooters.ae/sitemap.xml
+"""
+        return robots
+
+    def generate_sitemap_xml(self) -> str:
+        current_date = time.strftime("%Y-%m-%d")
+        
+        urls = [
+            {"loc": "https://emirates-scooters.ae", "priority": "1.0", "changefreq": "daily"},
+            {"loc": "https://emirates-scooters.ae/llms.txt", "priority": "0.9", "changefreq": "weekly"},
+            {"loc": "https://emirates-scooters.ae/blogs/rta-e-scooter-permit-dubai", "priority": "0.8", "changefreq": "monthly"},
+            {"loc": "https://emirates-scooters.ae/blogs/battery-maintenance-uae-summer", "priority": "0.8", "changefreq": "monthly"},
+            {"loc": "https://emirates-scooters.ae/blogs/best-e-scooter-tracks-dubai", "priority": "0.8", "changefreq": "monthly"},
+        ]
+        
+        for p in self.products:
+            urls.append({
+                "loc": f"https://emirates-scooters.ae/products/{p['id']}",
+                "priority": "0.9",
+                "changefreq": "daily"
+            })
+
+        xml_lines = [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        ]
+        
+        for u in urls:
+            xml_lines.append("  <url>")
+            xml_lines.append(f"    <loc>{u['loc']}</loc>")
+            xml_lines.append(f"    <lastmod>{current_date}</lastmod>")
+            xml_lines.append(f"    <changefreq>{u['changefreq']}</changefreq>")
+            xml_lines.append(f"    <priority>{u['priority']}</priority>")
+            xml_lines.append("  </url>")
+            
+        xml_lines.append("</urlset>")
+        return "\n".join(xml_lines)
+
+    def export_sitemap_and_robots(self, nextjs_public_dir: str = "src/nextjs/public", output_dir: str = "output") -> Dict[str, str]:
+        os.makedirs(nextjs_public_dir, exist_ok=True)
+        os.makedirs(output_dir, exist_ok=True)
+        
+        robots = self.generate_robots_txt()
+        sitemap = self.generate_sitemap_xml()
+        
+        paths = {
+            "nextjs_robots": f"{nextjs_public_dir}/robots.txt",
+            "nextjs_sitemap": f"{nextjs_public_dir}/sitemap.xml",
+            "output_robots": f"{output_dir}/robots.txt",
+            "output_sitemap": f"{output_dir}/sitemap.xml"
+        }
+        
+        with open(paths["nextjs_robots"], "w", encoding="utf-8") as f:
+            f.write(robots)
+        with open(paths["nextjs_sitemap"], "w", encoding="utf-8") as f:
+            f.write(sitemap)
+        with open(paths["output_robots"], "w", encoding="utf-8") as f:
+            f.write(robots)
+        with open(paths["output_sitemap"], "w", encoding="utf-8") as f:
+            f.write(sitemap)
+            
+        return paths
+
+if __name__ == "__main__":
+    generator = SitemapRobotsGenerator()
+    paths = generator.export_sitemap_and_robots()
+    print(f"Exported sitemap and robots.txt to:\n- {paths['nextjs_robots']}\n- {paths['nextjs_sitemap']}")

@@ -1,0 +1,39 @@
+{
+  "business_name": {
+    "en": "Mankeel E-Scooters Dubai",
+    "ar": "مانكيل للسكوترات الكهربائية دبي"
+  },
+  "nap_data": {
+    "building_name": "Silver Tower",
+    "unit": "Store 14, Ground Floor",
+    "cluster_area": "Cluster I, Jumeirah Lakes Towers (JLT)",
+    "city": "Dubai",
+    "emirate": "Dubai",
+    "country": "United Arab Emirates",
+    "postal_code": "00000",
+    "phone": "+971 4 456 7890",
+    "geo_coordinates": {
+      "latitude": 25.07725,
+      "longitude": 55.15012
+    }
+  },
+  "neighborhood_coverage": [
+    "Jumeirah Lakes Towers (JLT)",
+    "Dubai Marina",
+    "Business Bay",
+    "Downtown Dubai",
+    "City Walk",
+    "Dubai Water Canal Promenade",
+    "Al Rigga & Deira Mobility Hubs"
+  ],
+  "bilingual_descriptions": {
+    "en": "Official Mankeel Electric Scooter store in Dubai. We offer RTA-compliant 350W-600W electric scooters including the Mankeel MK083 P1, MX-14, and MX-14. Full 1-year warranty, summer battery maintenance, and fast local Dubai delivery to JLT, Marina, and Business Bay.",
+    "ar": "المتجر الرسمي لسكوترات مانكيل الكهربائية في دبي. نوفر سكوترات كهربائية معتمدة من هيئة الطرق والمواصلات (RTA) بقدرات من 350 واط إلى 600 واط، تشمل موديلات مانكيل بايونير P1 وسيلفروينج وستيدز. ضمان لمدة سنة كاملة، صيانة بطاريات في الصيف، وتوصيل سريع في جميع مناطق دبي."
+  },
+  "photo_upload_manifest": [
+    "storefront_exterior_jlt_silver_tower.jpg",
+    "mankeel_mk083_p1_display_showroom.jpg",
+    "rta_permit_safety_helmet_gear.jpg",
+    "summer_battery_service_workshop.jpg"
+  ]
+}

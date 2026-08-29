@@ -1,0 +1,52 @@
+[
+  {
+    "Model": "MX-14",
+    "slug": "mx-14",
+    "name": "Mankeel MX-14 Off-Road Electric Scooter",
+    "Price AED": 1499,
+    "Stock": "Yes",
+    "inStock": true,
+    "Product Link": "https://www.facebook.com/media/set/?set=a.122123165103099377&type=3",
+    "specifications": {
+      "Top Speed": "45 KMH",
+      "Range": "56 KM",
+      "Motor": "800W",
+      "Battery": "48V 13Ah",
+      "Tire": "10\" Off-road Tires",
+      "Charge time": "6-7 Hours",
+      "Weight": "18 Kg",
+      "Max Load": "200 KG"
+    },
+    "key_features": [
+      "Dual Spring Suspensions",
+      "Dual Disk Brakes",
+      "Upgraded BMS System",
+      "App Control"
+    ]
+  },
+  {
+    "Model": "MK083",
+    "slug": "mk083",
+    "name": "Mankeel MK083 City Commuter Electric Scooter",
+    "Price AED": 699,
+    "Stock": "Yes",
+    "inStock": true,
+    "Product Link": "https://www.facebook.com/media/set/?set=a.122123166645099377&type=3",
+    "specifications": {
+      "Top Speed": "30 KMH",
+      "Range": "35 KM",
+      "Motor": "350W",
+      "Battery": "36V 7.8Ah",
+      "Tire": "8.5\" Honeycomb Tire",
+      "Charge time": "4-5 Hours",
+      "Weight": "12 Kg",
+      "Max Load": "120 KG"
+    },
+    "key_features": [
+      "Rear Disc Brake",
+      "Cruise control",
+      "Foldable Design",
+      "App Control"
+    ]
+  }
+]
