@@ -26,8 +26,8 @@ class BacklogManager:
                         "topic": "RTA Compliance",
                         "title_en": "Riding Your Mankeel Scooter Legally in Dubai",
                         "title_ar": "قيادة سكوتر مانكيل بشكل قانوني في دبي",
-                        "body_en": "Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.",
-                        "body_ar": "هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات.",
+                        "body_en": "Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us about RTA permit requirements when we deliver.",
+                        "body_ar": "هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا عن اشتراطات تصريح هيئة الطرق والمواصلات عند التوصيل.",
                         "target_models": ["MK083", "MX-14"],
                         "status": "Ready to Post"
                     },
@@ -37,8 +37,8 @@ class BacklogManager:
                         "topic": "Summer Maintenance",
                         "title_en": "Protect Your Scooter Battery in UAE Summer Heat",
                         "title_ar": "احمِ بطارية السكوتر في حرارة الصيف بدبي",
-                        "body_en": "Keep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.",
-                        "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً.",
+                        "body_en": "Keep your battery in peak condition during 45°C+ summer heat. We offer free battery thermal diagnostic checks when we deliver or collect.",
+                        "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. نقدّم فحصاً مجانياً لحرارة البطارية عند التوصيل أو الاستلام.",
                         "target_models": ["MK083", "MX-14"],
                         "status": "Ready to Post"
                     }

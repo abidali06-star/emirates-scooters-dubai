@@ -222,14 +222,14 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                         </div>
                         <h4 class="font-bold text-slate-800 text-lg mb-2">RTA Compliance & Speed Limit Protocol</h4>
                         <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-sm text-slate-700 space-y-3 font-sans">
-                            <p><strong>🇬🇧 English:</strong><br>Riding Your Mankeel Scooter Legally in Dubai Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.</p>
+                            <p><strong>🇬🇧 English:</strong><br>Riding Your Mankeel Scooter Legally in Dubai Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us about RTA permit requirements when we deliver.</p>
                             <hr class="border-slate-200">
-                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>قيادة سكوتر مانكيل بشكل قانوني في دبي هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات.</p>
+                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>قيادة سكوتر مانكيل بشكل قانوني في دبي هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا عن اشتراطات تصريح هيئة الطرق والمواصلات عند التوصيل.</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
                         <span class="text-xs text-slate-500">Destination: <strong>Google Maps / Update</strong></span>
-                        <button onclick="copyText(`Riding Your Mankeel Scooter Legally in Dubai\nRiding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.\n\nقيادة سكوتر مانكيل بشكل قانوني في دبي\nهل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
+                        <button onclick="copyText(`Riding Your Mankeel Scooter Legally in Dubai\nRiding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us about RTA permit requirements when we deliver.\n\nقيادة سكوتر مانكيل بشكل قانوني في دبي\nهل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا عن اشتراطات تصريح هيئة الطرق والمواصلات عند التوصيل.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
                             <i class="fa-regular fa-copy"></i> Copy Clean Text
                         </button>
                     </div>
@@ -244,14 +244,14 @@ class DashboardRequestHandler(BaseHTTPRequestHandler):
                         </div>
                         <h4 class="font-bold text-slate-800 text-lg mb-2">Summer Battery Thermal Health Checklist</h4>
                         <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg text-sm text-slate-700 space-y-3 font-sans">
-                            <p><strong>🇬🇧 English:</strong><br>Protect Your Scooter Battery in UAE Summer Heat! Keep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.</p>
+                            <p><strong>🇬🇧 English:</strong><br>Protect Your Scooter Battery in UAE Summer Heat! Keep your battery in peak condition during 45°C+ summer heat. We offer free battery thermal diagnostic checks when we deliver or collect.</p>
                             <hr class="border-slate-200">
-                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>احمِ بطارية السكوتر في حرارة الصيف بدبي! حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً.</p>
+                            <p dir="rtl" class="text-right"><strong>🇦🇪 العربية:</strong><br>احمِ بطارية السكوتر في حرارة الصيف بدبي! حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. نقدّم فحصاً مجانياً لحرارة البطارية عند التوصيل أو الاستلام.</p>
                         </div>
                     </div>
                     <div class="mt-4 pt-4 border-t border-slate-100 flex justify-between items-center">
                         <span class="text-xs text-slate-500">Destination: <strong>Google Maps / Offer</strong></span>
-                        <button onclick="copyText(`Protect Your Scooter Battery in UAE Summer Heat\nKeep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.\n\nاحمِ بطارية السكوتر في حرارة الصيف بدبي\nحافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
+                        <button onclick="copyText(`Protect Your Scooter Battery in UAE Summer Heat\nKeep your battery in peak condition during 45°C+ summer heat. We offer free battery thermal diagnostic checks when we deliver or collect.\n\nاحمِ بطارية السكوتر في حرارة الصيف بدبي\nحافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. نقدّم فحصاً مجانياً لحرارة البطارية عند التوصيل أو الاستلام.`)" class="bg-slate-900 hover:bg-slate-800 text-white text-xs px-4 py-2 rounded-lg font-medium transition flex items-center gap-1.5 shadow-sm">
                             <i class="fa-regular fa-copy"></i> Copy Clean Text
                         </button>
                     </div>

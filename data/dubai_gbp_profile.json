@@ -2,52 +2,51 @@
   "_source_of_truth": "data/nap_master_record.json — do not edit NAP fields here independently.",
   "business_name": {
     "en": "Emirates E-Scooters",
-    "ar": "PROPOSED - see data/nap_master_record.json business_name.ar_proposals. DO NOT PUBLISH until Saam confirms."
+    "ar": "إميرتس إي سكوترز"
   },
   "nap_data": {
-    "store_number": "Store 001",
-    "building_name": "Waitrose",
-    "area": "Motor City",
+    "_status": "NO PUBLIC STREET ADDRESS - service area business.",
     "city": "Dubai",
     "emirate": "Dubai",
     "country": "United Arab Emirates",
-    "formatted_single_line": "Store 001, Waitrose, Motor City, Dubai, United Arab Emirates",
+    "country_code": "AE",
     "phone": "+971 56 667 2354",
     "phone_e164": "+971566672354",
-    "geo_coordinates": {
-      "latitude": 25.041390226596707,
-      "longitude": 55.22914791534377
-    },
-    "premises_type": "standalone_unit"
+    "public_street_address": null,
+    "geo_coordinates": null,
+    "_note": "Street address and coordinates removed 2026-08-29. Delivery-only business with no premises."
   },
   "neighborhood_coverage": [
     "Motor City",
     "Dubai Sports City",
     "Dubai Studio City",
     "Jumeirah Village Circle (JVC)",
+    "Jumeirah Village Triangle (JVT)",
     "Arabian Ranches",
     "Damac Hills",
     "Mudon",
-    "Al Barsha South"
+    "Al Barsha South",
+    "Dubai Production City",
+    "Green Community Motor City"
   ],
   "_coverage_note": "Rewritten from the previous JLT/Marina/Business Bay list, which belonged to the incorrect JLT address. Confirm these match actual delivery coverage before publishing.",
   "bilingual_descriptions": {
-    "en": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock the Mankeel MK083 and MX-14, supplied with a one-year warranty and VAT-inclusive AED pricing. Servicing, genuine spare parts, and summer battery health checks. Local delivery across Motor City, Sports City and JVC.",
-    "_ar_note": "Arabic rewritten to match the English. The previous Arabic text referenced models (Pioneer P1, Silverwing, Steeds) that do not exist in the catalog. Have a native speaker review before publishing.",
-    "ar": "TO_CONFIRM - withheld until the Arabic trading name is confirmed."
+    "en": "Emirates E-Scooters supplies Mankeel electric scooters across Dubai. We are a delivery-based business: we bring the scooter to you rather than running a shop, so you can inspect it in person before you accept it. Models: the Mankeel MK083 city commuter (350W, 699 AED) and the Mankeel MX-14 off-road (800W, 1,499 AED). Both include a one-year warranty and VAT-inclusive AED pricing. We also handle servicing, genuine Mankeel spare parts, and battery health checks. Delivery across Motor City, Sports City, Studio City, JVC, Arabian Ranches, Damac Hills, Mudon and Al Barsha South.",
+    "ar": "إميرتس إي سكوترز توفّر سكوترات مانكيل الكهربائية في جميع أنحاء دبي. نحن نعمل بنظام التوصيل: نأتي بالسكوتر إليك بدلاً من تشغيل متجر، ويمكنك معاينته بنفسك قبل استلامه. الموديلات: مانكيل MK083 للتنقل داخل المدينة (350 واط، 699 درهماً) ومانكيل MX-14 للطرق الوعرة (800 واط، 1,499 درهماً). كلاهما يشمل ضماناً لمدة سنة وأسعاراً شاملة ضريبة القيمة المضافة. نوفّر أيضاً خدمات الصيانة وقطع الغيار الأصلية وفحص صحة البطارية. التوصيل يغطي موتور سيتي وسبورتس سيتي وستوديو سيتي وقرية جميرا الدائرية ومزارع العرب ودماك هيلز ومدن وبرشاء ساوث.",
+    "_ar_note": "Matches the English. Have a native speaker read it once before it goes on a listing."
   },
   "photo_upload_manifest": [
-    "storefront_exterior_waitrose_motor_city.jpg",
-    "mankeel_mk083_display_showroom.jpg",
-    "rta_permit_safety_helmet_gear.jpg",
-    "summer_battery_service_workshop.jpg"
+    "mankeel_mk083_product.jpg",
+    "mankeel_mx14_product.jpg",
+    "handover_and_delivery.jpg",
+    "battery_health_check.jpg"
   ],
-  "_photo_note": "Filenames are targets, not existing assets. Real photos of the actual Motor City storefront must be taken before GBP upload.",
+  "_photo_note": "Product and service photos only. Do NOT upload storefront or showroom photos - there is no storefront, and a photo implying one contradicts the service-area listing.",
   "website_url": "https://emirates-scooters-dubai.vercel.app",
   "gbp_listing_type": {
-    "type": "storefront",
-    "note": "Standalone unit with its own entrance. File as a normal storefront listing. Do NOT use the 'located within' / department relationship, and do not select a service-area-only business type.",
-    "hide_address": false
+    "type": "service_area_business",
+    "hide_address": true,
+    "note": "Set live in GBP on 2026-08-29: 'No location; deliveries and home services only'. Do not re-add an address."
   },
   "trading_hours": {
     "opens": "08:00",
@@ -61,7 +60,8 @@
       "Saturday",
       "Sunday"
     ],
-    "status": "CONFIRMED by owner 2026-08-29 (08:00-22:00, all seven days)"
+    "meaning": "Contact and delivery hours, not shop hours.",
+    "status": "CONFIRMED by owner 2026-08-29"
   },
   "_rta_claim_policy": "No product-level 'RTA compliant' or 'RTA Authorized Dealer' claim may be published until the Mankeel manufacturer spec sheet confirms whether the imported units are limited to RTA's 20 km/h maximum. State the law; do not assert the products meet it."
 }

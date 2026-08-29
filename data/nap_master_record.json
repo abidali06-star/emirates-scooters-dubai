@@ -1,9 +1,12 @@
 {
-  "_note": "SOURCE OF TRUTH for Name, Address, Phone (NAP). Confirmed by owner Saam Khan on 2026-08-29. Every citation, schema block, GBP field and directory listing must match this record character-for-character.",
+  "_note": "SOURCE OF TRUTH for the publishable business identity. This is a SERVICE AREA BUSINESS (delivery only, no public premises). There is NO public street address: name, phone, website and service areas are the citation set that must match character-for-character everywhere.",
   "business_name": {
     "en": "Emirates E-Scooters",
-    "ar": "PROPOSED - NOT CONFIRMED - DO NOT PUBLISH",
-    "ar_proposals": {
+    "ar": "إميرتس إي سكوترز",
+    "ar_status": "CONFIRMED by owner Saam Khan 2026-08-29. Chose the transliteration (option_2). Phonetic rendering of 'Emirates E-Scooters'; carries no descriptive meaning in Arabic.",
+    "ar_romanised": "Emirates E-Scooters (phonetic)",
+    "ar_outstanding_check": "Owner has not confirmed whether this matches the Arabic name on the trade licence. On a UAE licence the Arabic name is the legal identifier and listings should match it verbatim. If the licence differs, the licence wins and this must be updated before any listing is filed.",
+    "ar_options_considered": {
       "_status": "PROPOSED by Claude 2026-08-29. Awaiting Saam's confirmation. Must NOT be published to any listing until confirmed.",
       "_legal_warning": "On a UAE trade licence the Arabic name is the LEGAL identifier, and DED/GBP listings should match the licence exactly. Whatever is already printed on the trade licence overrides every option below. Check the licence before choosing.",
       "option_1_translation": {
@@ -39,23 +42,14 @@
     "role": "Owner / primary contact"
   },
   "address": {
-    "formatted_single_line": "Store 001, Waitrose, Motor City, Dubai, United Arab Emirates",
-    "store_number": "Store 001",
-    "building_or_landmark": "Waitrose, Motor City",
-    "area": "Motor City",
+    "_status": "NO PUBLIC ADDRESS. Service area business.",
+    "public_street_address": null,
     "city": "Dubai",
     "emirate": "Dubai",
     "country": "United Arab Emirates",
     "country_code": "AE",
-    "geo_coordinates": {
-      "latitude": 25.041390226596707,
-      "longitude": 55.22914791534377
-    },
-    "open_questions": [
-      "Verify the pin lands on the shop entrance in Google Maps satellite view before submitting GBP."
-    ],
-    "premises_type": "standalone_unit",
-    "premises_note": "Store 001 is a STANDALONE unit, not a concession inside Waitrose. Waitrose is used as the locating landmark only. GBP is therefore eligible as a normal storefront listing with its own door and signage; it must NOT be filed as a department/'store within a store'."
+    "verification_address": "TO_CONFIRM - Google/Bing/Apple each need a real base address (normally the owner's home) for verification only. It is never displayed. Owner must supply and enter this himself. Must NOT be a PO box, a virtual office, or the Motor City meeting point.",
+    "_removed": "Store 001, Waitrose, Motor City and coordinates 25.041390/55.229148 were removed 2026-08-29. That location is a customer meeting/handover point, not premises the business occupies, so it cannot be published as an address."
   },
   "phone": {
     "primary_e164": "+971566672354",
@@ -66,12 +60,15 @@
     "Dubai Sports City",
     "Dubai Studio City",
     "Jumeirah Village Circle (JVC)",
+    "Jumeirah Village Triangle (JVT)",
     "Arabian Ranches",
     "Damac Hills",
     "Mudon",
-    "Al Barsha South"
+    "Al Barsha South",
+    "Dubai Production City",
+    "Green Community Motor City"
   ],
-  "_service_area_note": "Rewritten from the previous JLT/Marina/Business Bay set, which reflected the old incorrect JLT address. These are the districts adjacent to Motor City. Confirm they match actual delivery coverage.",
+  "_service_area_note": "Matches the 11 areas entered in Google Business Profile on 2026-08-29.",
   "website_url": "https://emirates-scooters-dubai.vercel.app",
   "superseded_values": {
     "_note": "Historic incorrect values. Kept only so future audits can detect stragglers.",
@@ -84,11 +81,17 @@
     }
   },
   "website_url_status": "CONFIRMED as the deployed Vercel URL (Antigravity session log 4ee5d596; git commit b084d75; verified live 2026-08-29). Owner has decided against a custom domain, so emirates-scooters-dubai.vercel.app is final and safe to use in citations.",
-  "trading_hours": {
-    "status": "CONFIRMED by owner 2026-08-29",
+  "business_model": {
+    "type": "service_area_business",
+    "confirmed": "Owner confirmed 2026-08-29: side business, no shop. Deliveries and in-person handovers only.",
+    "public_address": "NONE - must not be published on any listing, page or schema block.",
+    "google_listing_state": "GBP set to 'No location; deliveries and home services only' on 2026-08-29."
+  },
+  "operating_hours": {
     "opens": "08:00",
     "closes": "22:00",
     "days": "Monday-Sunday (all seven days)",
-    "note": "Earlier '8:00 - 10:00 all days' was ambiguous; owner clarified as 08:00-22:00."
+    "meaning": "Hours the business is contactable and delivering. NOT shop opening hours - there is no shop.",
+    "status": "CONFIRMED by owner 2026-08-29"
   }
 }

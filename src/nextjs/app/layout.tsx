@@ -5,14 +5,14 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://emirates-scooters-dubai.vercel.app'),
   title: {
-    default: 'Emirates E-Scooters | Mankeel Electric Scooters, Motor City Dubai',
+    default: 'Emirates E-Scooters | Mankeel Electric Scooters Delivered Across Dubai',
     template: '%s | Emirates E-Scooters',
   },
-  description: 'Mankeel MK083 and MX-14 electric scooters in Dubai. One-year warranty, summer battery servicing, and local delivery across Motor City, Sports City and JVC.',
+  description: 'Mankeel MK083 and MX-14 electric scooters delivered across Dubai. One-year warranty, battery servicing, and free local delivery to Motor City, Sports City and JVC.',
   keywords: [
     'Mankeel Dubai',
     'Mankeel electric scooter UAE',
-    'e-scooter shop Dubai',
+    'buy e-scooter Dubai',
     'Mankeel MK083',
     'Mankeel MX-14',
     'e-scooter Dubai price',
@@ -25,21 +25,21 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     url: 'https://emirates-scooters-dubai.vercel.app',
     siteName: 'Emirates E-Scooters',
-    title: 'Emirates E-Scooters | Mankeel Electric Scooters, Motor City Dubai',
-    description: 'Buy Mankeel electric scooters in Dubai. In-stock models from 699 AED with free local delivery.',
+    title: 'Emirates E-Scooters | Mankeel Electric Scooters Delivered Across Dubai',
+    description: 'Buy Mankeel electric scooters in Dubai, delivered to you. In-stock models from 699 AED with free local delivery.',
     images: [
       {
         url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
         width: 1200,
         height: 630,
-        alt: 'Emirates E-Scooters showroom, Motor City Dubai',
+        alt: 'Mankeel electric scooters delivered across Dubai',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Emirates E-Scooters | Official Store',
-    description: 'Mankeel electric scooters in Dubai. Visit our Motor City store.',
+    title: 'Emirates E-Scooters | Mankeel Scooters, Dubai',
+    description: 'Mankeel electric scooters delivered across Dubai. Free local delivery.',
     images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
   },
   robots: {
@@ -56,26 +56,37 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Service area business: no premises open to the public. Per Google's
+  // structured-data guidance for service-area businesses, streetAddress and geo
+  // are omitted and areaServed carries the coverage instead. Do not add a
+  // street address back - the business has no public location.
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Store',
+    '@type': 'LocalBusiness',
     name: 'Emirates E-Scooters',
-    image: 'https://emirates-scooters-dubai.vercel.app/images/storefront-motor-city.jpg',
+    image: 'https://emirates-scooters-dubai.vercel.app/images/mankeel-mk083-product.jpg',
     telephone: '+971 56 667 2354',
     url: 'https://emirates-scooters-dubai.vercel.app',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Store 001, Waitrose, Motor City',
       addressLocality: 'Dubai',
       addressRegion: 'Dubai',
       addressCountry: 'AE',
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 25.041390226596707,
-      longitude: 55.22914791534377,
-    },
-    // Hours confirmed by the owner 2026-08-29: 08:00-22:00, all seven days.
+    areaServed: [
+      'Motor City',
+      'Dubai Sports City',
+      'Dubai Studio City',
+      'Jumeirah Village Circle (JVC)',
+      'Jumeirah Village Triangle (JVT)',
+      'Arabian Ranches',
+      'Damac Hills',
+      'Mudon',
+      'Al Barsha South',
+      'Dubai Production City',
+      'Green Community Motor City',
+    ],
+    // Contact and delivery hours, confirmed 2026-08-29. Not shop hours - there is no shop.
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

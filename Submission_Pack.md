@@ -4,29 +4,34 @@ Prepared 2026-08-29. Everything below is staged and ready to paste.
 
 **I cannot submit these for you.** Each requires signing into an account as the business owner and passing identity verification tied to Saam. Those steps need his credentials and, in most cases, a physical postcard or a live video call. Creating accounts or entering credentials on his behalf is out of bounds — so this pack takes it to the last click and stops there.
 
-**One field is deliberately blank: the Arabic trading name.** Trading hours are now confirmed (08:00–22:00, all seven days) and filled in below. See §5.
+**All fields below are confirmed and ready to paste.** Trading hours 08:00–22:00 all seven days; Arabic trade name `إميرتس إي سكوترز`. One caveat on the Arabic name in §5.
 
 ---
 
-## 1. The canonical NAP — paste this identically everywhere
+## 1. Business type: SERVICE AREA BUSINESS
 
-Character-for-character consistency across listings is the entire point of the exercise. One variant address weakens every citation.
+Emirates E-Scooters is a delivery-only business with **no premises open to the public**. This governs every listing below.
+
+- **Do not publish a street address anywhere.** Not on Google, Bing, Apple, any directory, or the website.
+- The Motor City Waitrose location is a customer meeting point, not premises the business occupies. It must never appear as an address.
+- Each platform still needs a **real base address for verification only** (normally the owner's home). It is stored privately and never displayed. Saam enters this himself — it is not in this pack. It must not be a PO box, a virtual office, or the Waitrose meeting point.
+
+**The citation set — paste identically everywhere:**
 
 | Field | Value |
 |---|---|
 | Business name | `Emirates E-Scooters` |
-| Address line | `Store 001, Waitrose, Motor City` |
-| City | `Dubai` |
-| Region / Emirate | `Dubai` |
+| Business name (Arabic) | `إميرتس إي سكوترز` |
+| Street address | **none — hidden** |
+| City / Emirate | `Dubai` / `Dubai` |
 | Country | `United Arab Emirates` |
 | Phone | `+971 56 667 2354` |
 | Website | `https://emirates-scooters-dubai.vercel.app` |
-| Latitude | `25.041390226596707` |
-| Longitude | `55.22914791534377` |
+| Contact & delivery hours | `08:00 – 22:00`, all seven days |
 
-Do **not** append "Dubai" or "UAE" to the business name — Google treats keyword/location stuffing in the title as a violation, and it's a common cause of suspension.
+Service areas (11, as entered in GBP): Motor City · Dubai Sports City · Dubai Studio City · JVC · JVT · Arabian Ranches · Damac Hills · Mudon · Al Barsha South · Dubai Production City · Green Community Motor City
 
-**Premises type: standalone unit.** File as a normal storefront with its own entrance. Do **not** use the "located within" / store-within-a-store relationship, and do **not** select service-area-only.
+Do **not** append "Dubai" or "UAE" to the business name — Google treats location stuffing in the title as a violation.
 
 ---
 
@@ -37,9 +42,10 @@ Do **not** append "Dubai" or "UAE" to the business name — Google treats keywor
 | Field | Value |
 |---|---|
 | Business name | `Emirates E-Scooters` |
+| Business name (Arabic) | `إميرتس إي سكوترز` |
 | Primary category | `Scooter Repair Shop` or `Motor Scooter Dealer` — pick whichever matches the dominant activity; a retail-first shop is usually the dealer category |
 | Secondary categories | `Electric Vehicle Charging Station` only if you actually offer it; otherwise leave empty |
-| Address | as §1 |
+| Address | **hidden — service area business** |
 | Service area | Motor City, Dubai Sports City, Dubai Studio City, JVC, Arabian Ranches, Damac Hills, Mudon, Al Barsha South |
 | Phone | `+971 56 667 2354` |
 | Website | `https://emirates-scooters-dubai.vercel.app` |
@@ -57,9 +63,11 @@ Our workshop handles servicing, genuine Mankeel spare parts, and battery health 
 Visit us in store for advice on choosing a scooter, on RTA permit requirements, and on where you can legally ride in Dubai.
 ```
 
-**Verification to expect:** for a new UAE retail address, Google will most likely require **video verification** — a single unbroken recording showing the street/signage, the store interior, and you demonstrating proof of management (keys, POS, branded stock). Postcard is sometimes offered instead. Have signage physically up before starting; a unit with no visible branding is the most common failure.
+**Status:** the profile already exists and was reconfigured on 2026-08-29 to *"No location; deliveries and home services only"*, with the description rewritten to delivery framing. It is **not yet verified** and not publicly visible.
 
-**Before you submit:** open Google Maps satellite view at the coordinates in §1 and confirm the pin sits on your door, not on the Waitrose entrance or the car park.
+**Verification to expect:** with the address hidden, Google usually stops asking for a storefront video. Expect postcard to your real base address, a phone call, or a video showing you genuinely operate — stock, branded materials, tools, delivery setup. All of those you can do honestly.
+
+If it still demands a storefront walkthrough, stop and re-check the listing type rather than improvising a video. Filming premises you don't occupy is what gets accounts banned.
 
 ---
 
@@ -73,7 +81,8 @@ Bing offers "import from Google Business Profile" — **do GBP first**, then imp
 |---|---|
 | Business name | `Emirates E-Scooters` |
 | Category | `Motorcycle & Scooter Dealers` |
-| Address / phone / website / geo | as §1 |
+| Address | **hidden — service area business** |
+| Phone / website | as §1 |
 | Hours | `08:00 – 22:00`, Monday–Sunday (all seven days) |
 | Description | reuse the §2 description |
 
@@ -89,10 +98,13 @@ Bing offers "import from Google Business Profile" — **do GBP first**, then imp
 |---|---|
 | Business name | `Emirates E-Scooters` |
 | Category | `Shopping > Automotive` (Apple's tree differs from Google's; pick the nearest retail-automotive node) |
-| Address / phone / website / geo | as §1 |
+| Address | **hidden — service area business** |
+| Phone / website | as §1 |
 | Hours | `08:00 – 22:00`, Monday–Sunday (all seven days) |
 
-**Verification:** Apple requires an Apple ID plus proof of authority — usually a document showing the business name at the address (trade licence, tenancy contract, or utility bill). Have the trade licence PDF ready.
+**Verification:** Apple requires an Apple ID plus proof of authority — normally a trade licence. Note that Apple Business Connect is oriented to places on the map; a delivery-only business may have limited options there. Do GBP and Bing first.
+
+**Trade licence:** Google and Apple both ask for business documentation, and the UAE requires a licence to trade. If there isn't one yet, Dubai's e-Trader licence covers home-based online selling (~AED 1,070–1,370 government fees), though most sources restrict it to UAE/GCC nationals — if you're on a residence visa you'd need a different e-commerce licence. Worth settling before verification.
 
 ---
 
@@ -100,7 +112,9 @@ Bing offers "import from Google Business Profile" — **do GBP first**, then imp
 
 **Trading hours — RESOLVED.** Saam confirmed 08:00–22:00, all seven days. Now published in schema, the GBP manifest, llms.txt and the tables above.
 
-**Arabic trading name.** Three options are staged in `data/nap_master_record.json` under `business_name.ar_proposals`, with `الإمارات للسكوترات الكهربائية` recommended. It is marked PROPOSED and must not go on a listing until confirmed — on a UAE trade licence the Arabic name is a legal identifier, and if a licence already exists, its Arabic name overrides all three options. Two things to check first: UAE trade-name rules restrict the use of country/emirate names, so `الإمارات` may need approval; and "Emirates" is a heavily used mark in the UAE.
+**Arabic trading name — CONFIRMED.** Saam chose the transliteration: **`إميرتس إي سكوترز`** — a phonetic rendering of "Emirates E-Scooters" that carries no descriptive meaning in Arabic. Use it verbatim wherever a listing offers an Arabic name field.
+
+One caveat, not a blocker: if a UAE trade licence has already been issued, the Arabic name printed on it is the legal identifier and listings should match it exactly. Check the licence — if it differs, the licence wins and every listing needs updating. A side effect of the transliteration choice is that the Arabic name contains no words meaning "electric scooter", so Arabic-language search relevance now has to come from the Arabic description rather than the name.
 
 **Speed-governor claim.** Omitted from all product copy — see §6.
 

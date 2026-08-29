@@ -69,7 +69,20 @@ class TestGEOSEOPipeline(unittest.TestCase):
             data = json.load(f)
             self.assertIn("local_business_schema", data)
             self.assertIn("bilingual_posts", data)
-            self.assertEqual(data["local_business_schema"]["@type"], "Store")
+
+            schema = data["local_business_schema"]
+            # Emirates E-Scooters is a SERVICE AREA BUSINESS: delivery only, no
+            # premises open to the public. The schema must therefore never carry
+            # a street address or geo coordinates, and must carry areaServed.
+            # Publishing an address for a business with no premises is what gets
+            # a Google listing suspended.
+            self.assertEqual(schema["@type"], "LocalBusiness")
+            self.assertNotIn("streetAddress", schema.get("address", {}),
+                             "Service area business must not publish a street address")
+            self.assertNotIn("geo", schema,
+                             "Service area business must not publish geo coordinates")
+            self.assertIn("areaServed", schema)
+            self.assertTrue(schema["areaServed"], "areaServed must not be empty")
 
     def test_06_part2_offsite_citations_valid(self):
         citations_path = "output/reports/offsite_citations_sentiment_manifest.json"

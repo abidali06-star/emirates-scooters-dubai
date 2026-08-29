@@ -1,23 +1,17 @@
 {
   "local_business_schema": {
     "@context": "https://schema.org",
-    "@type": "Store",
+    "@type": "LocalBusiness",
     "name": "Emirates E-Scooters",
-    "image": "TO_CONFIRM: real photo of the Motor City storefront, hosted on the production domain",
+    "image": "TO_CONFIRM: product or delivery photo. Do NOT use a storefront photo - there is no storefront.",
     "telephone": "+971 56 667 2354",
     "url": "https://emirates-scooters-dubai.vercel.app",
-    "description": "Emirates E-Scooters is the official Mankeel electric scooter store in Dubai, located at Waitrose, Motor City. We stock the Mankeel MK083 and MX-14, supplied with a one-year warranty and VAT-inclusive AED pricing. Servicing, genuine spare parts, and summer battery health checks. Local delivery across Motor City, Sports City and JVC.",
+    "description": "Emirates E-Scooters supplies Mankeel electric scooters across Dubai. We are a delivery-based business: we bring the scooter to you rather than running a shop, so you can inspect it in person before you accept it. Models: the Mankeel MK083 city commuter (350W, 699 AED) and the Mankeel MX-14 off-road (800W, 1,499 AED). Both include a one-year warranty and VAT-inclusive AED pricing. We also handle servicing, genuine Mankeel spare parts, and battery health checks. Delivery across Motor City, Sports City, Studio City, JVC, Arabian Ranches, Damac Hills, Mudon and Al Barsha South.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Store 001, Waitrose, Motor City",
       "addressLocality": "Dubai",
       "addressRegion": "Dubai",
       "addressCountry": "AE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 25.041390226596707,
-      "longitude": 55.22914791534377
     },
     "openingHoursSpecification": [
       {
@@ -40,10 +34,13 @@
       "Dubai Sports City",
       "Dubai Studio City",
       "Jumeirah Village Circle (JVC)",
+      "Jumeirah Village Triangle (JVT)",
       "Arabian Ranches",
       "Damac Hills",
       "Mudon",
-      "Al Barsha South"
+      "Al Barsha South",
+      "Dubai Production City",
+      "Green Community Motor City"
     ]
   },
   "bilingual_posts": {
@@ -52,15 +49,15 @@
         "topic": "RTA Compliance",
         "title_en": "Riding Your Mankeel Scooter Legally in Dubai",
         "title_ar": "قيادة سكوتر مانكيل بشكل قانوني في دبي",
-        "body_en": "Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us in store about RTA permit requirements.",
-        "body_ar": "هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا في المتجر عن اشتراطات تصريح هيئة الطرق والمواصلات."
+        "body_en": "Riding in Motor City, Sports City or JVC? Every Mankeel scooter we sell ships with dual braking and is set up for Dubai's designated e-scooter tracks. Ask us about RTA permit requirements when we deliver.",
+        "body_ar": "هل تتنقل في موتور سيتي أو سبورتس سيتي أو قرية جميرا الدائرية؟ جميع سكوترات مانكيل لدينا مزودة بنظام فرامل مزدوج ومهيأة للمسارات المخصصة في دبي. اسألنا عن اشتراطات تصريح هيئة الطرق والمواصلات عند التوصيل."
       },
       {
         "topic": "Summer Maintenance Protocol",
         "title_en": "Protect Your Scooter Battery in UAE Summer Heat",
         "title_ar": "احمِ بطارية السكوتر في حرارة الصيف بدبي",
-        "body_en": "Keep your battery in peak condition during 45°C+ summer heat. Visit our Motor City store for free battery thermal diagnostic checks.",
-        "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. تفضل بزيارة متجرنا في موتور سيتي لفحص بطاريتك مجاناً."
+        "body_en": "Keep your battery in peak condition during 45°C+ summer heat. We offer free battery thermal diagnostic checks when we deliver or collect.",
+        "body_ar": "حافظ على كفاءة البطارية أثناء حرارة الصيف التي تتجاوز 45 درجة. نقدّم فحصاً مجانياً لحرارة البطارية عند التوصيل أو الاستلام."
       }
     ]
   }
