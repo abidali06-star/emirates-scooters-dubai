@@ -25,7 +25,14 @@
       "weight_kg": 12.0,
       "max_load": "120 KG",
       "max_load_kg": 120,
-      "braking_system": "Rear Disc Brake"
+      "braking_system": "Rear Disc Brake",
+      "speed_modes": {
+        "count": 3,
+        "mode_1_kmh": 20,
+        "mode_1_note": "Lowest of three selectable ride modes. 20 km/h matches the maximum e-scooter speed RTA requires in Dubai.",
+        "max_mode_kmh": 30,
+        "source": "Owner-confirmed 2026-08-29 from the Mankeel supplier."
+      }
     },
     "key_features": [
       "Rear Disc Brake",
@@ -61,7 +68,14 @@
       "weight_kg": 18.0,
       "max_load": "200 KG",
       "max_load_kg": 200,
-      "braking_system": "Dual Disk Brakes"
+      "braking_system": "Dual Disk Brakes",
+      "speed_modes": {
+        "count": 3,
+        "mode_1_kmh": 20,
+        "mode_1_note": "Lowest of three selectable ride modes. 20 km/h matches the maximum e-scooter speed RTA requires in Dubai.",
+        "max_mode_kmh": 45,
+        "source": "Owner-confirmed 2026-08-29 from the Mankeel supplier."
+      }
     },
     "key_features": [
       "Dual Spring Suspensions",
@@ -97,7 +111,14 @@
       "weight_kg": 15.0,
       "max_load": "130 KG",
       "max_load_kg": 130,
-      "braking_system": "Rear Disc Brake"
+      "braking_system": "Rear Disc Brake",
+      "speed_modes": {
+        "count": 3,
+        "mode_1_kmh": 20,
+        "mode_1_note": "Lowest of three selectable ride modes. 20 km/h matches the maximum e-scooter speed RTA requires in Dubai.",
+        "max_mode_kmh": 35,
+        "source": "Owner-confirmed 2026-08-29 from the Mankeel supplier."
+      }
     },
     "key_features": [
       "Dual Suspensions",
@@ -133,7 +154,14 @@
       "weight_kg": 33.5,
       "max_load": "200 KG",
       "max_load_kg": 200,
-      "braking_system": "Dual Hydraulic Disk Brakes"
+      "braking_system": "Dual Hydraulic Disk Brakes",
+      "speed_modes": {
+        "count": 3,
+        "mode_1_kmh": 20,
+        "mode_1_note": "Lowest of three selectable ride modes. 20 km/h matches the maximum e-scooter speed RTA requires in Dubai.",
+        "max_mode_kmh": 55,
+        "source": "Owner-confirmed 2026-08-29 from the Mankeel supplier."
+      }
     },
     "key_features": [
       "Dual Suspensions",
@@ -169,7 +197,14 @@
       "weight_kg": 12.5,
       "max_load": "200 KG",
       "max_load_kg": 200,
-      "braking_system": "Dual Hydraulic Disk Brakes"
+      "braking_system": "Dual Hydraulic Disk Brakes",
+      "speed_modes": {
+        "count": 3,
+        "mode_1_kmh": 20,
+        "mode_1_note": "Lowest of three selectable ride modes. 20 km/h matches the maximum e-scooter speed RTA requires in Dubai.",
+        "max_mode_kmh": 65,
+        "source": "Owner-confirmed 2026-08-29 from the Mankeel supplier."
+      }
     },
     "key_features": [
       "Dual Suspensions",

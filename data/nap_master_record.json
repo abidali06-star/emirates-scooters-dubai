@@ -68,7 +68,7 @@
     "Green Community",
     "JVT"
   ],
-  "_service_area_note": "Matches the 11 revised free delivery areas.",
+  "_service_area_note": "Owner-revised free delivery areas, 2026-08-29.",
   "website_url": "https://emirates-scooters-dubai.vercel.app",
   "social_profiles": {
     "facebook": "https://www.facebook.com/profile.php?id=61582981335703"
@@ -97,20 +97,24 @@
     "meaning": "Hours the business is contactable and delivering. NOT shop opening hours - there is no shop.",
     "status": "CONFIRMED by owner 2026-08-29"
   },
-  "blocking_issues": {
-    "_status": "Recorded 2026-08-29 after the owner confirmed no trade licence and no premises.",
-    "no_trade_licence": {
-      "owner_statement": "No UAE trade licence. Described as a side hustle.",
-      "impact": "Blocks Google Business Profile verification (Google asks for business documentation), Google Merchant Center, Bing Places, Apple Business Connect, and business profiles on Trustpilot/Dubizzle. Separately, trading commercially in the UAE without a licence is not permitted regardless of what Google requires.",
-      "action": "Owner to obtain an appropriate UAE e-commerce/trader licence, or accept that local-listing channels stay closed."
+  "facebook_page": "https://www.facebook.com/profile.php?id=61582981335703",
+  "scope_decisions": {
+    "_note": "SETTLED. Do not reopen these. They define what this project does and does not attempt.",
+    "trade_licence": {
+      "decision": "Not pursuing a UAE trade licence. This is a side business.",
+      "decided": "2026-08-29 by owner",
+      "consequence": "Channels that require business documentation are OUT OF SCOPE: Google Business Profile verification, Google Merchant Center, Bing Places, Apple Business Connect, and business profiles on Trustpilot/Dubizzle. Do not plan around them and do not re-raise licensing.",
+      "in_scope_instead": "Website SEO/GEO, llms.txt for AI engines, organic content, and the existing Facebook page."
     },
-    "no_verification_address": {
-      "owner_statement": "Prefers not to use a real address for verification.",
-      "impact": "Google requires a real address for verification even when it is hidden from the public listing. PO boxes and virtual offices are explicitly disallowed and cause suspension. There is no compliant workaround. Without an address, GBP verification cannot complete.",
-      "mitigation": "For a service-area business the address is NEVER displayed publicly - only used to verify. That already addresses the privacy concern."
+    "verification_address": {
+      "decision": "Owner prefers not to supply a personal address for platform verification.",
+      "consequence": "Reinforces the above: verified local listings are out of scope. No workaround is attempted.",
+      "note": "Moot while the listing channels are out of scope."
     },
-    "speed_governor_unresolved": {
-      "note": "The owner's spec sheet gives hardware top speeds (30-65 km/h) but says nothing about whether units are limited to RTA's 20 km/h. No compliance claim may be published until that is confirmed with Mankeel."
+    "speed_compliance": {
+      "decision": "RESOLVED 2026-08-29.",
+      "fact": "Every model ships with three selectable speed modes. Mode 1 is limited to 20 km/h, which matches RTA's stated maximum for e-scooters in Dubai.",
+      "publishing_rule": "State it factually: the scooter has a 20 km/h mode that meets the RTA limit, and the rider selects it. Do NOT claim the product is 'RTA certified', 'RTA approved' or that we are an 'RTA Authorized Dealer' - those are authority-granted statuses we do not hold."
     }
   }
 }

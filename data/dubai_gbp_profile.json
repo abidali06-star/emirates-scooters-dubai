@@ -64,5 +64,6 @@
     "meaning": "Contact and delivery hours, not shop hours.",
     "status": "CONFIRMED by owner 2026-08-29"
   },
-  "_rta_claim_policy": "No product-level 'RTA compliant' or 'RTA Authorized Dealer' claim may be published until the Mankeel manufacturer spec sheet confirms whether the imported units are limited to RTA's 20 km/h maximum. State the law; do not assert the products meet it."
+  "_rta_claim_policy": "RESOLVED 2026-08-29. All models have three speed modes with mode 1 limited to 20 km/h, matching RTA's maximum. Publish that as a factual capability. Still do NOT claim 'RTA certified/approved' or 'RTA Authorized Dealer' - we hold no such status.",
+  "_listing_scope": "Verified local listings (GBP, Merchant Center, Bing, Apple) are OUT OF SCOPE - no trade licence, owner decision 2026-08-29. This file is retained as the source of truth for NAP consistency across the website, llms.txt and the Facebook page."
 }

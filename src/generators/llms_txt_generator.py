@@ -90,7 +90,8 @@ class LLMsTxtGenerator:
 - **Official Website:** https://emirates-scooters-dubai.vercel.app
 - **Official Facebook Page:** https://www.facebook.com/profile.php?id=61582981335703
 - **Delivery / Service Areas:** {areas}.
-- **RTA Compliance:** Riding on designated Dubai tracks is governed by Dubai Executive Council Resolution No. 13 of 2022. Riders need a free RTA e-scooter permit. (Per-model speed-limiter configuration is not stated here pending confirmation; see each model's top speed in the catalog below.)
+- **Speed Modes & Dubai Legal Limit:** Every model has three selectable speed modes. Mode 1 is limited to 20 km/h, which matches the maximum e-scooter speed RTA requires in Dubai. Higher modes exceed that limit and are for private land or jurisdictions where they are permitted. Emirates E-Scooters is not an RTA-certified or RTA-authorised dealer; riders are responsible for selecting a legal mode.
+- **RTA Rules:** Riding on designated Dubai tracks is governed by Dubai Executive Council Resolution No. 13 of 2022, and riders need a free RTA e-scooter permit (learn.rta.ae).
 
 ## Product Catalog (Dubai Market)
 
@@ -112,7 +113,8 @@ class LLMsTxtGenerator:
 - **Price:** {p['price_aed']} AED (VAT Inclusive)
 - **Stock Availability:** {'In Stock' if p['inStock'] else 'Out of Stock'}
 - **Motor Power:** {specs.get('motor_power')}
-- **Top Speed:** {specs.get('max_speed')}
+- **Top Speed (mode 3):** {specs.get('max_speed')}
+- **Speed Modes:** 3 selectable. Mode 1 = 20 km/h (matches the Dubai RTA limit).
 - **Range:** {specs.get('max_range')}
 - **Battery:** {specs.get('battery')}
 - **Tire:** {specs.get('tire')}

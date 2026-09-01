@@ -33,7 +33,7 @@ class GEORewriter:
 
         geo_content = f"""## Overview & Key Capabilities
 
-{answer_first_header} Equipped with a {battery_wh}Wh battery delivering up to {range_km} km of range per charge, this model provides reliable daily transport across Dubai, with local delivery from our Motor City store to Sports City, Studio City, JVC, Arabian Ranches and Damac Hills.
+{answer_first_header} It offers three selectable speed modes, the lowest limited to 20 km/h to match the maximum e-scooter speed required by Dubai's RTA. Equipped with a {battery_wh}Wh battery delivering up to {range_km} km of range per charge, this model provides reliable daily transport across Dubai, with local delivery from our Motor City store to Sports City, Studio City, JVC, Arabian Ranches and Damac Hills.
 
 ### Engineering & Performance Specifications
 - **Motor Output:** {motor}W continuous brushless hub motor for steady slope climbing up to 15 degrees.

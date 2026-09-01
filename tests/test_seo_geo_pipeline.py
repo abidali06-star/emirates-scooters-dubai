@@ -152,7 +152,14 @@ class TestGEOSEOPipeline(unittest.TestCase):
         with open(llms_path, "r", encoding="utf-8") as f:
             content = f.read()
             self.assertIn("Mankeel MX-14", content)
-            self.assertIn("RTA Compliance", content)
+            # Must state the RTA position factually and must never claim a status
+            # we don't hold (RTA certification / authorised dealer).
+            self.assertIn("RTA", content)
+            self.assertIn("20 km/h", content)
+            for forbidden in ("RTA certified", "RTA approved", "RTA Authorized Dealer",
+                              "RTA Authorised Dealer"):
+                self.assertNotIn(forbidden, content,
+                                 f"llms.txt must not claim: {forbidden}")
 
     def test_09_merchant_feed_xml_valid(self):
         feed_path = "src/nextjs/public/google-merchant-feed.xml"

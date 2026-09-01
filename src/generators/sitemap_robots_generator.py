@@ -9,6 +9,14 @@ import time
 from typing import Dict, Any
 
 class SitemapRobotsGenerator:
+    def _blog_slugs(self):
+        """Reads the generated blog index; returns [] if the pipeline hasn't written it yet."""
+        try:
+            with open("src/nextjs/lib/data/blogs.json", "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (FileNotFoundError, ValueError):
+            return []
+
     def __init__(self, products_path: str = "data/mankeel_products.json"):
         with open(products_path, "r", encoding="utf-8") as f:
             self.products = json.load(f)
@@ -57,9 +65,14 @@ Sitemap: https://emirates-scooters-dubai.vercel.app/sitemap.xml
         urls = [
             {"loc": "https://emirates-scooters-dubai.vercel.app", "priority": "1.0", "changefreq": "daily"},
             {"loc": "https://emirates-scooters-dubai.vercel.app/llms.txt", "priority": "0.9", "changefreq": "weekly"},
-            {"loc": "https://emirates-scooters-dubai.vercel.app/blogs/rta-e-scooter-permit-dubai", "priority": "0.8", "changefreq": "monthly"},
-            {"loc": "https://emirates-scooters-dubai.vercel.app/blogs/battery-maintenance-uae-summer", "priority": "0.8", "changefreq": "monthly"},
-            {"loc": "https://emirates-scooters-dubai.vercel.app/blogs/best-e-scooter-tracks-dubai", "priority": "0.8", "changefreq": "monthly"},
+            # Blog URLs are read from lib/data/blogs.json so new guides appear in
+            # the sitemap automatically. This list used to be hardcoded to three,
+            # which silently left later guides out of the sitemap entirely.
+            *[
+                {"loc": f"https://emirates-scooters-dubai.vercel.app/blogs/{b['slug']}",
+                 "priority": "0.8", "changefreq": "monthly"}
+                for b in self._blog_slugs()
+            ],
         ]
         
         for p in self.products:
