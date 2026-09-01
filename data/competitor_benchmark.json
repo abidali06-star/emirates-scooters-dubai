@@ -1,0 +1,100 @@
+{
+  "_note": "Observed UAE competitor pricing and specs, collected 2026-09-02 from electricscooters.ae (a UAE retailer shipping Dubai/Abu Dhabi/Sharjah). Every figure below was read off the live site, not estimated. Any comparison claim published on our site must be traceable to a row here.",
+  "_rules": [
+    "Never publish a comparison percentage that isn't computed from these figures.",
+    "Re-check before reusing: competitor prices change and many of these were sale prices.",
+    "Do not name Xiaomi or Segway/Ninebot in comparisons unless their current UAE prices are recorded here. They are not."
+  ],
+  "source": "https://electricscooters.ae",
+  "collected": "2026-09-02",
+  "currency": "AED",
+  "comparables": [
+    {
+      "model": "Kugoo G2 Pro",
+      "price_aed": 1885,
+      "price_note": "sale price; list 1,950",
+      "motor_w": 1000,
+      "max_speed_kmh": 45,
+      "range_km": 50,
+      "weight_kg": 23,
+      "closest_to": "MX-14"
+    },
+    {
+      "model": "Kugoo M6 Plus",
+      "price_aed": 1800,
+      "price_note": "sale price; list 2,175",
+      "motor_w": 1000,
+      "max_speed_kmh": 65,
+      "range_km": 50,
+      "weight_kg": 30,
+      "closest_to": "MX-14"
+    },
+    {
+      "model": "Kugoo C1 Plus",
+      "price_aed": 1385,
+      "price_note": "sale price; list 1,450",
+      "motor_w": 500,
+      "max_speed_kmh": 45,
+      "range_km": 35,
+      "weight_kg": 20,
+      "closest_to": "MX-14"
+    },
+    {
+      "model": "Kugoo Kirin C2 Pro",
+      "price_aed": 1999,
+      "price_note": "sale price; list 2,200",
+      "closest_to": "MX-14"
+    },
+    {
+      "model": "Kugoo T5",
+      "price_aed": 1500,
+      "price_note": "sale price; list 1,600",
+      "closest_to": "MX-14"
+    },
+    {
+      "model": "Wind Horse T1",
+      "price_aed": 685,
+      "motor_w": 350,
+      "max_speed_kmh": 25,
+      "range_km": 30,
+      "closest_to": "MK083"
+    },
+    {
+      "model": "Kugoo Pro 4",
+      "price_aed": 775,
+      "price_note": "sale price; list 850",
+      "motor_w": 350,
+      "max_speed_kmh": 35,
+      "closest_to": "MK083"
+    },
+    {
+      "model": "Wind Horse H5",
+      "price_aed": 1015,
+      "price_note": "sale price; list 1,299",
+      "closest_to": "MK083"
+    }
+  ],
+  "analysis": {
+    "MX-14": {
+      "our_price": 1499,
+      "spec": "800W, 45 km/h, 56 km range, 18 kg, dual spring suspension, dual disc brakes",
+      "finding": "The nearest same-speed competitor with dual suspension is the Kugoo G2 Pro at 1,885 AED. We are 386 AED cheaper (about 20% less), carry more range (56 km vs 50 km) and are 5 kg lighter. The Kugoo M6 Plus at 1,800 AED is faster but 12 kg heavier and no longer range.",
+      "defensible_claim": "About 20% less than the closest comparable 45 km/h dual-suspension scooter sold in the UAE, with more range and 5 kg less weight.",
+      "computation": "(1885 - 1499) / 1885 = 20.5%"
+    },
+    "MK083": {
+      "our_price": 699,
+      "spec": "350W, 30 km/h, 35 km range, 12 kg, solid honeycomb tyres",
+      "finding": "The entry band is genuinely competitive: Wind Horse T1 at 685 AED and Kugoo Pro 4 at 775 AED are both 350W. We are NOT meaningfully cheaper here. Our advantages are range (35 km vs the T1's 30 km), weight (12 kg is among the lightest at this price), and solid honeycomb tyres that cannot puncture on hot Dubai asphalt.",
+      "defensible_claim": "Priced in line with the UAE entry band, but with more range than the nearest competitor at the same price, one of the lightest at 12 kg, and puncture-proof solid tyres.",
+      "do_not_claim": "Any large percentage saving. The entry segment is competitive and a discount claim here would not survive a price check."
+    }
+  },
+  "retired_claims": {
+    "_why": "Removed 2026-09-02 after this benchmark was collected. They were written without competitor data.",
+    "claims": [
+      "Mankeel offers 30-40% better value — unsupported. Real gap is ~20% on the MX-14 and roughly nil on the MK083.",
+      "Direct Xiaomi Essential/1S and Segway Ninebot comparisons — no current UAE prices for those models were observed, so the comparison could not be substantiated."
+    ]
+  }
+}

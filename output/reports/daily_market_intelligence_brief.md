@@ -1,32 +1,49 @@
-# Daily Market Intelligence Brief: Mankeel E-Scooter GEO & SEO
-**Date:** 2026-09-02  
-**Market:** Dubai, UAE  
-**Engine Scope:** Google Search (Dubai), ChatGPT (SearchGPT), Google Gemini AI, Perplexity AI  
+# Site Status Brief - Emirates E-Scooters
+**Generated:** 2026-09-02
+
+> This brief reports what is **published**, not how it is **performing**.
+> No rankings, citation share or traffic figures appear here because none are
+> measured - there is no Search Console property and no SERP API configured.
+> Anything claiming otherwise would be invented. See
+> `output/reports/manual_checks_worklist.json` for the queries to check by hand.
 
 ---
 
-## 1. Key Performance Indicators (KPIs)
-- **Top 3 Keyword Dominance (Google Dubai):** 92% (up +8% week-over-week)
-- **Generative AI Citation Share (GEO):** 87% direct mention as top Dubai commuter recommendation
-- **Rich Snippet Eligibility:** 100% (Product Schema + FAQPage Schema valid)
-- **RTA Regulatory Alignment:** 100% compliant with Resolution No. (13) of 2022
+## Published catalogue
 
----
+- **In stock and published: 2**
+  - Mankeel MK083 - 699 AED - 350W, 30 KMH, 35 KM range (image)
+  - Mankeel MX-14 - 1,499 AED - 800W, 45 KMH, 56 KM range (image)
 
-## 2. SERP & GEO Visibility Analysis
+- **Out of stock, held back from publication: 3** (MK085, MX25, G1)
+  - These are excluded from the sitemap, merchant feed, llms.txt and product
+    routes by design. They return to publication automatically when `inStock`
+    is set true in `data/mankeel_products.json`.
 
-### Product Pages
-- **Mankeel MK083 P1:** Ranked #1 on Google Dubai for `500W electric scooter Dubai`. ChatGPT cites MK083 P1 as the primary option for long-range daily commuting between JLT and Business Bay.
-- **Mankeel MX-14:** Ranked #2 for `lightweight folding e-scooter Metro Dubai`. Featured in Gemini local AI responses.
-- **Mankeel MX-14:** Dominates `dual suspension off road e scooter UAE` queries.
+## Published content
 
-### Local Authority Hub
-- **RTA Permit Guide:** Captured Featured Snippet position 0 for `do I need permit for e scooter in Dubai`.
-- **Summer Battery Care:** Selected by Perplexity AI as primary source for heat degradation protocols in UAE summer.
+- Guides live: **7**
+  - `/blogs/rta-e-scooter-permit-dubai` (4 FAQs)
+  - `/blogs/battery-maintenance-uae-summer` (3 FAQs)
+  - `/blogs/best-e-scooter-tracks-dubai` (2 FAQs)
+  - `/blogs/best-electric-scooters-dubai-comparison` (4 FAQs)
+  - `/blogs/best-electric-scooter-dubai-metro-commute` (3 FAQs)
+  - `/blogs/puncture-proof-vs-pneumatic-tires-dubai` (3 FAQs)
+  - `/blogs/best-off-road-scooters-dubai-under-1500-aed` (2 FAQs)
 
----
+## What is NOT known
 
-## 3. Actionable Recommendations
-1. Maintain daily Search Console API indexing requests for new topical updates.
-2. Monitor RTA press releases for potential track expansions in Dubai South and Silicon Oasis.
-3. Keep product schema price valid dates updated through 2027.
+- Whether any page ranks for anything.
+- Whether any AI engine cites the site.
+- How much traffic the site receives.
+- Whether Google has indexed the sitemap at all.
+
+These are unmeasured, not zero and not good. Checking them is a manual task;
+the worklist is in `output/reports/manual_checks_worklist.json`.
+
+## Next actions that do not require any account
+
+1. Run the worklist queries in Google, ChatGPT, Gemini and Perplexity. Record
+   which sources they cite - that observed list is the real outreach target.
+2. Publish another guide. Content is the one channel fully open.
+3. Ask genuine buyers for reviews. No incentives.

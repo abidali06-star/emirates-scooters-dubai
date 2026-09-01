@@ -226,6 +226,8 @@ def run_pipeline():
     # Next.js product database, generated from the source catalogue so the site
     # can never serve a different set of models than data/mankeel_products.json.
     # (This file used to be hand-maintained and had drifted to 2 of 5 models.)
+    # Publish in-stock models only (owner decision 2026-09-02).
+    published = [p for p in products if p.get("inStock")]
     nextjs_products = [{
         "Model": p["model"],
         "slug": p["id"],
@@ -246,7 +248,7 @@ def run_pipeline():
             "Max Load": p["specs"]["max_load"],
         },
         "key_features": p["key_features"],
-    } for p in products]
+    } for p in published]
     nextjs_products_path = "src/nextjs/lib/data/products.json"
     os.makedirs(os.path.dirname(nextjs_products_path), exist_ok=True)
     with open(nextjs_products_path, "w", encoding="utf-8") as f:
@@ -329,10 +331,15 @@ def run_pipeline():
     print("\n--- Submitting Indexing & Monitoring Dubai SERP ---")
     monitor = SearchConsoleAndSERPMonitor()
     indexing_res = monitor.submit_urls_for_indexing(generated_urls)
-    print(f"[OK] Search Console Submission Status: {indexing_res['status_code']} OK ({indexing_res['total_submitted']} URLs)")
-    
+    print(f"[--] Search Console: {indexing_res['status']} - {indexing_res['count']} URL(s) awaiting MANUAL submission.")
+
     serp_res = monitor.monitor_dubai_serp()
-    print(f"[OK] Dubai SERP Monitoring Check: Verified {len(serp_res['rankings'])} target queries.")
+    print(f"[--] Dubai SERP: {serp_res['status']} - {len(serp_res['checks'])} queries to check by hand.")
+
+    # Persist the worklists so they can actually be worked through.
+    with open("output/reports/manual_checks_worklist.json", "w", encoding="utf-8") as f:
+        json.dump({"indexing": indexing_res, "serp": serp_res}, f, indent=2, ensure_ascii=False)
+    print("[OK] Manual check worklist saved to: output/reports/manual_checks_worklist.json")
 
     reporter = MarketIntelligenceReporter()
     brief = reporter.generate_daily_brief()

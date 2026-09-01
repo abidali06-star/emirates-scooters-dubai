@@ -132,8 +132,13 @@ class TestGEOSEOPipeline(unittest.TestCase):
             products = json.load(f)
         with open("data/mankeel_products.json", "r", encoding="utf-8") as f:
             source = json.load(f)
-        self.assertEqual(len(products), len(source),
-                         "Next.js product data must match the source catalogue")
+        published = [p for p in source if p.get("inStock")]
+        # Only in-stock models are published (owner decision 2026-09-02). Out-of-stock
+        # models stay in the source catalogue but must not reach the site.
+        self.assertEqual(len(products), len(published),
+                         "Next.js product data must contain exactly the in-stock models")
+        self.assertTrue(all(p["inStock"] for p in products),
+                        "An out-of-stock model reached the published product data")
             
         with open(layout_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -169,8 +174,9 @@ class TestGEOSEOPipeline(unittest.TestCase):
         items = root.findall(".//item")
         with open("data/mankeel_products.json", "r", encoding="utf-8") as f:
             source = json.load(f)
-        self.assertEqual(len(items), len(source),
-                         "Merchant feed must list every model in the catalogue")
+        published = [p for p in source if p.get("inStock")]
+        self.assertEqual(len(items), len(published),
+                         "Merchant feed must list exactly the in-stock models")
 
     def test_10_sitemap_and_robots_valid(self):
         robots_path = "src/nextjs/public/robots.txt"
@@ -183,6 +189,49 @@ class TestGEOSEOPipeline(unittest.TestCase):
             self.assertIn("GPTBot", content)
             self.assertIn("Google-Extended", content)
             self.assertIn("PerplexityBot", content)
+
+    def test_11_no_unsupported_comparison_claims(self):
+        """
+        Comparison claims must be traceable to data/competitor_benchmark.json,
+        which records observed UAE retail prices. The site previously claimed
+        "30-40% better value" with no competitor data behind it; the real gap is
+        about 20% on the MX-14 and roughly nil on the MK083.
+        """
+        banned = ["30% to 40%", "30-40%", "30–40%", "Unbeatable Value"]
+        targets = [
+            "src/nextjs/public/llms.txt",
+            "src/nextjs/public/llms-full.txt",
+            "src/nextjs/app/page.tsx",
+        ]
+        for path in targets:
+            if not os.path.exists(path):
+                continue
+            with open(path, "r", encoding="utf-8") as f:
+                content = f.read()
+            for phrase in banned:
+                self.assertNotIn(phrase, content,
+                                 f"Unsupported comparison claim '{phrase}' found in {path}")
+
+        self.assertTrue(os.path.exists("data/competitor_benchmark.json"),
+                        "Comparison claims require a benchmark file with observed prices")
+
+    def test_12_published_surfaces_are_in_stock_only(self):
+        """Out-of-stock models must not reach the sitemap or the merchant feed."""
+        with open("data/mankeel_products.json", "r", encoding="utf-8") as f:
+            source = json.load(f)
+        out_of_stock = [p["id"] for p in source if not p.get("inStock")]
+
+        with open("src/nextjs/public/sitemap.xml", "r", encoding="utf-8") as f:
+            sitemap = f.read()
+        for pid in out_of_stock:
+            self.assertNotIn(f"/products/{pid}", sitemap,
+                             f"Out-of-stock model {pid} is in the sitemap")
+
+        with open("src/nextjs/public/llms.txt", "r", encoding="utf-8") as f:
+            llms = f.read()
+        self.assertNotIn("Out of Stock", llms,
+                         "llms.txt should only advertise in-stock models")
+
 
 if __name__ == "__main__":
     unittest.main()

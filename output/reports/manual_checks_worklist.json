@@ -1,0 +1,118 @@
+{
+  "indexing": {
+    "status": "NOT_SUBMITTED",
+    "reason": "No Search Console API credentials are configured and this function makes no network call. Submit the sitemap manually at https://search.google.com/search-console if and when the domain is verified.",
+    "urls_pending_submission": [
+      "https://emirates-scooters-dubai.vercel.app/products/mk083",
+      "https://emirates-scooters-dubai.vercel.app/products/mx-14",
+      "https://emirates-scooters-dubai.vercel.app/products/mk085",
+      "https://emirates-scooters-dubai.vercel.app/products/mx25",
+      "https://emirates-scooters-dubai.vercel.app/products/g1",
+      "https://emirates-scooters-dubai.vercel.app/blogs/rta-e-scooter-permit-dubai",
+      "https://emirates-scooters-dubai.vercel.app/blogs/battery-maintenance-uae-summer",
+      "https://emirates-scooters-dubai.vercel.app/blogs/best-e-scooter-tracks-dubai",
+      "https://emirates-scooters-dubai.vercel.app/blogs/best-electric-scooters-dubai-comparison",
+      "https://emirates-scooters-dubai.vercel.app/blogs/best-electric-scooter-dubai-metro-commute",
+      "https://emirates-scooters-dubai.vercel.app/blogs/puncture-proof-vs-pneumatic-tires-dubai",
+      "https://emirates-scooters-dubai.vercel.app/blogs/best-off-road-scooters-dubai-under-1500-aed"
+    ],
+    "count": 12,
+    "generated_at": "2026-09-01T21:19:50Z"
+  },
+  "serp": {
+    "status": "NOT_MEASURED",
+    "reason": "No SERP API is configured. Rankings and AI-citation status must be observed by hand: run each query in Google, ChatGPT, Gemini and Perplexity, and record what you actually see. Never fill these in from expectation.",
+    "how_to_check": [
+      "Run the query in a logged-out / incognito browser set to Dubai.",
+      "For AI engines, note whether emirates-scooters-dubai.vercel.app is cited at all, and which competing sources are cited instead - that list is the real outreach target.",
+      "Record observed_position as an integer, or null if not in the top 100."
+    ],
+    "checks": [
+      {
+        "keyword": "electric scooter Dubai",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "buy electric scooter Dubai",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "electric scooter Dubai price",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "best electric scooter Dubai",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "cheap electric scooter Dubai under 1000 AED",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "Mankeel MK083",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "Mankeel MX-14",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "Mankeel Dubai",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "RTA e-scooter permit Dubai how to apply",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "e-scooter speed limit Dubai",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "electric scooter delivery Motor City Dubai",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      },
+      {
+        "keyword": "lightweight folding electric scooter Dubai Metro",
+        "observed_position": null,
+        "observed_in_ai_answer": null,
+        "competing_sources_cited": [],
+        "checked_on": null
+      }
+    ],
+    "generated_at": "2026-09-01T21:19:50Z"
+  }
+}

@@ -77,6 +77,45 @@ export default async function ProductPage({ params }: { params: { slug: string }
     notFound();
   }
 
+  // Per-product FAQ schema. These are the questions buyers actually ask, so they
+  // give AI engines and Google direct answers tied to this specific model.
+  const faqs = [
+    {
+      q: `Is the Mankeel ${product.Model} legal to ride in Dubai?`,
+      a: `Yes, on designated tracks and shared paths with a free RTA permit. RTA requires an e-scooter's maximum speed to be set to 20 km/h, and this model has three speed modes with mode 1 limited to 20 km/h.`,
+    },
+    {
+      q: `How far does the Mankeel ${product.Model} go on one charge?`,
+      a: `Rated ${product.specifications.Range} per charge. Expect roughly 70-80% of that in Dubai summer heat, depending on rider weight, speed mode and terrain.`,
+    },
+    {
+      q: `How long does the Mankeel ${product.Model} take to charge?`,
+      a: `${product.specifications['Charge time']}. Let the battery cool for 30-45 minutes indoors before charging after a ride.`,
+    },
+    {
+      q: `How much does the Mankeel ${product.Model} weigh?`,
+      a: `${product.specifications.Weight}, carrying up to ${product.specifications['Max Load']}.`,
+    },
+    {
+      q: `Do you deliver the Mankeel ${product.Model} in Dubai?`,
+      a: `Yes. Free delivery across Motor City, Sports City, JVC, Arabian Ranches, Damac Hills, Mudon, Studio City, Al Barsha South, Production City, Green Community and JVT. We hand it over in person so you can inspect it before you accept it.`,
+    },
+    {
+      q: `Is there a warranty on the Mankeel ${product.Model}?`,
+      a: `One year in the UAE, plus servicing and genuine Mankeel spare parts held locally.`,
+    },
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -107,6 +146,10 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       <header className="mb-6 flex flex-col md:flex-row md:items-center justify-between border-b pb-4">
@@ -192,6 +235,18 @@ export default async function ProductPage({ params }: { params: { slug: string }
           </button>
         )}
       </section>
-    </article>
+      <section className="mt-10 rounded-lg border border-slate-200 bg-slate-50 p-5">
+          <h2 className="mb-3 text-lg font-bold text-slate-900">
+            Mankeel {product.Model} &mdash; common questions
+          </h2>
+          {faqs.map((f, i) => (
+            <div key={i} className="mb-3">
+              <p className="text-sm font-semibold text-slate-900">{f.q}</p>
+              <p className="text-sm text-slate-700">{f.a}</p>
+            </div>
+          ))}
+        </section>
+  
+      </article>
   );
 }

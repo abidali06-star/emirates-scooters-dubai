@@ -31,7 +31,7 @@ class MerchantCenterFeedGenerator:
         description = ET.SubElement(channel, "description")
         description.text = "Official product feed for Mankeel electric scooters in Dubai, UAE."
 
-        for p in self.products:
+        for p in [x for x in self.products if x.get('inStock')]:
             item = ET.SubElement(channel, "item")
             
             g_id = ET.SubElement(item, "g:id")

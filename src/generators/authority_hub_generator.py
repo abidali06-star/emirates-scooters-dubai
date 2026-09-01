@@ -181,7 +181,7 @@ Hot asphalt expands air in pneumatic tires. Keep tires inflated to manufacturer 
     def generate_competitor_comparison_guide(self) -> Dict[str, Any]:
         title = "Best Electric Scooters in Dubai (2026): Mankeel vs Xiaomi vs Segway Ninebot Comparison"
         slug = "best-electric-scooters-dubai-comparison"
-        description = "Complete UAE buying guide comparing top electric scooter brands in Dubai. Discover why Mankeel offers superior motor power, solid honeycomb tires, local UAE warranty, and 30-40% better value than Xiaomi and Ninebot."
+        description = "Complete UAE buying guide comparing electric scooter brands in Dubai: motor power, tyre type, warranty and real UAE retail prices checked September 2026."
 
         faqs = [
             {
@@ -190,7 +190,7 @@ Hot asphalt expands air in pneumatic tires. Keep tires inflated to manufacturer 
             },
             {
                 "question": "How does Mankeel compare to Xiaomi and Segway Ninebot in UAE?",
-                "answer": "Mankeel delivers equivalent or superior specs at 30% to 40% lower prices. While Xiaomi Pro 2 and Ninebot Max cost AED 1,200 to AED 2,200, Mankeel offers puncture-proof solid tires (eliminating flat tires common on Xiaomi pneumatic tires in Dubai heat), higher motor output (800W on MX-14 vs 600W peak on Ninebot), and local Dubai battery warranty support."
+                "answer": "On like-for-like specification, Mankeel is priced below the comparable UAE market. The Mankeel MX-14 is 1,499 AED; the closest 45 km/h dual-suspension scooter we found on sale at a UAE retailer in September 2026 was 1,885 AED, and the MX-14 carries more range (56 km vs 50 km) and weighs 5 kg less - a gap of roughly 20%. At entry level the market is tighter: the Mankeel MK083 at 699 AED sits in line with UAE entry pricing rather than below it, and competes on solid puncture-proof tyres, 12 kg weight and a local one-year warranty rather than on price alone."
             },
             {
                 "question": "Which electric scooter is best for under 1,000 AED in Dubai?",
@@ -227,7 +227,7 @@ When shopping for an electric scooter in Dubai, buyers frequently compare establ
 ### 1. Zero Flat Tires with Honeycomb Technology
 Dubai's summer pavement reaches temperatures above **65°C**. Standard pneumatic tires on Xiaomi scooters frequently suffer blowouts and inner-tube punctures. Mankeel's **solid honeycomb tire system** eliminates flat tires completely while maintaining shock absorption.
 
-### 2. Unbeatable Value for Money (Save 30% to 40%)
+### 2. Priced below comparable UAE stock (about 20% on the MX-14)
 At **699 AED**, the Mankeel MK083 outperforms entry-level competitor scooters costing AED 1,100+. For off-road and heavy riders, the 800W **Mankeel MX-14 at 1,499 AED** offers dual suspensions and hill-climbing torque normally restricted to AED 2,500+ premium scooters.
 
 ### 3. Dedicated Dubai Summer Battery Care & Local Warranty

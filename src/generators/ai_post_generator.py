@@ -62,7 +62,7 @@ class AIPostGenerator:
         elif any(w in t_lower for w in ["budget", "cheap", "saving", "price", "deal", "offer", "discount"]):
             title_en = f"💰 Best Value E-Scooter Deal in Dubai: {model_name} ({price})"
             title_ar = f"💰 أفضل قيمة لسكوتر كهربائي في دبي: {model_name} ({price})"
-            hook_en = f"Save 30% to 40% compared to AED 1,200+ brands! Get top-tier motor performance, 1-year local UAE warranty, and zero maintenance costs."
+            hook_en = f"The MX-14 is 1,499 AED - about 20% less than the closest 45 km/h dual-suspension scooter we found at a UAE retailer (1,885 AED), with more range and 5 kg less weight. 1-year local UAE warranty included."
             hook_ar = f"وفّر 30% إلى 40% مقارنة بالعلامات التجارية الأخرى! احصل على أداء ممتاز، ضمان محلي لمدة سنة، وبدون تكاليف صيانة إطارات."
 
         else:
