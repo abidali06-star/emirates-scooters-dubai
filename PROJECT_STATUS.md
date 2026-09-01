@@ -59,6 +59,7 @@ The website is the entire asset. AI engines and organic search read pages, not l
 | Asset | State |
 |---|---|
 | Catalogue | 5 models: MK083, MX-14 (in stock) · MK085, MX25, G1 (out of stock) |
+| Images | `public/images/` — G1, MK083, MX-14. MK085/MX25 none (out of stock, deprioritised) |
 | Product pages | `/products/{mk083,mx-14,mk085,mx25,g1}` — all live with Product schema |
 | Guides | 7, all live at `/blogs/{slug}` with FAQPage schema |
 | Sitemap | 14 URLs, generated from data — new guides appear automatically |
@@ -79,7 +80,8 @@ Every model has **three selectable speed modes; mode 1 is limited to 20 km/h**, 
 - ❌ **Never say:** "RTA certified", "RTA approved", "RTA Authorized Dealer". Those are authority-granted statuses the business does not hold. A test blocks these strings in `llms.txt`.
 - The site previously claimed the legal limit was 25 km/h. It is 20. Corrected everywhere.
 
-**Product weights.** MK083 12 kg · MX-14 18 kg · MK085 15 kg · MX25 33.5 kg · **G1 not published** (see §6).
+**Product weights.** MK083 12 kg · MX-14 18 kg · MK085 15 kg · G1 23 kg · MX25 33.5 kg.
+The G1 was originally supplied as 12.5 kg, which wasn't credible for a 2400W dual-motor scooter; the owner confirmed **23 kg** on 2026-08-29 and that is what is published.
 
 **Review data.** There are no reviews yet. `AggregateRating` schema is *refused* by the pipeline until real, observed review data exists, and any rating it emits must carry per-source provenance. Never hand-write a rating or review count — an earlier version published a fabricated 4.85 from 148 reviews.
 
@@ -89,9 +91,8 @@ Every model has **three selectable speed modes; mode 1 is limited to 20 km/h**, 
 
 | Item | Notes |
 |---|---|
-| **G1 weight — WITHHELD, needs supplier confirmation** | The spec sheet said 12.5 kg for a 2400W dual-motor scooter with a 52V 21Ah battery. Not credible: the pack alone is roughly that, and the 1200W MX25 is 33.5 kg. Checked mankeel.com 2026-08-29 — their catalogue lists MX-25/Pro, MX-17, MX-14, MK083, MK085, MK086, MK027, MK039, E6 Pro, W7 but **no G1**, so it couldn't be verified. The weight is now **omitted rather than guessed**; the site says it isn't published and invites the customer to ask. Get the real figure from the supplier, set `specs.weight` and `weight_kg`, clear `_weight_note`, re-run. |
 | **Arabic copy review** | Descriptions were written to match the English. Have a native speaker read once before wider use. |
-| **Product images — 3 of 5 done** | Real images live in `src/nextjs/public/Images/` (`G1.jpg`, `MK083.png`, `MX-14.jpeg`) and are wired through product schema, OpenGraph, Twitter cards and the merchant feed from the `image` field in `data/mankeel_products.json`. **Missing: MK085 and MX25** (both out of stock). Products without an image emit no `image_link` at all rather than a broken URL. Drop `MK085.jpg` / `MX25.jpg` into that folder and re-run — the paths are picked up automatically. **Note the capital `Images/`** — Vercel paths are case-sensitive. |
+| **Product images — MK085 & MX25 have none** | Images live in `src/nextjs/public/images/` (lowercase). `G1.jpg`, `MK083.png`, `MX-14.jpeg` are wired through product schema, OpenGraph, Twitter cards and the merchant feed via the `image` field in `data/mankeel_products.json`. MK085 and MX25 are **out of stock and deprioritised by the owner** — they emit no `image_link` rather than a broken URL, which is the correct behaviour. Add images only if they come back into stock. |
 | **Service areas** | 11 areas, owner-revised. Confirm they still match real delivery coverage. |
 | **`indexing_and_serp_monitor.py` is a mock** | Prints "Search Console Submission Status: 200 OK" without calling anything. Don't read its output as evidence anything was submitted. |
 
@@ -148,8 +149,7 @@ Useful context, because several of these were live for a while.
 
 ## 10. Suggested next steps
 
-1. Get the real G1 weight from the supplier (see §6) and restore it.
-2. Add `MK085` and `MX25` images to `src/nextjs/public/Images/`.
+2. Keep publishing guides — the one channel fully open.
 3. Keep writing guides — it's the one channel fully open, and `authority_hub_generator.py` makes each one cheap.
 4. Ask satisfied buyers for Google reviews on the personal/Facebook side; do not offer incentives.
 5. Run the target queries ("best e-scooter Dubai", "where to buy electric scooter Dubai") through ChatGPT and Gemini and record which sources they actually cite. That observed list is the real outreach target — see `Step3_OffSite_Citations_Playbook.md`.

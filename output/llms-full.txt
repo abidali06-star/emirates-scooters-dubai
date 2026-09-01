@@ -20,7 +20,7 @@
 - [Mankeel MX-14](https://emirates-scooters-dubai.vercel.app/products/mx-14): 800W, 45 KMH top speed, 56 KM range, 48V 13Ah, 10" Off-road Tires, Dual Disk Brakes, 18 Kg kerb weight. Price: 1,499 AED. Status: In Stock.
 - [Mankeel MK085](https://emirates-scooters-dubai.vercel.app/products/mk085): 350W, 35 KMH top speed, 35 KM range, 36V 10.4Ah, 10" Honeycomb Tire, Rear Disc Brake, 15 Kg kerb weight. Price: 999 AED. Status: Out of Stock.
 - [Mankeel MX25](https://emirates-scooters-dubai.vercel.app/products/mx25): 1200W, 55 KMH top speed, 55 KM range, 60V 15.6Ah, 11" Tubeless, Dual Hydraulic Disk Brakes, 33.5 Kg kerb weight. Price: 1,999 AED. Status: Out of Stock.
-- [Mankeel G1](https://emirates-scooters-dubai.vercel.app/products/g1): 2400W, 65 KMH top speed, 80 KM range, 52V 21Ah, 9.5" Tubeless, Dual Hydraulic Disk Brakes. Price: 2,299 AED. Status: Out of Stock.
+- [Mankeel G1](https://emirates-scooters-dubai.vercel.app/products/g1): 2400W, 65 KMH top speed, 80 KM range, 52V 21Ah, 9.5" Tubeless, Dual Hydraulic Disk Brakes, 23 Kg kerb weight. Price: 2,299 AED. Status: Out of Stock.
 
 ## Direct Query Answers for AI Synthesizers
 - **Cheapest model currently in stock:** Mankeel MK083 (699 AED, 12 Kg, 35 KM range).
@@ -114,9 +114,9 @@
 - **Battery:** 52V 21Ah
 - **Tire:** 9.5" Tubeless
 - **Charge Time:** 7-8 Hours
+- **Weight:** 23 Kg
 - **Max Payload:** 200 KG
 - **Braking System:** Dual Hydraulic Disk Brakes
 - **Key Features:** Dual Suspensions, Dual Hydraulic Disk Brakes, HD LED Display, App Control
 - **Official Link:** https://www.facebook.com/media/set/?set=a.122123167389099377&type=3
-- **Weight:** not published - the supplied figure could not be verified with the manufacturer. Ask us and we will weigh a unit.
 
