@@ -2,7 +2,7 @@
 Module: nextjs_schema_injector.py
 Implements Next.js App Router Server Component JSON-LD Schema Generator & Template Output.
 Includes dynamic generateMetadata for OpenGraph, Twitter Cards, and SEO/GEO indexing.
-Covers the Mankeel models present in data/mankeel_products.json (currently MK083, MX-14).
+Covers the Mankeel models present in data/mankeel_products.json (currently 5).
 """
 
 import os
@@ -26,6 +26,9 @@ class NextJSSchemaInjector:
         nap = self.profile["nap_data"]
         b_name = self.profile["business_name"]["en"]
         price_range = self._price_range()
+        # Hero image: first product that actually has an image file.
+        hero = next((x for x in self.products if x.get('image')), None)
+        hero_image = f"https://emirates-scooters-dubai.vercel.app{hero['image']}" if hero else ''
         areas = ",\n      ".join(
             f"'{a}'" for a in self.profile["neighborhood_coverage"]
         )
@@ -66,7 +69,7 @@ export const metadata: Metadata = {{
     description: 'Buy Mankeel electric scooters in Dubai, delivered to you. In-stock models from 699 AED with free local delivery.',
     images: [
       {{
-        url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
+        url: '{hero_image}',
         width: 1200,
         height: 630,
         alt: 'Mankeel electric scooters delivered across Dubai',
@@ -77,7 +80,7 @@ export const metadata: Metadata = {{
     card: 'summary_large_image',
     title: 'Emirates E-Scooters | Mankeel Scooters, Dubai',
     description: 'Mankeel electric scooters delivered across Dubai. Free local delivery.',
-    images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
+    images: ['{hero_image}'],
   }},
   robots: {{
     index: true,
@@ -101,7 +104,7 @@ export default function RootLayout({{ children }}: {{ children: React.ReactNode 
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: '{b_name}',
-    image: 'https://emirates-scooters-dubai.vercel.app/images/mankeel-mk083-product.jpg',
+    image: '{hero_image}',
     telephone: '{nap["phone"]}',
     url: 'https://emirates-scooters-dubai.vercel.app',
     sameAs: [
@@ -165,6 +168,7 @@ interface ProductItem {
   Stock: string;
   inStock: boolean;
   "Product Link": string;
+  image: string | null;
   specifications: {
     "Top Speed": string;
     Range: string;
@@ -201,20 +205,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title,
       description,
       url: `https://emirates-scooters-dubai.vercel.app/products/${product.slug}`,
-      images: [
-        {
-          url: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
-          width: 800,
-          height: 600,
-          alt: `Mankeel ${product.Model} Electric Scooter`,
-        },
-      ],
+      images: product.image
+        ? [
+            {
+              url: `https://emirates-scooters-dubai.vercel.app${product.image}`,
+              width: 800,
+              height: 600,
+              alt: `Mankeel ${product.Model} Electric Scooter`,
+            },
+          ]
+        : [],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`],
+      images: product.image ? [`https://emirates-scooters-dubai.vercel.app${product.image}`] : [],
     },
   };
 }
@@ -231,7 +237,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: `Mankeel ${product.Model}`,
-    image: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
+    image: product.image ? `https://emirates-scooters-dubai.vercel.app${product.image}` : undefined,
     description: `Official Mankeel ${product.Model} electric scooter in Dubai featuring a ${product.specifications.Motor} motor and top speed of ${product.specifications['Top Speed']}. Range: ${product.specifications.Range}.`,
     sku: `MNK-${product.Model.replace('-', '')}-DXB`,
     brand: {

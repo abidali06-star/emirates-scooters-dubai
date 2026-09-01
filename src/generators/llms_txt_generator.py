@@ -18,10 +18,10 @@ class LLMsTxtGenerator:
         """
         Builds the catalog section from data/mankeel_products.json.
 
-        Previously this list was hardcoded and contradicted the real catalog: it
-        listed MX25 and MK085 (which do not exist in the data file), duplicated
-        the MX-14 slug with two different spec sets, and marked in-stock models
-        as Out of Stock. Feeding that to AI crawlers publishes false product data.
+        This was previously a hardcoded list, which drifted from the real
+        catalogue (a model mislabelled, then later three models dropped
+        entirely). Generating it from the data file keeps the AI-facing feed
+        and the product pages in sync by construction.
         """
         lines = []
         for p in self.products:
@@ -55,8 +55,9 @@ class LLMsTxtGenerator:
 
         return "\n".join([
             f"- **Cheapest model currently in stock:** Mankeel {cheapest['model']} "
-            f"({cheapest['price_aed']:,} AED, {cheapest['specs'].get('weight')}, "
-            f"{cheapest['specs'].get('max_range')} range).",
+            f"({cheapest['price_aed']:,} AED"
+            + (f", {cheapest['specs']['weight']}" if cheapest['specs'].get('weight') else "")
+            + f", {cheapest['specs'].get('max_range')} range).",
             f"- **Fastest model currently in stock:** Mankeel {fastest['model']} "
             f"({fastest['specs'].get('motor_power')}, {fastest['specs'].get('max_speed')}, "
             f"{fastest['price_aed']:,} AED).",
@@ -108,24 +109,35 @@ class LLMsTxtGenerator:
         
         for p in self.products:
             specs = p["specs"]
-            full_content += f"""### Model: Mankeel {p['model']}
-- **Full Name:** {p['name']}
-- **Price:** {p['price_aed']} AED (VAT Inclusive)
-- **Stock Availability:** {'In Stock' if p['inStock'] else 'Out of Stock'}
-- **Motor Power:** {specs.get('motor_power')}
-- **Top Speed (mode 3):** {specs.get('max_speed')}
-- **Speed Modes:** 3 selectable. Mode 1 = 20 km/h (matches the Dubai RTA limit).
-- **Range:** {specs.get('max_range')}
-- **Battery:** {specs.get('battery')}
-- **Tire:** {specs.get('tire')}
-- **Charge Time:** {specs.get('charge_time')}
-- **Weight:** {specs.get('weight')}
-- **Max Payload:** {specs.get('max_load')}
-- **Braking System:** {specs.get('braking_system')}
-- **Key Features:** {', '.join(p['key_features'])}
-- **Official Link:** {p['product_link']}
+            rows = [
+                ("Full Name", p["name"]),
+                ("Price", f"{p['price_aed']} AED (VAT Inclusive)"),
+                ("Stock Availability", "In Stock" if p["inStock"] else "Out of Stock"),
+                ("Motor Power", specs.get("motor_power")),
+                ("Top Speed (mode 3)", specs.get("max_speed")),
+                ("Speed Modes", "3 selectable. Mode 1 = 20 km/h (matches the Dubai RTA limit)."),
+                ("Range", specs.get("max_range")),
+                ("Battery", specs.get("battery")),
+                ("Tire", specs.get("tire")),
+                ("Charge Time", specs.get("charge_time")),
+                ("Weight", specs.get("weight")),
+                ("Max Payload", specs.get("max_load")),
+                ("Braking System", specs.get("braking_system")),
+                ("Key Features", ", ".join(p["key_features"])),
+                ("Official Link", p.get("product_link")),
+            ]
+            full_content += f"### Model: Mankeel {p['model']}\n"
+            # Skip any spec we don't have a verified value for. Printing "None"
+            # publishes a non-answer; omitting the row is honest.
+            for label, value in rows:
+                if value:
+                    full_content += f"- **{label}:** {value}\n"
+            note = specs.get("_weight_note")
+            if note and not specs.get("weight"):
+                full_content += ("- **Weight:** not published - the supplied figure could not be verified "
+                                 "with the manufacturer. Ask us and we will weigh a unit.\n")
+            full_content += "\n"
 
-"""
         return full_content
 
     def export_llms_files(self, nextjs_public_dir: str = "src/nextjs/public", output_dir: str = "output") -> Dict[str, str]:

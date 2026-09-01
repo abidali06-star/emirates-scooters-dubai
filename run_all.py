@@ -234,6 +234,7 @@ def run_pipeline():
         "Stock": p["stock_status"],
         "inStock": p["inStock"],
         "Product Link": p["product_link"],
+        "image": p.get("image"),
         "specifications": {
             "Top Speed": p["specs"]["max_speed"],
             "Range": p["specs"]["max_range"],

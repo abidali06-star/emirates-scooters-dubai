@@ -12,6 +12,7 @@ interface ProductItem {
   Stock: string;
   inStock: boolean;
   "Product Link": string;
+  image: string | null;
   specifications: {
     "Top Speed": string;
     Range: string;
@@ -48,20 +49,22 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title,
       description,
       url: `https://emirates-scooters-dubai.vercel.app/products/${product.slug}`,
-      images: [
-        {
-          url: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
-          width: 800,
-          height: 600,
-          alt: `Mankeel ${product.Model} Electric Scooter`,
-        },
-      ],
+      images: product.image
+        ? [
+            {
+              url: `https://emirates-scooters-dubai.vercel.app${product.image}`,
+              width: 800,
+              height: 600,
+              alt: `Mankeel ${product.Model} Electric Scooter`,
+            },
+          ]
+        : [],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`],
+      images: product.image ? [`https://emirates-scooters-dubai.vercel.app${product.image}`] : [],
     },
   };
 }
@@ -78,7 +81,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: `Mankeel ${product.Model}`,
-    image: `https://emirates-scooters-dubai.vercel.app/images/products/${product.slug}.jpg`,
+    image: product.image ? `https://emirates-scooters-dubai.vercel.app${product.image}` : undefined,
     description: `Official Mankeel ${product.Model} electric scooter in Dubai featuring a ${product.specifications.Motor} motor and top speed of ${product.specifications['Top Speed']}. Range: ${product.specifications.Range}.`,
     sku: `MNK-${product.Model.replace('-', '')}-DXB`,
     brand: {

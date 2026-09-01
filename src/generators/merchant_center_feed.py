@@ -46,8 +46,11 @@ class MerchantCenterFeedGenerator:
             g_link = ET.SubElement(item, "g:link")
             g_link.text = f"https://emirates-scooters-dubai.vercel.app/products/{p['id']}"
             
-            g_image = ET.SubElement(item, "g:image_link")
-            g_image.text = f"https://emirates-scooters-dubai.vercel.app/images/products/{p['id']}.jpg"
+            # Only emit image_link when a real image file exists. A 404 image_link
+            # causes Merchant Center item disapproval.
+            if p.get("image"):
+                g_image = ET.SubElement(item, "g:image_link")
+                g_image.text = f"https://emirates-scooters-dubai.vercel.app{p['image']}"
             
             g_condition = ET.SubElement(item, "g:condition")
             g_condition.text = "new"

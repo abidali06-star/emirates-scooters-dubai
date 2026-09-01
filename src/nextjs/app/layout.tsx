@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: 'Buy Mankeel electric scooters in Dubai, delivered to you. In-stock models from 699 AED with free local delivery.',
     images: [
       {
-        url: 'https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg',
+        url: 'https://emirates-scooters-dubai.vercel.app/Images/MK083.png',
         width: 1200,
         height: 630,
         alt: 'Mankeel electric scooters delivered across Dubai',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Emirates E-Scooters | Mankeel Scooters, Dubai',
     description: 'Mankeel electric scooters delivered across Dubai. Free local delivery.',
-    images: ['https://emirates-scooters-dubai.vercel.app/images/og-mankeel-dubai.jpg'],
+    images: ['https://emirates-scooters-dubai.vercel.app/Images/MK083.png'],
   },
   robots: {
     index: true,
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Emirates E-Scooters',
-    image: 'https://emirates-scooters-dubai.vercel.app/images/mankeel-mk083-product.jpg',
+    image: 'https://emirates-scooters-dubai.vercel.app/Images/MK083.png',
     telephone: '+971 56 667 2354',
     url: 'https://emirates-scooters-dubai.vercel.app',
     sameAs: [

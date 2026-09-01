@@ -40,7 +40,9 @@
       "Foldable Design",
       "App Control"
     ],
-    "raw_description": "Mankeel MK083: 350W motor, 30 KMH top speed, 35 KM range, 36V 7.8Ah battery."
+    "raw_description": "Mankeel MK083: 350W motor, 30 KMH top speed, 35 KM range, 36V 7.8Ah battery.",
+    "image": "/Images/MK083.png",
+    "image_status": "present"
   },
   {
     "id": "mx-14",
@@ -83,7 +85,9 @@
       "Upgraded BMS System",
       "App Control"
     ],
-    "raw_description": "Mankeel MX-14: 800W motor, 45 KMH top speed, 56 KM range, 48V 13Ah battery."
+    "raw_description": "Mankeel MX-14: 800W motor, 45 KMH top speed, 56 KM range, 48V 13Ah battery.",
+    "image": "/Images/MX-14.jpeg",
+    "image_status": "present"
   },
   {
     "id": "mk085",
@@ -126,7 +130,9 @@
       "Foldable Design",
       "App Control"
     ],
-    "raw_description": "Mankeel MK085: 350W motor, 35 KMH top speed, 35 KM range, 36V 10.4Ah battery."
+    "raw_description": "Mankeel MK085: 350W motor, 35 KMH top speed, 35 KM range, 36V 10.4Ah battery.",
+    "image": null,
+    "image_status": "MISSING - add src/nextjs/public/Images/MK085.jpg and re-run"
   },
   {
     "id": "mx25",
@@ -169,7 +175,9 @@
       "HD LED Display",
       "App Control"
     ],
-    "raw_description": "Mankeel MX25: 1200W motor, 55 KMH top speed, 55 KM range, 60V 15.6Ah battery."
+    "raw_description": "Mankeel MX25: 1200W motor, 55 KMH top speed, 55 KM range, 60V 15.6Ah battery.",
+    "image": null,
+    "image_status": "MISSING - add src/nextjs/public/Images/MX25.jpg and re-run"
   },
   {
     "id": "g1",
@@ -193,8 +201,8 @@
       "battery": "52V 21Ah",
       "tire": "9.5\" Tubeless",
       "charge_time": "7-8 Hours",
-      "weight": "12.5 Kg",
-      "weight_kg": 12.5,
+      "weight": null,
+      "weight_kg": null,
       "max_load": "200 KG",
       "max_load_kg": 200,
       "braking_system": "Dual Hydraulic Disk Brakes",
@@ -204,7 +212,8 @@
         "mode_1_note": "Lowest of three selectable ride modes. 20 km/h matches the maximum e-scooter speed RTA requires in Dubai.",
         "max_mode_kmh": 65,
         "source": "Owner-confirmed 2026-08-29 from the Mankeel supplier."
-      }
+      },
+      "_weight_note": "WITHHELD, not guessed. The supplied spec sheet said 12.5 kg. That is not credible for a 2400W dual-motor scooter with a 52V 21Ah battery: the battery pack alone is roughly that weight, and the 1200W MX25 in the same sheet is 33.5 kg. Mankeel's official catalogue (mankeel.com, checked 2026-08-29) lists MX-25/MX-25 Pro, MX-17, MX-14, MK083, MK085, MK086, MK027, MK039, E6 Pro and W7 but NO G1, so the figure could not be verified against the manufacturer. Publishing a likely-wrong weight would mislead buyers on portability, which is a purchase-relevant spec. Confirm with the supplier and restore."
     },
     "key_features": [
       "Dual Suspensions",
@@ -212,6 +221,8 @@
       "HD LED Display",
       "App Control"
     ],
-    "raw_description": "Mankeel G1: 2400W motor, 65 KMH top speed, 80 KM range, 52V 21Ah battery."
+    "raw_description": "Mankeel G1: 2400W motor, 65 KMH top speed, 80 KM range, 52V 21Ah battery.",
+    "image": "/Images/G1.jpg",
+    "image_status": "present"
   }
 ]

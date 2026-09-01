@@ -7,6 +7,7 @@
     "Stock": "Yes",
     "inStock": true,
     "Product Link": "https://www.facebook.com/media/set/?set=a.122123166645099377&type=3",
+    "image": "/Images/MK083.png",
     "specifications": {
       "Top Speed": "30 KMH",
       "Range": "35 KM",
@@ -32,6 +33,7 @@
     "Stock": "Yes",
     "inStock": true,
     "Product Link": "https://www.facebook.com/media/set/?set=a.122123165103099377&type=3",
+    "image": "/Images/MX-14.jpeg",
     "specifications": {
       "Top Speed": "45 KMH",
       "Range": "56 KM",
@@ -57,6 +59,7 @@
     "Stock": "No",
     "inStock": false,
     "Product Link": "https://www.facebook.com/media/set/?set=a.122123169441099377&type=3",
+    "image": null,
     "specifications": {
       "Top Speed": "35 KMH",
       "Range": "35 KM",
@@ -82,6 +85,7 @@
     "Stock": "No",
     "inStock": false,
     "Product Link": "https://www.facebook.com/media/set/?set=a.122123171067099377&type=3",
+    "image": null,
     "specifications": {
       "Top Speed": "55 KMH",
       "Range": "55 KM",
@@ -107,6 +111,7 @@
     "Stock": "No",
     "inStock": false,
     "Product Link": "https://www.facebook.com/media/set/?set=a.122123167389099377&type=3",
+    "image": "/Images/G1.jpg",
     "specifications": {
       "Top Speed": "65 KMH",
       "Range": "80 KM",
@@ -114,7 +119,7 @@
       "Battery": "52V 21Ah",
       "Tire": "9.5\" Tubeless",
       "Charge time": "7-8 Hours",
-      "Weight": "12.5 Kg",
+      "Weight": null,
       "Max Load": "200 KG"
     },
     "key_features": [
